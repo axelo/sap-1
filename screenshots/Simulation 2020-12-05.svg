@@ -1,0 +1,906 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="239 -357 1388 1428" style="background-color: #efefef">
+    <g stroke-linecap="square">
+        <path fill="none" stroke="#000" stroke-width="2.8" d="M1032-325h50M1032-290h25v-25h25M1032-255h50M960-120v20M940-100v-10M920-100v-10M900-100v-10M880-100v-10M860-100v-10M840-100v-10M820-100v-10M1140 34v6M1340 206v-6M960 160v20M940 180v-10M920 180v-10M900 180v-10M880 180v-10M860 180v-10M840 180v-10M820 180v-10M960 20v20M940 40V30M920 40V30M900 40V30M880 40V30M860 40V30M840 40V30M820 40V30M1140 220v-20M1180 200v10M1220 200v10M960 300v20M940 320v-10M920 320v-10M900 320v-10M880 320v-10M860 320v-10M840 320v-10M820 320v-10M960 440v20M940 460v-10M920 460v-10M900 460v-10M880 460v-10M860 460v-10M840 460v-10M820 460v-10M960 580v20M940 600v-10M920 600v-10M900 600v-10M880 600v-10M860 600v-10M840 600v-10M820 600v-10M960 700v20M940 720v-10M920 720v-10M900 720v-10M880 720v-10M860 720v-10M840 720v-10M820 720v-10M1190 939h10M1290 939h10M1390 939h10M1490 939h10M640 840h20M660 860h-10M660 880h-10M660 900h-10M640 940h20M660 960h-10M660 980h-10M660 1000h-10M660 1020h-10M660 1040h-10M660 1060h-10"/>
+        <path fill="none" stroke="#000" stroke-dasharray="4.0,4.0" stroke-width=".7" d="M1032-320h50M1032-285h50M1082-355h-50v105h50zM1057-355v105"/>
+        <path fill="none" stroke="#0000b2" stroke-width="2.8" d="M380 320h20M560 320h20M940 0h20v20M660 960h20M380 580h20M560 580h20M300 900h100M660 900h20M480-200h40M560-200h40M300 200h100M1260 180v20h40v-20M1380 520h20M1440 520h20M600 840h40M380 840h20M660 840h20M940-140h20v20M480-140h20M560 460h20M300 460h100M940 140h20v20M380 80h20M380 720h20M560 720h20M1420 400h20M1320 400h20M660 1040h20M660 980h20M300 340h100M560 20h20M380 20h20M560 600h20M300 600h100M940 280h20v20M300 920h100M380 220h20M600 860h20v80h20M380 860h20M660 860h20M560 160h20M380 160h20M380 480h20M1400 480h20v20M660 1060h20M1320 420h20M940 420h20v20M300 740h100M300-40h100M660 1000h20M560 40h20M300 40h100M940 680h20v20M660 940h20M380 300h20M380 620h20M940 560h20v20M1140 220v20h20M380 880h20M660 880h20M560 180h20M380 180h20M1420-120h20M380 440h20M560 440h20M380 760h20M660 1020h20M1320 380h20M300 60h100M380 700h20M560 700h20M960 720v20M960 600v20M960 460v20M960 320v20M960 180v20M960 40v20M960-100v20M1280 200v20M1280 780v20M1280 940v20M1220 40v20M1220 180v20M1220 780v20M1220 940v20M900 40v20M900 180v20M900 320v20M900 600v20M900 720v20M900 460v20M900-100v20M580-220v20M840 40v20M840 180v20M840 320v20M840 600v20M840 720v20M840 460v20M840-100v20M1160 780v20M1160 940v20M1480 780v20M1480 940v20M1420 180v20M1420 40v20M1420 780v20M1420 940v20M1360 780v20M1360 940v20M1300 40v20M1300 940v40M1240 780v20M1240 940v20M920-100v20M920 40v20M920 180v20M920 320v20M920 460v20M920 600v20M920 720v20M1500 940v40M860-100v20M860 40v20M860 180v20M860 320v20M860 460v20M860 600v20M860 720v20M1180 180v20M1180 40v20M1180 780v20M1180 940v20M1440 780v20M1440 940v20M1120 780v20M1120 940v20M1380 780v20M1380 940v20M1380 180v20M1380 40v20M1320 780v20M1320 940v20M1260 780v20M1260 940v20M1260 40v20M940-100v20M940 720v20M940 600v20M940 460v20M940 320v20M940 180v20M940 40v20M1200 940v40M880-100v20M880 720v20M880 600v20M880 460v20M880 320v20M880 180v20M880 40v20M1460 780v20M1460 940v20M820-100v20M820 40v20M820 180v20M820 320v20M820 600v20M820 720v20M820 460v20M500-220v20M1140 40v20M1140 180v20M1140 780v20M1140 940v20M1400 940v40M1340 780v20M1340 940v20M1340 180v20M1340 40v20"/>
+        <path fill="none" stroke="#000" stroke-width="4.2" d="M1410 200h20M1270 220h20M1170 960h20M1270 960h20M1370 960h20M1470 960h20"/>
+        <g fill="#0000b2" stroke="#0000b2" stroke-width="2.8">
+            <circle cx="500" cy="-200" r="4"/>
+            <circle cx="580" cy="-200" r="4"/>
+            <circle cx="1280" cy="200" r="4"/>
+        </g>
+        <path fill="#ffffb4" fill-opacity=".784" d="M401 146h158v88H401z"/>
+        <path fill="none" stroke="#000" stroke-width="2.8" d="M401 146h158v88H401z"/>
+        <path fill="none" stroke="#000" stroke-width="1.4" d="M401 167l7-7-7-7"/>
+        <text x="411" y="166.75" fill="gray" font-size="18">CLOCK</text>
+        <text x="404" y="186.75" fill="gray" font-size="18">ADDRESS</text>
+        <text x="404" y="206.75" fill="gray" font-size="18">
+            <tspan text-decoration="overline">IN</tspan>
+        </text>
+        <text x="404" y="226.75" fill="gray" font-size="18">
+            <tspan text-decoration="overline">OUT</tspan>
+        </text>
+        <text x="556" y="166.75" fill="gray" font-size="18" text-anchor="end">BUS</text>
+        <text x="556" y="186.75" fill="gray" font-size="18" text-anchor="end">PEEK</text>
+        <text x="480" y="251.5" fill="gray" font-size="18" text-anchor="middle">RAM</text>
+        <g font-size="24" text-anchor="end">
+            <text x="1030" y="-329">A</text>
+            <text x="1030" y="-294">B</text>
+            <text x="1030" y="-259">C</text>
+        </g>
+        <text x="1377" y="529" font-size="24" text-anchor="end">0b11111111</text>
+        <circle cx="960" cy="-69" r="10" stroke="#000" stroke-width="2.8"/>
+        <circle cx="960" cy="-69" r="8" fill="#06f"/>
+        <circle cx="940" cy="-69" r="10" stroke="#000" stroke-width="2.8"/>
+        <circle cx="940" cy="-69" r="8" fill="#06f"/>
+        <circle cx="920" cy="-69" r="10" stroke="#000" stroke-width="2.8"/>
+        <circle cx="920" cy="-69" r="8" fill="#06f"/>
+        <circle cx="900" cy="-69" r="10" stroke="#000" stroke-width="2.8"/>
+        <circle cx="900" cy="-69" r="8" fill="#06f"/>
+        <text x="963" y="-113" fill="gray" font-size="12" transform="rotate(-90 963 -122)">0-7</text>
+        <text x="963" y="-89" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 963 -98)">0</text>
+        <text x="943" y="-89" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 943 -98)">1</text>
+        <text x="923" y="-89" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 923 -98)">2</text>
+        <text x="903" y="-89" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 903 -98)">3</text>
+        <text x="883" y="-89" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 883 -98)">4</text>
+        <text x="863" y="-89" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 863 -98)">5</text>
+        <text x="843" y="-89" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 843 -98)">6</text>
+        <text x="823" y="-89" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 823 -98)">7</text>
+        <path stroke="#000" stroke-width="2.8" d="M962-112v4H818v-4z"/>
+        <circle cx="880" cy="-69" r="10" stroke="#000" stroke-width="2.8"/>
+        <circle cx="880" cy="-69" r="8" fill="#06f"/>
+        <circle cx="860" cy="-69" r="10" stroke="#000" stroke-width="2.8"/>
+        <circle cx="860" cy="-69" r="8" fill="#06f"/>
+        <circle cx="840" cy="-69" r="10" stroke="#000" stroke-width="2.8"/>
+        <circle cx="840" cy="-69" r="8" fill="#06f"/>
+        <circle cx="820" cy="-69" r="10" stroke="#000" stroke-width="2.8"/>
+        <circle cx="820" cy="-69" r="8" fill="#06f"/>
+        <path fill="none" stroke="#000" stroke-width="2.8" d="M299 210h-58v-20h58z"/>
+        <path fill="gray" d="M295 206h-25v-12h25z"/>
+        <path fill="none" stroke="#000" stroke-width="2.8" d="M1130 170v8h20v-8"/>
+        <text x="1140" y="171.75" fill="gray" font-size="18" transform="rotate(-90 1140 165)">A</text>
+        <path fill="none" stroke="#000" stroke-width="2.8" d="M1130 70v-8h20v8"/>
+        <text x="1140" y="81.75" fill="gray" font-size="18" text-anchor="end" transform="rotate(-90 1140 75)">VCC</text>
+        <path fill="none" stroke="#000" stroke-width="2.8" d="M1170 170v8h20v-8"/>
+        <text x="1180" y="171.75" fill="gray" font-size="18" transform="rotate(-90 1180 165)">B</text>
+        <path fill="none" stroke="#000" stroke-width="2.8" d="M1170 70v-8h20v8"/>
+        <text x="1180" y="81.75" fill="gray" font-size="18" text-anchor="end" transform="rotate(-90 1180 75)">
+            <tspan text-decoration="overline">Y0</tspan>
+        </text>
+        <path fill="none" stroke="#000" stroke-width="2.8" d="M1210 170v8h20v-8"/>
+        <text x="1220" y="171.75" fill="gray" font-size="18" transform="rotate(-90 1220 165)">C</text>
+        <path fill="none" stroke="#000" stroke-width="2.8" d="M1210 70v-8h20v8"/>
+        <text x="1220" y="81.75" fill="gray" font-size="18" text-anchor="end" transform="rotate(-90 1220 75)">
+            <tspan text-decoration="overline">Y1</tspan>
+        </text>
+        <path fill="none" stroke="#000" stroke-width="2.8" d="M1250 170v8h20v-8"/>
+        <text x="1260" y="171.75" fill="gray" font-size="18" transform="rotate(-90 1260 165)">
+            <tspan text-decoration="overline">GA</tspan>
+        </text>
+        <path fill="none" stroke="#000" stroke-width="2.8" d="M1250 70v-8h20v8"/>
+        <text x="1260" y="81.75" fill="gray" font-size="18" text-anchor="end" transform="rotate(-90 1260 75)">
+            <tspan text-decoration="overline">Y2</tspan>
+        </text>
+        <path fill="none" stroke="#000" stroke-width="2.8" d="M1290 170v8h20v-8"/>
+        <text x="1300" y="171.75" fill="gray" font-size="18" transform="rotate(-90 1300 165)">
+            <tspan text-decoration="overline">GB</tspan>
+        </text>
+        <path fill="none" stroke="#000" stroke-width="2.8" d="M1290 70v-8h20v8"/>
+        <text x="1300" y="81.75" fill="gray" font-size="18" text-anchor="end" transform="rotate(-90 1300 75)">
+            <tspan text-decoration="overline">Y3</tspan>
+        </text>
+        <path fill="none" stroke="#000" stroke-width="2.8" d="M1330 170v8h20v-8"/>
+        <text x="1340" y="171.75" fill="gray" font-size="18" transform="rotate(-90 1340 165)">G</text>
+        <path fill="none" stroke="#000" stroke-width="2.8" d="M1330 70v-8h20v8"/>
+        <text x="1340" y="81.75" fill="gray" font-size="18" text-anchor="end" transform="rotate(-90 1340 75)">
+            <tspan text-decoration="overline">Y4</tspan>
+        </text>
+        <path fill="none" stroke="#000" stroke-width="2.8" d="M1370 170v8h20v-8"/>
+        <text x="1380" y="171.75" fill="gray" font-size="18" transform="rotate(-90 1380 165)">
+            <tspan text-decoration="overline">Y7</tspan>
+        </text>
+        <path fill="none" stroke="#000" stroke-width="2.8" d="M1370 70v-8h20v8"/>
+        <text x="1380" y="81.75" fill="gray" font-size="18" text-anchor="end" transform="rotate(-90 1380 75)">
+            <tspan text-decoration="overline">Y5</tspan>
+        </text>
+        <path fill="none" stroke="#000" stroke-width="2.8" d="M1410 170v8h20v-8"/>
+        <text x="1420" y="171.75" fill="gray" font-size="18" transform="rotate(-90 1420 165)">GND</text>
+        <path fill="none" stroke="#000" stroke-width="2.8" d="M1410 70v-8h20v8"/>
+        <text x="1420" y="81.75" fill="gray" font-size="18" text-anchor="end" transform="rotate(-90 1420 75)">
+            <tspan text-decoration="overline">Y6</tspan>
+        </text>
+        <path fill="none" stroke="#000" stroke-width="2.8" d="M1120 170v-40c6 0 10-4 10-10s-4-10-10-10V70h320v100z"/>
+        <text x="1150" y="129" font-size="24">74138</text>
+        <text x="1450" y="138" font-size="24" text-anchor="middle" transform="rotate(-90 1450 120)">BUS OUT ADDRESS</text>
+        <path fill="none" stroke="#000" stroke-width="2.8" d="M1130 44l10-13 10 13M1350 196l-10 13-10-13"/>
+        <g fill="none" stroke="#000" stroke-width="2.8">
+            <path d="M1401 508l38 12-38 12z"/>
+            <circle cx="1420" cy="506" r="6"/>
+        </g>
+        <circle cx="960" cy="211" r="10" stroke="#000" stroke-width="2.8"/>
+        <circle cx="960" cy="211" r="8" fill="#fc6"/>
+        <circle cx="940" cy="211" r="10" stroke="#000" stroke-width="2.8"/>
+        <circle cx="940" cy="211" r="8" fill="#fc6"/>
+        <circle cx="920" cy="211" r="10" stroke="#000" stroke-width="2.8"/>
+        <circle cx="920" cy="211" r="8" fill="#fc6"/>
+        <text x="963" y="167" fill="gray" font-size="12" transform="rotate(-90 963 158)">0-7</text>
+        <text x="963" y="191" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 963 182)">0</text>
+        <text x="943" y="191" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 943 182)">1</text>
+        <text x="923" y="191" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 923 182)">2</text>
+        <text x="903" y="191" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 903 182)">3</text>
+        <text x="883" y="191" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 883 182)">4</text>
+        <text x="863" y="191" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 863 182)">5</text>
+        <text x="843" y="191" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 843 182)">6</text>
+        <text x="823" y="191" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 823 182)">7</text>
+        <path stroke="#000" stroke-width="2.8" d="M962 168v4H818v-4z"/>
+        <circle cx="900" cy="211" r="10" stroke="#000" stroke-width="2.8"/>
+        <circle cx="900" cy="211" r="8" fill="#fc6"/>
+        <circle cx="880" cy="211" r="10" stroke="#000" stroke-width="2.8"/>
+        <circle cx="880" cy="211" r="8" fill="#fc6"/>
+        <circle cx="860" cy="211" r="10" stroke="#000" stroke-width="2.8"/>
+        <circle cx="860" cy="211" r="8" fill="#fc6"/>
+        <circle cx="840" cy="211" r="10" stroke="#000" stroke-width="2.8"/>
+        <circle cx="840" cy="211" r="8" fill="#fc6"/>
+        <circle cx="820" cy="211" r="10" stroke="#000" stroke-width="2.8"/>
+        <circle cx="820" cy="211" r="8" fill="#fc6"/>
+        <path fill="none" stroke="#000" stroke-width="2.8" d="M580 180l14 8v-16z"/>
+        <text x="599" y="186.75" fill="gray" font-size="18">PEEK RAM</text>
+        <path fill="none" stroke="#000" stroke-width="2.8" d="M940 140l-14-8v16z"/>
+        <text x="921" y="146.75" fill="gray" font-size="18" text-anchor="end">PEEK RAM</text>
+        <path fill="none" stroke="#000" stroke-width="2.8" d="M580 160l14 8v-16z"/>
+        <text x="599" y="166.75" fill="gray" font-size="18">BUS</text>
+        <path fill="none" stroke="#000" stroke-width="2.8" d="M1460 520l14 8v-16z"/>
+        <text x="1479" y="526.75" fill="gray" font-size="18">BUS</text>
+        <path fill="none" stroke="#000" stroke-width="2.8" d="M940-140l-14-8v16z"/>
+        <text x="921" y="-133.25" fill="gray" font-size="18" text-anchor="end">BUS</text>
+        <path fill="none" stroke="#000" stroke-width="2.8" d="M380 220l-14-8v16z"/>
+        <text x="361" y="226.75" fill="gray" font-size="18" text-anchor="end">RAM <tspan text-decoration="overline">OUT</tspan>
+        </text>
+        <path fill="none" stroke="#000" stroke-width="2.8" d="M1220 40l8-14h-16z"/>
+        <text x="1220" y="27.75" fill="gray" font-size="18" transform="rotate(-90 1220 21)">RAM <tspan text-decoration="overline">OUT</tspan>
+        </text>
+        <path fill="none" stroke="#000" stroke-width="2.8" d="M1400 480l-14-8v16z"/>
+        <text x="1381" y="486.75" fill="gray" font-size="18" text-anchor="end">OUT 1s</text>
+        <path fill="#ffffb4" fill-opacity=".784" d="M401 6h158v88H401z"/>
+        <path fill="none" stroke="#000" stroke-width="2.8" d="M401 6h158v88H401z"/>
+        <path fill="none" stroke="#000" stroke-width="1.4" d="M401 27l7-7-7-7"/>
+        <text x="411" y="26.75" fill="gray" font-size="18">CLOCK</text>
+        <text x="404" y="46.75" fill="gray" font-size="18">COUNT</text>
+        <text x="404" y="66.75" fill="gray" font-size="18">
+            <tspan text-decoration="overline">IN</tspan>
+        </text>
+        <text x="404" y="86.75" fill="gray" font-size="18">
+            <tspan text-decoration="overline">OUT</tspan>
+        </text>
+        <text x="556" y="26.75" fill="gray" font-size="18" text-anchor="end">BUS</text>
+        <text x="556" y="46.75" fill="gray" font-size="18" text-anchor="end">PEEK</text>
+        <text x="480" y="111.5" fill="gray" font-size="18" text-anchor="middle">PC</text>
+        <circle cx="960" cy="71" r="10" stroke="#000" stroke-width="2.8"/>
+        <circle cx="960" cy="71" r="8" fill="#f30"/>
+        <text x="963" y="27" fill="gray" font-size="12" transform="rotate(-90 963 18)">0-7</text>
+        <text x="963" y="51" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 963 42)">0</text>
+        <text x="943" y="51" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 943 42)">1</text>
+        <text x="923" y="51" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 923 42)">2</text>
+        <text x="903" y="51" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 903 42)">3</text>
+        <text x="883" y="51" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 883 42)">4</text>
+        <text x="863" y="51" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 863 42)">5</text>
+        <text x="843" y="51" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 843 42)">6</text>
+        <text x="823" y="51" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 823 42)">7</text>
+        <path stroke="#000" stroke-width="2.8" d="M962 28v4H818v-4z"/>
+        <path fill="none" stroke="#000" stroke-width="2.8" d="M940 0l-14-8V8z"/>
+        <text x="921" y="6.75" fill="gray" font-size="18" text-anchor="end">PEEK PC</text>
+        <circle cx="940" cy="71" r="10" stroke="#000" stroke-width="2.8"/>
+        <circle cx="940" cy="71" r="8" fill="#f30"/>
+        <circle cx="920" cy="71" r="10" stroke="#000" stroke-width="2.8"/>
+        <circle cx="920" cy="71" r="8" fill="#f30"/>
+        <circle cx="900" cy="71" r="10" stroke="#000" stroke-width="2.8"/>
+        <circle cx="900" cy="71" r="8" fill="#f30"/>
+        <circle cx="880" cy="71" r="10" stroke="#000" stroke-width="2.8"/>
+        <circle cx="880" cy="71" r="8" fill="#f30"/>
+        <circle cx="860" cy="71" r="10" stroke="#000" stroke-width="2.8"/>
+        <circle cx="860" cy="71" r="8" fill="#f30"/>
+        <circle cx="840" cy="71" r="10" stroke="#000" stroke-width="2.8"/>
+        <circle cx="840" cy="71" r="8" fill="#f30"/>
+        <circle cx="820" cy="71" r="10" stroke="#000" stroke-width="2.8"/>
+        <circle cx="820" cy="71" r="8" fill="#f30"/>
+        <path fill="none" stroke="#000" stroke-width="2.8" d="M580 40l14 8V32z"/>
+        <text x="599" y="46.75" fill="gray" font-size="18">PEEK PC</text>
+        <path fill="none" stroke="#000" stroke-width="2.8" d="M580 20l14 8V12z"/>
+        <text x="599" y="26.75" fill="gray" font-size="18">BUS</text>
+        <path fill="none" stroke="#000" stroke-width="2.8" d="M380 80l-14-8v16z"/>
+        <text x="361" y="86.75" fill="gray" font-size="18" text-anchor="end">PC <tspan text-decoration="overline">OUT</tspan>
+        </text>
+        <path fill="none" stroke="#000" stroke-width="2.8" d="M1260 40l8-14h-16z"/>
+        <text x="1260" y="27.75" fill="gray" font-size="18" transform="rotate(-90 1260 21)">PC <tspan text-decoration="overline">OUT</tspan>
+        </text>
+        <path fill="none" stroke="#000" stroke-width="2.8" d="M449-215h30v30h-30z"/>
+        <text x="435" y="-191" font-size="24" text-anchor="end">CLOCK</text>
+        <path fill="none" stroke="#000" stroke-width="1.4" d="M455-195h5v-10h5v10h5v-10h5"/>
+        <path fill="none" stroke="#000" stroke-width="2.8" d="M500-220l8-14h-16z"/>
+        <text x="500" y="-232.25" fill="gray" font-size="18" transform="rotate(-90 500 -239)">CLOCK</text>
+        <path fill="none" stroke="#000" stroke-width="2.8" d="M380 160l-14-8v16z"/>
+        <text x="361" y="166.75" fill="gray" font-size="18" text-anchor="end">CLOCK</text>
+        <path fill="none" stroke="#000" stroke-width="2.8" d="M380 20l-14-8v16z"/>
+        <text x="361" y="26.75" fill="gray" font-size="18" text-anchor="end">
+            <tspan text-decoration="overline">CLOCK</tspan>
+        </text>
+        <path fill="none" stroke="#000" stroke-width="2.8" d="M299 70h-58V50h58z"/>
+        <path fill="gray" d="M295 66h-25V54h25z"/>
+        <path fill="none" stroke="#000" stroke-width="2.8" d="M299 50h-58V30h58z"/>
+        <path fill="gray" d="M245 46h25V34h-25z"/>
+        <path fill="none" stroke="#000" stroke-width="2.8" d="M1389-135h30v30h-30z"/>
+        <circle cx="1404" cy="-120" r="9" fill="none" stroke="#000" stroke-width="2.8"/>
+        <text x="1375" y="-111" font-size="24" text-anchor="end">
+            <tspan font-style="italic">BUS OUT ADDRESS</tspan>
+        </text>
+        <path fill="none" stroke="#000" stroke-width="2.8" d="M1440-120l14 8v-16z"/>
+        <text x="1459" y="-113.25" fill="gray" font-size="18">BUS OUT ADDRESS</text>
+        <path fill="none" stroke="#000" stroke-width="2.8" d="M1160 240l14 8v-16z"/>
+        <text x="1179" y="246.75" fill="gray" font-size="18">BUS OUT ADDRESS</text>
+        <text x="1137" y="222" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 1137 222)">0-2</text>
+        <text x="1137" y="198" fill="gray" font-size="12" transform="rotate(-90 1137 198)">0</text>
+        <text x="1177" y="198" fill="gray" font-size="12" transform="rotate(-90 1177 198)">1</text>
+        <text x="1217" y="198" fill="gray" font-size="12" transform="rotate(-90 1217 198)">2</text>
+        <path stroke="#000" stroke-width="2.8" d="M1138 212v-4h84v4z"/>
+        <path fill="#ffffb4" fill-opacity=".784" d="M401 286h158v68H401z"/>
+        <path fill="none" stroke="#000" stroke-width="2.8" d="M401 286h158v68H401z"/>
+        <path fill="none" stroke="#000" stroke-width="1.4" d="M401 307l7-7-7-7"/>
+        <text x="411" y="306.75" fill="gray" font-size="18">CLOCK</text>
+        <text x="404" y="326.75" fill="gray" font-size="18">BUS</text>
+        <text x="404" y="346.75" fill="gray" font-size="18">
+            <tspan text-decoration="overline">IN</tspan>
+        </text>
+        <text x="556" y="326.75" fill="gray" font-size="18" text-anchor="end">OUTPUT</text>
+        <text x="480" y="371.5" fill="gray" font-size="18" text-anchor="middle">MAR</text>
+        <path fill="none" stroke="#000" stroke-width="2.8" d="M380 300l-14-8v16z"/>
+        <text x="361" y="306.75" fill="gray" font-size="18" text-anchor="end">CLOCK</text>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M380 320l-14-8v16z"/>
+            <text x="361" y="326.75" fill="gray" font-size="18" text-anchor="end">BUS</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M299 350h-58v-20h58z"/>
+            <path fill="gray" d="M295 346h-25v-12h25z"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M580 320l14 8v-16z"/>
+            <text x="599" y="326.75" fill="gray" font-size="18">MAR OUT</text>
+        </g>
+        <g>
+            <circle cx="960" cy="351" r="10" stroke="#000" stroke-width="2.8"/>
+            <circle cx="960" cy="351" r="8" fill="#f30"/>
+        </g>
+        <g>
+            <text x="963" y="307" fill="gray" font-size="12" transform="rotate(-90 963 298)">0-7</text>
+            <text x="963" y="331" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 963 322)">0</text>
+            <text x="943" y="331" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 943 322)">1</text>
+            <text x="923" y="331" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 923 322)">2</text>
+            <text x="903" y="331" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 903 322)">3</text>
+            <text x="883" y="331" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 883 322)">4</text>
+            <text x="863" y="331" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 863 322)">5</text>
+            <text x="843" y="331" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 843 322)">6</text>
+            <text x="823" y="331" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 823 322)">7</text>
+            <path stroke="#000" stroke-width="2.8" d="M962 308v4H818v-4z"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M940 280l-14-8v16z"/>
+            <text x="921" y="286.75" fill="gray" font-size="18" text-anchor="end">MAR OUT</text>
+        </g>
+        <g>
+            <circle cx="940" cy="351" r="10" stroke="#000" stroke-width="2.8"/>
+            <circle cx="940" cy="351" r="8" fill="#f30"/>
+        </g>
+        <g>
+            <circle cx="920" cy="351" r="10" stroke="#000" stroke-width="2.8"/>
+            <circle cx="920" cy="351" r="8" fill="#f30"/>
+        </g>
+        <g>
+            <circle cx="900" cy="351" r="10" stroke="#000" stroke-width="2.8"/>
+            <circle cx="900" cy="351" r="8" fill="#f30"/>
+        </g>
+        <g>
+            <circle cx="880" cy="351" r="10" stroke="#000" stroke-width="2.8"/>
+            <circle cx="880" cy="351" r="8" fill="#f30"/>
+        </g>
+        <g>
+            <circle cx="860" cy="351" r="10" stroke="#000" stroke-width="2.8"/>
+            <circle cx="860" cy="351" r="8" fill="#f30"/>
+        </g>
+        <g>
+            <circle cx="840" cy="351" r="10" stroke="#000" stroke-width="2.8"/>
+            <circle cx="840" cy="351" r="8" fill="#f30"/>
+        </g>
+        <g>
+            <circle cx="820" cy="351" r="10" stroke="#000" stroke-width="2.8"/>
+            <circle cx="820" cy="351" r="8" fill="#f30"/>
+        </g>
+        <g fill="none" stroke="#000" stroke-width="2.8">
+            <path d="M521-212l18 12-18 12z"/>
+            <circle cx="550" cy="-200" r="9"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M580-220l8-14h-16z"/>
+            <text x="580" y="-232.25" fill="gray" font-size="18" transform="rotate(-90 580 -239)">
+                <tspan text-decoration="overline">CLOCK</tspan>
+            </text>
+        </g>
+        <g font-size="24">
+            <text x="602" y="-204">
+                <tspan text-decoration="overline">CLOCK</tspan>
+            </text>
+            <text x="602" y="-178">?</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M380 180l-14-8v16z"/>
+            <text x="361" y="186.75" fill="gray" font-size="18" text-anchor="end">MAR OUT</text>
+        </g>
+        <g>
+            <path fill="#ffffb4" fill-opacity=".784" d="M401 426h158v68H401z"/>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M401 426h158v68H401z"/>
+            <text x="480" y="418" font-size="24" text-anchor="middle">A</text>
+            <path fill="none" stroke="#000" stroke-width="1.4" d="M401 447l7-7-7-7"/>
+            <text x="411" y="446.75" fill="gray" font-size="18">CLOCK</text>
+            <text x="404" y="466.75" fill="gray" font-size="18">
+                <tspan text-decoration="overline">IN</tspan>
+            </text>
+            <text x="404" y="486.75" fill="gray" font-size="18">
+                <tspan text-decoration="overline">OUT</tspan>
+            </text>
+            <text x="556" y="446.75" fill="gray" font-size="18" text-anchor="end">BUS</text>
+            <text x="556" y="466.75" fill="gray" font-size="18" text-anchor="end">OUT</text>
+            <text x="480" y="511.5" fill="gray" font-size="18" text-anchor="middle">REG</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M580 460l14 8v-16z"/>
+            <text x="599" y="466.75" fill="gray" font-size="18">REG A</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M380 440l-14-8v16z"/>
+            <text x="361" y="446.75" fill="gray" font-size="18" text-anchor="end">CLOCK</text>
+        </g>
+        <g>
+            <circle cx="960" cy="491" r="10" stroke="#000" stroke-width="2.8"/>
+            <circle cx="960" cy="491" r="8" fill="#0c0"/>
+        </g>
+        <g>
+            <text x="963" y="447" fill="gray" font-size="12" transform="rotate(-90 963 438)">0-7</text>
+            <text x="963" y="471" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 963 462)">0</text>
+            <text x="943" y="471" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 943 462)">1</text>
+            <text x="923" y="471" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 923 462)">2</text>
+            <text x="903" y="471" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 903 462)">3</text>
+            <text x="883" y="471" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 883 462)">4</text>
+            <text x="863" y="471" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 863 462)">5</text>
+            <text x="843" y="471" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 843 462)">6</text>
+            <text x="823" y="471" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 823 462)">7</text>
+            <path stroke="#000" stroke-width="2.8" d="M962 448v4H818v-4z"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M940 420l-14-8v16z"/>
+            <text x="921" y="426.75" fill="gray" font-size="18" text-anchor="end">REG A</text>
+        </g>
+        <g>
+            <circle cx="940" cy="491" r="10" stroke="#000" stroke-width="2.8"/>
+            <circle cx="940" cy="491" r="8" fill="#0c0"/>
+        </g>
+        <g>
+            <circle cx="920" cy="491" r="10" stroke="#000" stroke-width="2.8"/>
+            <circle cx="920" cy="491" r="8" fill="#0c0"/>
+        </g>
+        <g>
+            <circle cx="900" cy="491" r="10" stroke="#000" stroke-width="2.8"/>
+            <circle cx="900" cy="491" r="8" fill="#0c0"/>
+        </g>
+        <g>
+            <circle cx="880" cy="491" r="10" stroke="#000" stroke-width="2.8"/>
+            <circle cx="880" cy="491" r="8" fill="#0c0"/>
+        </g>
+        <g>
+            <circle cx="860" cy="491" r="10" stroke="#000" stroke-width="2.8"/>
+            <circle cx="860" cy="491" r="8" fill="#0c0"/>
+        </g>
+        <g>
+            <circle cx="840" cy="491" r="10" stroke="#000" stroke-width="2.8"/>
+            <circle cx="840" cy="491" r="8" fill="#0c0"/>
+        </g>
+        <g>
+            <circle cx="820" cy="491" r="10" stroke="#000" stroke-width="2.8"/>
+            <circle cx="820" cy="491" r="8" fill="#0c0"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M380 480l-14-8v16z"/>
+            <text x="361" y="486.75" fill="gray" font-size="18" text-anchor="end">REG A <tspan text-decoration="overline">OUT</tspan>
+            </text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M1300 40l8-14h-16z"/>
+            <text x="1300" y="27.75" fill="gray" font-size="18" transform="rotate(-90 1300 21)">REG A <tspan text-decoration="overline">OUT</tspan>
+            </text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M299 470h-58v-20h58z"/>
+            <path fill="gray" d="M295 466h-25v-12h25z"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M580 440l14 8v-16z"/>
+            <text x="599" y="446.75" fill="gray" font-size="18">BUS</text>
+        </g>
+        <g>
+            <path fill="#ffffb4" fill-opacity=".784" d="M401 566h158v68H401z"/>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M401 566h158v68H401z"/>
+            <text x="480" y="558" font-size="24" text-anchor="middle">B</text>
+            <path fill="none" stroke="#000" stroke-width="1.4" d="M401 587l7-7-7-7"/>
+            <text x="411" y="586.75" fill="gray" font-size="18">CLOCK</text>
+            <text x="404" y="606.75" fill="gray" font-size="18">
+                <tspan text-decoration="overline">IN</tspan>
+            </text>
+            <text x="404" y="626.75" fill="gray" font-size="18">
+                <tspan text-decoration="overline">OUT</tspan>
+            </text>
+            <text x="556" y="586.75" fill="gray" font-size="18" text-anchor="end">BUS</text>
+            <text x="556" y="606.75" fill="gray" font-size="18" text-anchor="end">OUT</text>
+            <text x="480" y="651.5" fill="gray" font-size="18" text-anchor="middle">REG</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M580 600l14 8v-16z"/>
+            <text x="599" y="606.75" fill="gray" font-size="18">REG B</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M380 580l-14-8v16z"/>
+            <text x="361" y="586.75" fill="gray" font-size="18" text-anchor="end">CLOCK</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M380 620l-14-8v16z"/>
+            <text x="361" y="626.75" fill="gray" font-size="18" text-anchor="end">REG B <tspan text-decoration="overline">OUT</tspan>
+            </text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M299 610h-58v-20h58z"/>
+            <path fill="gray" d="M295 606h-25v-12h25z"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M580 580l14 8v-16z"/>
+            <text x="599" y="586.75" fill="gray" font-size="18">BUS</text>
+        </g>
+        <g>
+            <circle cx="960" cy="631" r="10" stroke="#000" stroke-width="2.8"/>
+            <circle cx="960" cy="631" r="8" fill="#0c0"/>
+        </g>
+        <g>
+            <text x="963" y="587" fill="gray" font-size="12" transform="rotate(-90 963 578)">0-7</text>
+            <text x="963" y="611" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 963 602)">0</text>
+            <text x="943" y="611" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 943 602)">1</text>
+            <text x="923" y="611" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 923 602)">2</text>
+            <text x="903" y="611" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 903 602)">3</text>
+            <text x="883" y="611" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 883 602)">4</text>
+            <text x="863" y="611" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 863 602)">5</text>
+            <text x="843" y="611" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 843 602)">6</text>
+            <text x="823" y="611" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 823 602)">7</text>
+            <path stroke="#000" stroke-width="2.8" d="M962 588v4H818v-4z"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M940 560l-14-8v16z"/>
+            <text x="921" y="566.75" fill="gray" font-size="18" text-anchor="end">REG B</text>
+        </g>
+        <g>
+            <circle cx="940" cy="631" r="10" stroke="#000" stroke-width="2.8"/>
+            <circle cx="940" cy="631" r="8" fill="#0c0"/>
+        </g>
+        <g>
+            <circle cx="920" cy="631" r="10" stroke="#000" stroke-width="2.8"/>
+            <circle cx="920" cy="631" r="8" fill="#0c0"/>
+        </g>
+        <g>
+            <circle cx="900" cy="631" r="10" stroke="#000" stroke-width="2.8"/>
+            <circle cx="900" cy="631" r="8" fill="#0c0"/>
+        </g>
+        <g>
+            <circle cx="880" cy="631" r="10" stroke="#000" stroke-width="2.8"/>
+            <circle cx="880" cy="631" r="8" fill="#0c0"/>
+        </g>
+        <g>
+            <circle cx="860" cy="631" r="10" stroke="#000" stroke-width="2.8"/>
+            <circle cx="860" cy="631" r="8" fill="#0c0"/>
+        </g>
+        <g>
+            <circle cx="840" cy="631" r="10" stroke="#000" stroke-width="2.8"/>
+            <circle cx="840" cy="631" r="8" fill="#0c0"/>
+        </g>
+        <g>
+            <circle cx="820" cy="631" r="10" stroke="#000" stroke-width="2.8"/>
+            <circle cx="820" cy="631" r="8" fill="#0c0"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M1340 40l8-14h-16z"/>
+            <text x="1340" y="27.75" fill="gray" font-size="18" transform="rotate(-90 1340 21)">REG B <tspan text-decoration="overline">OUT</tspan>
+            </text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M1180 40l8-14h-16z"/>
+            <text x="1180" y="27.75" fill="gray" font-size="18" transform="rotate(-90 1180 21)">BUS OUT 0</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M1420 40l8-14h-16z"/>
+            <text x="1420" y="27.75" fill="gray" font-size="18" transform="rotate(-90 1420 21)">BUS OUT 6</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M1380 200l-8 14h16z"/>
+            <text x="1380" y="225.75" fill="gray" font-size="18" text-anchor="end" transform="rotate(-90 1380 219)">BUS OUT 7</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M1390 430h-49v-60h49c10 0 30 10 29 30 0 20-19 30-29 30z"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M1440 400l14 8v-16z"/>
+            <text x="1459" y="406.75" fill="gray" font-size="18">OUT 1s</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M1320 380l-14-8v16z"/>
+            <text x="1301" y="386.75" fill="gray" font-size="18" text-anchor="end">BUS OUT 0</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M1320 400l-14-8v16z"/>
+            <text x="1301" y="406.75" fill="gray" font-size="18" text-anchor="end">BUS OUT 6</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M1320 420l-14-8v16z"/>
+            <text x="1301" y="426.75" fill="gray" font-size="18" text-anchor="end">BUS OUT 7</text>
+        </g>
+        <g>
+            <path fill="#ffffb4" fill-opacity=".784" d="M401 686h158v88H401z"/>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M401 686h158v88H401z"/>
+            <text x="404" y="706.75" fill="gray" font-size="18">A</text>
+            <text x="404" y="726.75" fill="gray" font-size="18">B</text>
+            <text x="404" y="746.75" fill="gray" font-size="18">SUBTRACT</text>
+            <text x="404" y="766.75" fill="gray" font-size="18">
+                <tspan text-decoration="overline">OUT</tspan>
+            </text>
+            <text x="556" y="706.75" fill="gray" font-size="18" text-anchor="end">BUS</text>
+            <text x="556" y="726.75" fill="gray" font-size="18" text-anchor="end">PEEK</text>
+            <text x="480" y="791.5" fill="gray" font-size="18" text-anchor="middle">ALU</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M380 700l-14-8v16z"/>
+            <text x="361" y="706.75" fill="gray" font-size="18" text-anchor="end">REG A</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M380 720l-14-8v16z"/>
+            <text x="361" y="726.75" fill="gray" font-size="18" text-anchor="end">REG B</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M580 700l14 8v-16z"/>
+            <text x="599" y="706.75" fill="gray" font-size="18">BUS</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M380 760l-14-8v16z"/>
+            <text x="361" y="766.75" fill="gray" font-size="18" text-anchor="end">ALU <tspan text-decoration="overline">OUT</tspan>
+            </text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M1380 40l8-14h-16z"/>
+            <text x="1380" y="27.75" fill="gray" font-size="18" transform="rotate(-90 1380 21)">ALU <tspan text-decoration="overline">OUT</tspan>
+            </text>
+        </g>
+        <g>
+            <circle cx="960" cy="751" r="10" stroke="#000" stroke-width="2.8"/>
+            <circle cx="960" cy="751" r="8" fill="#cc0"/>
+        </g>
+        <g>
+            <text x="963" y="707" fill="gray" font-size="12" transform="rotate(-90 963 698)">0-7</text>
+            <text x="963" y="731" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 963 722)">0</text>
+            <text x="943" y="731" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 943 722)">1</text>
+            <text x="923" y="731" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 923 722)">2</text>
+            <text x="903" y="731" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 903 722)">3</text>
+            <text x="883" y="731" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 883 722)">4</text>
+            <text x="863" y="731" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 863 722)">5</text>
+            <text x="843" y="731" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 843 722)">6</text>
+            <text x="823" y="731" fill="gray" font-size="12" text-anchor="end" transform="rotate(-90 823 722)">7</text>
+            <path stroke="#000" stroke-width="2.8" d="M962 708v4H818v-4z"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M940 680l-14-8v16z"/>
+            <text x="921" y="686.75" fill="gray" font-size="18" text-anchor="end">PEEK ALU</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M580 720l14 8v-16z"/>
+            <text x="599" y="726.75" fill="gray" font-size="18">PEEK ALU</text>
+        </g>
+        <g>
+            <circle cx="940" cy="751" r="10" stroke="#000" stroke-width="2.8"/>
+            <circle cx="940" cy="751" r="8" fill="#cc0"/>
+        </g>
+        <g>
+            <circle cx="920" cy="751" r="10" stroke="#000" stroke-width="2.8"/>
+            <circle cx="920" cy="751" r="8" fill="#cc0"/>
+        </g>
+        <g>
+            <circle cx="900" cy="751" r="10" stroke="#000" stroke-width="2.8"/>
+            <circle cx="900" cy="751" r="8" fill="#cc0"/>
+        </g>
+        <g>
+            <circle cx="880" cy="751" r="10" stroke="#000" stroke-width="2.8"/>
+            <circle cx="880" cy="751" r="8" fill="#cc0"/>
+        </g>
+        <g>
+            <circle cx="860" cy="751" r="10" stroke="#000" stroke-width="2.8"/>
+            <circle cx="860" cy="751" r="8" fill="#cc0"/>
+        </g>
+        <g>
+            <circle cx="840" cy="751" r="10" stroke="#000" stroke-width="2.8"/>
+            <circle cx="840" cy="751" r="8" fill="#cc0"/>
+        </g>
+        <g>
+            <circle cx="820" cy="751" r="10" stroke="#000" stroke-width="2.8"/>
+            <circle cx="820" cy="751" r="8" fill="#cc0"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M299 750h-58v-20h58z"/>
+            <path fill="gray" d="M245 746h25v-12h-25z"/>
+        </g>
+        <g>
+            <path fill="#ffffb4" fill-opacity=".784" d="M401 826h198v108H401z"/>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M401 826h198v108H401z"/>
+            <path fill="none" stroke="#000" stroke-width="1.4" d="M401 847l7-7-7-7"/>
+            <text x="411" y="846.75" fill="gray" font-size="18">CLOCK</text>
+            <path fill="none" stroke="#000" stroke-width="1.4" d="M401 867l7-7-7-7"/>
+            <text x="411" y="866.75" fill="gray" font-size="18">REFRESH</text>
+            <text x="404" y="886.75" fill="gray" font-size="18">BUS</text>
+            <text x="404" y="906.75" fill="gray" font-size="18">SIGNED</text>
+            <text x="404" y="926.75" fill="gray" font-size="18">
+                <tspan text-decoration="overline">IN</tspan>
+            </text>
+            <text x="596" y="846.75" fill="gray" font-size="18" text-anchor="end">PLACE</text>
+            <text x="596" y="866.75" fill="gray" font-size="18" text-anchor="end">7 SEG OUT</text>
+            <text x="500" y="951.5" fill="gray" font-size="18" text-anchor="middle">OUT</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M1110 801h80v138h-80z"/>
+            <path fill="#f33" d="M1132.04 805h40.76l5.35 5.61-5.87 5.61h-40.76l-5.35-5.61zM1179.49 812.01l5.35 5.61-2.1 45.37-5.87 5.61-5.35-5.61 2.1-45.37zM1176.74 871.4l5.35 5.61-2.09 45.37-5.87 5.61-5.35-5.61 2.1-45.37zM1126.55 923.78h40.77l5.35 5.61-5.87 5.61h-40.76l-5.35-5.61zM1121.96 871.4l5.35 5.61-2.09 45.37-5.86 5.61-5.35-5.61 2.09-45.37zM1124.7 812.01l5.35 5.61-2.09 45.37-5.87 5.61-5.34-5.61 2.1-45.37zM1129.3 864.39h40.76l5.35 5.61-5.87 5.61h-40.76l-5.35-5.61z"/>
+            <circle cx="1182" cy="931" r="4" fill="#f33"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M1210 801h80v138h-80z"/>
+            <path fill="#f33" d="M1232.04 805h40.76l5.35 5.61-5.87 5.61h-40.76l-5.35-5.61zM1279.49 812.01l5.35 5.61-2.1 45.37-5.87 5.61-5.35-5.61 2.1-45.37zM1276.74 871.4l5.35 5.61-2.09 45.37-5.87 5.61-5.35-5.61 2.1-45.37zM1226.55 923.78h40.77l5.35 5.61-5.87 5.61h-40.76l-5.35-5.61zM1221.96 871.4l5.35 5.61-2.09 45.37-5.86 5.61-5.35-5.61 2.09-45.37zM1224.7 812.01l5.35 5.61-2.09 45.37-5.87 5.61-5.34-5.61 2.1-45.37zM1229.3 864.39h40.76l5.35 5.61-5.87 5.61h-40.76l-5.35-5.61z"/>
+            <circle cx="1282" cy="931" r="4" fill="#f33"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M1310 801h80v138h-80z"/>
+            <path fill="#f33" d="M1332.04 805h40.76l5.35 5.61-5.87 5.61h-40.76l-5.35-5.61zM1379.49 812.01l5.35 5.61-2.1 45.37-5.87 5.61-5.35-5.61 2.1-45.37zM1376.74 871.4l5.35 5.61-2.09 45.37-5.87 5.61-5.35-5.61 2.1-45.37zM1326.55 923.78h40.77l5.35 5.61-5.87 5.61h-40.76l-5.35-5.61zM1321.96 871.4l5.35 5.61-2.09 45.37-5.86 5.61-5.35-5.61 2.09-45.37zM1324.7 812.01l5.35 5.61-2.09 45.37-5.87 5.61-5.34-5.61 2.1-45.37zM1329.3 864.39h40.76l5.35 5.61-5.87 5.61h-40.76l-5.35-5.61z"/>
+            <circle cx="1382" cy="931" r="4" fill="#f33"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M1410 801h80v138h-80z"/>
+            <path fill="#f33" d="M1432.04 805h40.76l5.35 5.61-5.87 5.61h-40.76l-5.35-5.61zM1479.49 812.01l5.35 5.61-2.1 45.37-5.87 5.61-5.35-5.61 2.1-45.37zM1476.74 871.4l5.35 5.61-2.09 45.37-5.87 5.61-5.35-5.61 2.1-45.37zM1426.55 923.78h40.77l5.35 5.61-5.87 5.61h-40.76l-5.35-5.61zM1421.96 871.4l5.35 5.61-2.09 45.37-5.86 5.61-5.35-5.61 2.09-45.37zM1424.7 812.01l5.35 5.61-2.09 45.37-5.87 5.61-5.34-5.61 2.1-45.37zM1429.3 864.39h40.76l5.35 5.61-5.87 5.61h-40.76l-5.35-5.61z"/>
+            <circle cx="1482" cy="931" r="4" fill="#f33"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M1120 780l8-14h-16z"/>
+            <text x="1120" y="767.75" fill="gray" font-size="18" transform="rotate(-90 1120 761)">a</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M1140 780l8-14h-16z"/>
+            <text x="1140" y="767.75" fill="gray" font-size="18" transform="rotate(-90 1140 761)">b</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M1160 780l8-14h-16z"/>
+            <text x="1160" y="767.75" fill="gray" font-size="18" transform="rotate(-90 1160 761)">c</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M1180 780l8-14h-16z"/>
+            <text x="1180" y="767.75" fill="gray" font-size="18" transform="rotate(-90 1180 761)">d</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M1220 780l8-14h-16z"/>
+            <text x="1220" y="767.75" fill="gray" font-size="18" transform="rotate(-90 1220 761)">a</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M1240 780l8-14h-16z"/>
+            <text x="1240" y="767.75" fill="gray" font-size="18" transform="rotate(-90 1240 761)">b</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M1260 780l8-14h-16z"/>
+            <text x="1260" y="767.75" fill="gray" font-size="18" transform="rotate(-90 1260 761)">c</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M1280 780l8-14h-16z"/>
+            <text x="1280" y="767.75" fill="gray" font-size="18" transform="rotate(-90 1280 761)">d</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M1320 780l8-14h-16z"/>
+            <text x="1320" y="767.75" fill="gray" font-size="18" transform="rotate(-90 1320 761)">a</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M1340 780l8-14h-16z"/>
+            <text x="1340" y="767.75" fill="gray" font-size="18" transform="rotate(-90 1340 761)">b</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M1360 780l8-14h-16z"/>
+            <text x="1360" y="767.75" fill="gray" font-size="18" transform="rotate(-90 1360 761)">c</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M1380 780l8-14h-16z"/>
+            <text x="1380" y="767.75" fill="gray" font-size="18" transform="rotate(-90 1380 761)">d</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M1420 780l8-14h-16z"/>
+            <text x="1420" y="767.75" fill="gray" font-size="18" transform="rotate(-90 1420 761)">a</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M1440 780l8-14h-16z"/>
+            <text x="1440" y="767.75" fill="gray" font-size="18" transform="rotate(-90 1440 761)">b</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M1460 780l8-14h-16z"/>
+            <text x="1460" y="767.75" fill="gray" font-size="18" transform="rotate(-90 1460 761)">c</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M1480 780l8-14h-16z"/>
+            <text x="1480" y="767.75" fill="gray" font-size="18" transform="rotate(-90 1480 761)">d</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M1120 960l-8 14h16z"/>
+            <text x="1120" y="985.75" fill="gray" font-size="18" text-anchor="end" transform="rotate(-90 1120 979)">e</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M1140 960l-8 14h16z"/>
+            <text x="1140" y="985.75" fill="gray" font-size="18" text-anchor="end" transform="rotate(-90 1140 979)">f</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M1160 960l-8 14h16z"/>
+            <text x="1160" y="985.75" fill="gray" font-size="18" text-anchor="end" transform="rotate(-90 1160 979)">g</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M1220 960l-8 14h16z"/>
+            <text x="1220" y="985.75" fill="gray" font-size="18" text-anchor="end" transform="rotate(-90 1220 979)">e</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M1240 960l-8 14h16z"/>
+            <text x="1240" y="985.75" fill="gray" font-size="18" text-anchor="end" transform="rotate(-90 1240 979)">f</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M1260 960l-8 14h16z"/>
+            <text x="1260" y="985.75" fill="gray" font-size="18" text-anchor="end" transform="rotate(-90 1260 979)">g</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M1320 960l-8 14h16z"/>
+            <text x="1320" y="985.75" fill="gray" font-size="18" text-anchor="end" transform="rotate(-90 1320 979)">e</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M1340 960l-8 14h16z"/>
+            <text x="1340" y="985.75" fill="gray" font-size="18" text-anchor="end" transform="rotate(-90 1340 979)">f</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M1360 960l-8 14h16z"/>
+            <text x="1360" y="985.75" fill="gray" font-size="18" text-anchor="end" transform="rotate(-90 1360 979)">g</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M1420 960l-8 14h16z"/>
+            <text x="1420" y="985.75" fill="gray" font-size="18" text-anchor="end" transform="rotate(-90 1420 979)">e</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M1440 960l-8 14h16z"/>
+            <text x="1440" y="985.75" fill="gray" font-size="18" text-anchor="end" transform="rotate(-90 1440 979)">f</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M1460 960l-8 14h16z"/>
+            <text x="1460" y="985.75" fill="gray" font-size="18" text-anchor="end" transform="rotate(-90 1460 979)">g</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M1200 980l-8 14h16z"/>
+            <text x="1200" y="1005.75" fill="gray" font-size="18" text-anchor="end" transform="rotate(-90 1200 999)">SIGN</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M1300 980l-8 14h16z"/>
+            <text x="1300" y="1005.75" fill="gray" font-size="18" text-anchor="end" transform="rotate(-90 1300 999)">100s</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M1400 980l-8 14h16z"/>
+            <text x="1400" y="1005.75" fill="gray" font-size="18" text-anchor="end" transform="rotate(-90 1400 999)">10s</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M1500 980l-8 14h16z"/>
+            <text x="1500" y="1005.75" fill="gray" font-size="18" text-anchor="end" transform="rotate(-90 1500 999)">1s</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M299 910h-58v-20h58z"/>
+            <path fill="gray" d="M245 906h25v-12h-25z"/>
+        </g>
+        <g>
+            <text x="638" y="837" fill="gray" font-size="12" text-anchor="end">0-3</text>
+            <text x="662" y="837" fill="gray" font-size="12">0</text>
+            <text x="662" y="857" fill="gray" font-size="12">1</text>
+            <text x="662" y="877" fill="gray" font-size="12">2</text>
+            <text x="662" y="897" fill="gray" font-size="12">3</text>
+            <path stroke="#000" stroke-width="2.8" d="M648 838h4v64h-4z"/>
+        </g>
+        <g>
+            <text x="638" y="937" fill="gray" font-size="12" text-anchor="end">0-6</text>
+            <text x="662" y="937" fill="gray" font-size="12">0</text>
+            <text x="662" y="957" fill="gray" font-size="12">1</text>
+            <text x="662" y="977" fill="gray" font-size="12">2</text>
+            <text x="662" y="997" fill="gray" font-size="12">3</text>
+            <text x="662" y="1017" fill="gray" font-size="12">4</text>
+            <text x="662" y="1037" fill="gray" font-size="12">5</text>
+            <text x="662" y="1057" fill="gray" font-size="12">6</text>
+            <path stroke="#000" stroke-width="2.8" d="M648 938h4v124h-4z"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M680 980l14 8v-16z"/>
+            <text x="699" y="986.75" fill="gray" font-size="18">e</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M680 960l14 8v-16z"/>
+            <text x="699" y="966.75" fill="gray" font-size="18">f</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M680 940l14 8v-16z"/>
+            <text x="699" y="946.75" fill="gray" font-size="18">g</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M680 1060l14 8v-16z"/>
+            <text x="699" y="1066.75" fill="gray" font-size="18">a</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M680 1040l14 8v-16z"/>
+            <text x="699" y="1046.75" fill="gray" font-size="18">b</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M680 1020l14 8v-16z"/>
+            <text x="699" y="1026.75" fill="gray" font-size="18">c</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M680 1000l14 8v-16z"/>
+            <text x="699" y="1006.75" fill="gray" font-size="18">d</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M680 900l14 8v-16z"/>
+            <text x="699" y="906.75" fill="gray" font-size="18">SIGN</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M680 880l14 8v-16z"/>
+            <text x="699" y="886.75" fill="gray" font-size="18">100s</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M680 860l14 8v-16z"/>
+            <text x="699" y="866.75" fill="gray" font-size="18">10s</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M680 840l14 8v-16z"/>
+            <text x="699" y="846.75" fill="gray" font-size="18">1s</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M380 840l-14-8v16z"/>
+            <text x="361" y="846.75" fill="gray" font-size="18" text-anchor="end">CLOCK</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M380 880l-14-8v16z"/>
+            <text x="361" y="886.75" fill="gray" font-size="18" text-anchor="end">BUS</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M449-155h30v30h-30z"/>
+            <text x="435" y="-131" font-size="24" text-anchor="end">OUT CLOCK</text>
+            <path fill="none" stroke="#000" stroke-width="1.4" d="M455-135h5v-10h5v10h5v-10h5"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M500-140l14 8v-16z"/>
+            <text x="519" y="-133.25" fill="gray" font-size="18">OUT CLOCK</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M380 860l-14-8v16z"/>
+            <text x="361" y="866.75" fill="gray" font-size="18" text-anchor="end">OUT CLOCK</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M299 930h-58v-20h58z"/>
+            <path fill="gray" d="M295 926h-25v-12h25z"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M401-50h58v20h-58z"/>
+            <text x="430" y="-58" font-size="24" text-anchor="middle">HALT</text>
+            <text x="404" y="-33.25" fill="gray" font-size="18">stop</text>
+            <text x="430" y="-12.5" fill="gray" font-size="18" text-anchor="middle">Stop</text>
+        </g>
+        <g>
+            <path fill="none" stroke="#000" stroke-width="2.8" d="M299-30h-58v-20h58z"/>
+            <path fill="gray" d="M245-34h25v-12h-25z"/>
+        </g>
+    </g>
+</svg>
