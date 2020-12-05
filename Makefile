@@ -1,9 +1,12 @@
 DIG_FILES := $(shell ls Simulation/*.dig)
 SVG_FILES := $(addprefix Schematics/Simulation\ , $(notdir $(DIG_FILES:.dig=.svg)))
 
-DIGITAL_JAR_PATH ?= Simulation/Digital/Digital.jar
+DIGITAL_JAR_PATH ?= Digital/Digital.jar
 
-simulation-svgs: $(SVG_FILES)
+run-digital:
+	@java -jar "$(DIGITAL_JAR_PATH)"
+
+digital-svgs: $(SVG_FILES)
 	@echo Done!
 
 Schematics/Simulation\ %.svg: Simulation/%.dig

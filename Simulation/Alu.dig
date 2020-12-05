@@ -659,7 +659,7 @@
           <int>8</int>
         </entry>
       </elementAttributes>
-      <pos x="80" y="460"/>
+      <pos x="80" y="440"/>
     </visualElement>
     <visualElement>
       <elementName>Splitter</elementName>
@@ -1429,6 +1429,32 @@
       </elementAttributes>
       <pos x="1100" y="380"/>
     </visualElement>
+    <visualElement>
+      <elementName>Rectangle</elementName>
+      <elementAttributes>
+        <entry>
+          <string>textFontSize</string>
+          <int>12</int>
+        </entry>
+        <entry>
+          <string>RectBottom</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>RectHeight</string>
+          <int>2</int>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>Digital workaround for bus sharing</string>
+        </entry>
+        <entry>
+          <string>RectWidth</string>
+          <int>6</int>
+        </entry>
+      </elementAttributes>
+      <pos x="120" y="400"/>
+    </visualElement>
   </visualElements>
   <wires>
     <wire>
@@ -1474,10 +1500,6 @@
     <wire>
       <p1 x="-120" y="460"/>
       <p2 x="-100" y="460"/>
-    </wire>
-    <wire>
-      <p1 x="80" y="460"/>
-      <p2 x="100" y="460"/>
     </wire>
     <wire>
       <p1 x="-120" y="400"/>
@@ -1546,6 +1568,10 @@
     <wire>
       <p1 x="-120" y="500"/>
       <p2 x="-100" y="500"/>
+    </wire>
+    <wire>
+      <p1 x="80" y="440"/>
+      <p2 x="100" y="440"/>
     </wire>
     <wire>
       <p1 x="-120" y="440"/>
@@ -1729,7 +1755,7 @@
     </wire>
     <wire>
       <p1 x="100" y="400"/>
-      <p2 x="100" y="460"/>
+      <p2 x="100" y="440"/>
     </wire>
     <wire>
       <p1 x="1380" y="300"/>
