@@ -1328,7 +1328,7 @@ fc,fc,fc,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
         </entry>
         <entry>
           <string>Label</string>
-          <string>7 SEG OUT</string>
+          <string>OUTPUT_7SEG</string>
         </entry>
         <entry>
           <string>Bits</string>
@@ -1464,7 +1464,7 @@ fc,fc,fc,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>~IN</string>
+          <string>~IN_BUS</string>
         </entry>
       </elementAttributes>
       <pos x="420" y="140"/>
