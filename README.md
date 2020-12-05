@@ -6,7 +6,7 @@ My processor build using the SAP-1 (Simple-As-Possible-1) architecture.
 
 Before breadboarding I design the modules in [Digital](https://github.com/hneemann/Digital). This helps me better understand the problems and kind of "proves" a design.
 
-![Screenshot of a simulation](./screenshots/Simulation%202020-12-05.svg)
+![Processor simulation](./schematics/Simulation%20Processor.svg)
 
 ## Modules
 
@@ -15,6 +15,8 @@ Before breadboarding I design the modules in [Digital](https://github.com/hneema
 ### Register
 
 [dig file](./simulation/Register.dig)
+
+![Register simulation](./schematics/Simulation%20Register.svg)
 
 ### Program counter
 
