@@ -12,7 +12,7 @@
     </entry>
     <entry>
       <string>Width</string>
-      <int>8</int>
+      <int>10</int>
     </entry>
   </attributes>
   <visualElements>
@@ -95,7 +95,7 @@
         </entry>
         <entry>
           <string>Label</string>
-          <string>~IN</string>
+          <string>~IN_BUS</string>
         </entry>
         <entry>
           <string>InDefault</string>

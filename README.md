@@ -6,42 +6,52 @@ My processor build using the SAP-1 (Simple-As-Possible-1) architecture.
 
 Before breadboarding I design the modules in [Digital](https://github.com/hneemann/Digital). This helps me better understand the problems and kind of "proves" a design.
 
-![Processor simulation](./schematics/Simulation%20Processor.svg)
+![Processor simulation](./Schematics/Simulation%20Processor.svg)
 
 ## Modules
 
-[Processor dig file](./simulation/Processor.dig)
+[Processor dig file](./Simulation/Processor.dig)
 
 ### Register
 
-[dig file](./simulation/Register.dig)
+[dig file](./Simulation/Register.dig)
 
-![Register simulation](./schematics/Simulation%20Register.svg)
+![Register simulation](./Schematics/Simulation%20Register.svg)
 
 ### Program counter
 
-[dig file](./simulation/Pc.dig)
+[dig file](./Simulation/Pc.dig)
+
+![Register simulation](./Schematics/Simulation%20Pc.svg)
 
 ### Arithmetic logic unit
 
-[dig file](./simulation/Alu.dig)
+[dig file](./Simulation/Alu.dig)
+
+![Register simulation](./Schematics/Simulation%20Alu.svg)
 
 ### Memory address register
 
-[dig file](./simulation/mar.dig)
+[dig file](./Simulation/mar.dig)
+
+![Register simulation](./Schematics/Simulation%20Mar.svg)
 
 ### Ram
 
-[dig file](./simulation/Ram.dig)
+[dig file](./Simulation/Ram.dig)
+
+![Register simulation](./Schematics/Simulation%20Ram.svg)
 
 ### Out register
 
-[dig file](./simulation/Out.dig)
+[dig file](./Simulation/Out.dig)
+
+![Register simulation](./Schematics/Simulation%20Out.svg)
 
 ### Instrution register
 
-None yet
+None yet.
 
 ### Control unit
 
-None yet
+None yet.
