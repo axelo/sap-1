@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Digital by H.Neemann -->
-<!-- created: Sat Dec 05 20:37:09 CET 2020 -->
+<!-- created: Sat Dec 05 20:47:29 CET 2020 -->
 
 <svg
    xmlns:svg="http://www.w3.org/2000/svg"
@@ -9,10 +9,6 @@
    height="217.2mm"
    viewBox="179 -377 1448 1448">
 <g stroke-linecap="square">
-<path d="M 1032,-340 L 1082,-340" stroke-dasharray="4.0,4.0" stroke="#000000" stroke-width="0.7" fill="none"/>
-<path d="M 1032,-305 L 1082,-305" stroke-dasharray="4.0,4.0" stroke="#000000" stroke-width="0.7" fill="none"/>
-<path d="M 1082,-375 L 1032,-375 L 1032,-270 L 1082,-270 Z" stroke-dasharray="4.0,4.0" stroke="#000000" stroke-width="0.7" fill="none"/>
-<path d="M 1057,-375 L 1057,-270" stroke-dasharray="4.0,4.0" stroke="#000000" stroke-width="0.7" fill="none"/>
 <path d="M 380,320 L 400,320" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 600,320 L 620,320" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 940,0 L 960,0 L 960,20" stroke="#0000b2" stroke-width="2.8" fill="none"/>
@@ -278,6 +274,10 @@
 <path d="M 660,1020 L 650,1020" stroke="#000000" stroke-width="2.8" fill="none"/>
 <path d="M 660,1040 L 650,1040" stroke="#000000" stroke-width="2.8" fill="none"/>
 <path d="M 660,1060 L 650,1060" stroke="#000000" stroke-width="2.8" fill="none"/>
+<path d="M 1032,-340 L 1082,-340" stroke-dasharray="4.0,4.0" stroke="#000000" stroke-width="0.7" fill="none"/>
+<path d="M 1032,-305 L 1082,-305" stroke-dasharray="4.0,4.0" stroke="#000000" stroke-width="0.7" fill="none"/>
+<path d="M 1082,-375 L 1032,-375 L 1032,-270 L 1082,-270 Z" stroke-dasharray="4.0,4.0" stroke="#000000" stroke-width="0.7" fill="none"/>
+<path d="M 1057,-375 L 1057,-270" stroke-dasharray="4.0,4.0" stroke="#000000" stroke-width="0.7" fill="none"/>
 <g>
 <circle cx="500.0" cy="-200.0" r="4.0" stroke="#0000b2" stroke-width="2.8" fill="#0000b2" />
 <circle cx="580.0" cy="-200.0" r="4.0" stroke="#0000b2" stroke-width="2.8" fill="#0000b2" />
@@ -674,7 +674,7 @@
 <circle cx="820.0" cy="351.0" r="8.0" stroke="#ff3300" stroke-width="0.0" fill="#ff3300" />
 </g>
 <g>
-<path d="M 521,-210 L 539,-210 L 539,-190 L 521,-190 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<path d="M 521,-212 L 539,-200 L 521,-188 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
 <circle cx="550.0" cy="-200.0" r="9.0" stroke="#000000" stroke-width="2.8" fill="none" />
 </g>
 <g>
@@ -870,8 +870,7 @@
 <text text-anchor="end" x="1380.0" y="225.75" fill="#808080" style="font-size:18px" transform="rotate(-90,1380.0,219.0)" >BUS OUT 7</text>
 </g>
 <g>
-<path d="M 1341,370 L 1419,370 L 1419,430 L 1341,430 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="middle" x="1380.0" y="392.0" fill="#000000" style="font-size:24px">&amp;</text>
+<path d="M 1390,430 L 1341,430 L 1341,370 L 1390,370 C 1400,370 1420,380 1419,400 C 1419,420 1400,430 1390,430 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
 </g>
 <g>
 <path d="M 1440,400 L 1454,408 L 1454,392 Z" stroke="#000000" stroke-width="2.8" fill="none"/>

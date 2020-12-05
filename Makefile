@@ -11,4 +11,4 @@ digital-svgs: $(SVG_FILES)
 
 Schematics/Simulation\ %.svg: Simulation/%.dig
 	@echo Creating svg from $(notdir $<)..
-	@java -cp "$(DIGITAL_JAR_PATH)" CLI svg -dig "$<" -svg "$@" -noPinMarker -thinnerLines
+	@java -cp "$(DIGITAL_JAR_PATH)" CLI svg -dig "$<" -svg "$@" -ieee -noPinMarker -thinnerLines
