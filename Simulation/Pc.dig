@@ -123,7 +123,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>~IN_BUS</string>
+          <string>BUS ~IN</string>
         </entry>
         <entry>
           <string>InDefault</string>
@@ -137,7 +137,7 @@
       <elementAttributes>
         <entry>
           <string>NetName</string>
-          <string>~IN_BUS</string>
+          <string>BUS ~IN</string>
         </entry>
       </elementAttributes>
       <pos x="300" y="280"/>
@@ -151,7 +151,7 @@
         </entry>
         <entry>
           <string>NetName</string>
-          <string>~IN_BUS</string>
+          <string>BUS ~IN</string>
         </entry>
       </elementAttributes>
       <pos x="1600" y="140"/>
@@ -209,7 +209,7 @@
         </entry>
         <entry>
           <string>NetName</string>
-          <string>~IN_BUS</string>
+          <string>BUS ~IN</string>
         </entry>
       </elementAttributes>
       <pos x="1240" y="140"/>
@@ -388,7 +388,7 @@
       <elementAttributes>
         <entry>
           <string>NetName</string>
-          <string>~OUT_BUS</string>
+          <string>BUS ~OUT</string>
         </entry>
       </elementAttributes>
       <pos x="600" y="360"/>
@@ -398,7 +398,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>~OUT_BUS</string>
+          <string>BUS ~OUT</string>
         </entry>
         <entry>
           <string>InDefault</string>
@@ -412,7 +412,7 @@
       <elementAttributes>
         <entry>
           <string>NetName</string>
-          <string>~OUT_BUS</string>
+          <string>BUS ~OUT</string>
         </entry>
       </elementAttributes>
       <pos x="300" y="340"/>
@@ -538,7 +538,7 @@
         </entry>
         <entry>
           <string>NetName</string>
-          <string>~OUT_BUS</string>
+          <string>BUS ~OUT</string>
         </entry>
       </elementAttributes>
       <pos x="560" y="140"/>
