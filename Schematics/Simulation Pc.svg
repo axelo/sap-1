@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Digital by H.Neemann -->
-<!-- created: Sat Dec 05 20:47:26 CET 2020 -->
+<!-- created: Sun Dec 06 22:28:45 CET 2020 -->
 
 <svg
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   width="222.6mm"
-   height="82.05mm"
-   viewBox="138 50 1484 547">
+   width="224.4mm"
+   height="83.4mm"
+   viewBox="126 41 1496 556">
 <g stroke-linecap="square">
 <path d="M 340,480 L 360,480" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 620,480 L 640,480" stroke="#0000b2" stroke-width="2.8" fill="none"/>
@@ -195,15 +195,15 @@
 <g>
 <path d="M 249,265 L 279,265 L 279,295 L 249,295 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
 <circle cx="264.0" cy="280.0" r="9.0" stroke="#000000" stroke-width="2.8" fill="none" />
-<text text-anchor="end" x="235.0" y="289.0" fill="#000000" style="font-size:24px"><tspan style="font-style:italic;"><tspan style="text-decoration:overline;">IN</tspan><tspan style="font-size:80%;baseline-shift:sub;">BUS</tspan></tspan></text>
+<text text-anchor="end" x="235.0" y="289.0" fill="#000000" style="font-size:24px"><tspan style="font-style:italic;">BUS <tspan style="text-decoration:overline;">IN</tspan></tspan></text>
 </g>
 <g>
 <path d="M 300,280 L 314,288 L 314,272 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="start" x="319.0" y="286.75" fill="#808080" style="font-size:18px"><tspan style="text-decoration:overline;">IN</tspan><tspan style="font-size:80%;baseline-shift:sub;">BUS</tspan></text>
+<text text-anchor="start" x="319.0" y="286.75" fill="#808080" style="font-size:18px">BUS <tspan style="text-decoration:overline;">IN</tspan></text>
 </g>
 <g>
 <path d="M 1600,140 L 1608,126 L 1592,126 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="start" x="1600.0" y="127.75" fill="#808080" style="font-size:18px" transform="rotate(-90,1600.0,121.0)" ><tspan style="text-decoration:overline;">IN</tspan><tspan style="font-size:80%;baseline-shift:sub;">BUS</tspan></text>
+<text text-anchor="start" x="1600.0" y="127.75" fill="#808080" style="font-size:18px" transform="rotate(-90,1600.0,121.0)" >BUS <tspan style="text-decoration:overline;">IN</tspan></text>
 </g>
 <g>
 <path d="M 1550,144 L 1560,131 L 1570,144" stroke="#000000" stroke-width="2.8" fill="none"/>
@@ -256,7 +256,7 @@
 </g>
 <g>
 <path d="M 1240,140 L 1248,126 L 1232,126 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="start" x="1240.0" y="127.75" fill="#808080" style="font-size:18px" transform="rotate(-90,1240.0,121.0)" ><tspan style="text-decoration:overline;">IN</tspan><tspan style="font-size:80%;baseline-shift:sub;">BUS</tspan></text>
+<text text-anchor="start" x="1240.0" y="127.75" fill="#808080" style="font-size:18px" transform="rotate(-90,1240.0,121.0)" >BUS <tspan style="text-decoration:overline;">IN</tspan></text>
 </g>
 <g>
 </g>
@@ -360,16 +360,16 @@
 </g>
 <g>
 <path d="M 600,360 L 614,368 L 614,352 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="start" x="619.0" y="366.75" fill="#808080" style="font-size:18px"><tspan style="text-decoration:overline;">OUT</tspan><tspan style="font-size:80%;baseline-shift:sub;">BUS</tspan></text>
+<text text-anchor="start" x="619.0" y="366.75" fill="#808080" style="font-size:18px">BUS <tspan style="text-decoration:overline;">OUT</tspan></text>
 </g>
 <g>
 <path d="M 249,325 L 279,325 L 279,355 L 249,355 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
 <circle cx="264.0" cy="340.0" r="9.0" stroke="#000000" stroke-width="2.8" fill="none" />
-<text text-anchor="end" x="235.0" y="349.0" fill="#000000" style="font-size:24px"><tspan style="font-style:italic;"><tspan style="text-decoration:overline;">OUT</tspan><tspan style="font-size:80%;baseline-shift:sub;">BUS</tspan></tspan></text>
+<text text-anchor="end" x="235.0" y="349.0" fill="#000000" style="font-size:24px"><tspan style="font-style:italic;">BUS <tspan style="text-decoration:overline;">OUT</tspan></tspan></text>
 </g>
 <g>
 <path d="M 300,340 L 314,348 L 314,332 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="start" x="319.0" y="346.75" fill="#808080" style="font-size:18px"><tspan style="text-decoration:overline;">OUT</tspan><tspan style="font-size:80%;baseline-shift:sub;">BUS</tspan></text>
+<text text-anchor="start" x="319.0" y="346.75" fill="#808080" style="font-size:18px">BUS <tspan style="text-decoration:overline;">OUT</tspan></text>
 </g>
 <g>
 <path d="M 880,140 L 888,126 L 872,126 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
@@ -405,7 +405,7 @@
 </g>
 <g>
 <path d="M 560,140 L 568,126 L 552,126 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="start" x="560.0" y="127.75" fill="#808080" style="font-size:18px" transform="rotate(-90,560.0,121.0)" ><tspan style="text-decoration:overline;">OUT</tspan><tspan style="font-size:80%;baseline-shift:sub;">BUS</tspan></text>
+<text text-anchor="start" x="560.0" y="127.75" fill="#808080" style="font-size:18px" transform="rotate(-90,560.0,121.0)" >BUS <tspan style="text-decoration:overline;">OUT</tspan></text>
 </g>
 <g>
 </g>

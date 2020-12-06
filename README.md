@@ -48,10 +48,20 @@ Before breadboarding I design the modules in [Digital](https://github.com/hneema
 
 ![Register simulation](./Schematics/Simulation%20Out.svg)
 
-### Instrution register
+#### Lookup table
 
-None yet.
+[rom hex file](./Simulation/rom/Out.hex)
+
+8 bit to decimal representation is done with a look up table. Using 2 extra bits for outputting 1s, 10s, 100s or signed position and 1 extra bit for signed mode. 2^11 combinations in total making up 2 kB.
+
+### Instruction register
+
+[dig file](./Simulation/Ir.dig)
+
+![Register simulation](./Schematics/Simulation%20Ir.svg)
 
 ### Control unit
 
-None yet.
+[dig file](./Simulation/Control.dig)
+
+![Register simulation](./Schematics/Simulation%20Control.svg)
