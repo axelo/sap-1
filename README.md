@@ -6,6 +6,16 @@ My processor build using the SAP-1 (Simple-As-Possible-1) architecture.
 
 Before breadboarding I design the modules in [Digital](https://github.com/hneemann/Digital). This helps me better understand the problems and kind of "proves" a design.
 
+If you have Java on your path you can run
+
+    make run-digital
+
+to view the processor in Digital.
+
+    make test
+
+to run all [tests](./Tests/Suite.java).
+
 ![Processor simulation](./Schematics/Simulation%20Processor.svg)
 
 ## Modules
