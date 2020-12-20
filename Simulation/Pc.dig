@@ -37,16 +37,6 @@
       <pos x="1600" y="300"/>
     </visualElement>
     <visualElement>
-      <elementName>VDD</elementName>
-      <elementAttributes>
-        <entry>
-          <string>rotation</string>
-          <rotation rotation="2"/>
-        </entry>
-      </elementAttributes>
-      <pos x="1320" y="300"/>
-    </visualElement>
-    <visualElement>
       <elementName>Clock</elementName>
       <elementAttributes>
         <entry>
@@ -89,10 +79,10 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>COUNT</string>
+          <string>~RESET</string>
         </entry>
       </elementAttributes>
-      <pos x="280" y="220"/>
+      <pos x="280" y="100"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -123,14 +113,10 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>BUS ~IN</string>
-        </entry>
-        <entry>
-          <string>InDefault</string>
-          <value v="1" z="false"/>
+          <string>COUNT</string>
         </entry>
       </elementAttributes>
-      <pos x="280" y="280"/>
+      <pos x="280" y="220"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -170,16 +156,6 @@
         </entry>
       </elementAttributes>
       <pos x="960" y="280"/>
-    </visualElement>
-    <visualElement>
-      <elementName>VDD</elementName>
-      <elementAttributes>
-        <entry>
-          <string>rotation</string>
-          <rotation rotation="2"/>
-        </entry>
-      </elementAttributes>
-      <pos x="960" y="300"/>
     </visualElement>
     <visualElement>
       <elementName>VDD</elementName>
@@ -398,14 +374,14 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>BUS ~OUT</string>
+          <string>BUS ~IN</string>
         </entry>
         <entry>
           <string>InDefault</string>
           <value v="1" z="false"/>
         </entry>
       </elementAttributes>
-      <pos x="280" y="340"/>
+      <pos x="280" y="280"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -968,6 +944,58 @@
       </elementAttributes>
       <pos x="540" y="320"/>
     </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>BUS ~OUT</string>
+        </entry>
+        <entry>
+          <string>InDefault</string>
+          <value v="1" z="false"/>
+        </entry>
+      </elementAttributes>
+      <pos x="280" y="340"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>NetName</string>
+          <string>RESET</string>
+        </entry>
+      </elementAttributes>
+      <pos x="300" y="100"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
+          <string>RESET</string>
+        </entry>
+      </elementAttributes>
+      <pos x="960" y="300"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
+          <string>RESET</string>
+        </entry>
+      </elementAttributes>
+      <pos x="1320" y="300"/>
+    </visualElement>
   </visualElements>
   <wires>
     <wire>
@@ -1001,6 +1029,10 @@
     <wire>
       <p1 x="280" y="580"/>
       <p2 x="300" y="580"/>
+    </wire>
+    <wire>
+      <p1 x="280" y="100"/>
+      <p2 x="300" y="100"/>
     </wire>
     <wire>
       <p1 x="280" y="520"/>

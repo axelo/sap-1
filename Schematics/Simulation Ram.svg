@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Digital by H.Neemann -->
-<!-- created: Sun Dec 06 22:28:50 CET 2020 -->
+<!-- created: Sun Dec 20 20:47:55 CET 2020 -->
 
 <svg
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   width="261.3mm"
-   height="160.65mm"
-   viewBox="-1254 -597 1742 1071">
+   width="214.5mm"
+   height="152.25mm"
+   viewBox="-1254 -597 1430 1015">
 <g stroke-linecap="square">
 <path d="M -400,14 L -400,20" stroke="#000000" stroke-width="2.8" fill="none"/>
 <path d="M -840,74 L -840,80" stroke="#000000" stroke-width="2.8" fill="none"/>
@@ -39,7 +39,7 @@
 <path d="M -1040,0 L -1050,0" stroke="#000000" stroke-width="2.8" fill="none"/>
 <path d="M -1040,-20 L -1050,-20" stroke="#000000" stroke-width="2.8" fill="none"/>
 <path d="M -1040,-40 L -1050,-40" stroke="#000000" stroke-width="2.8" fill="none"/>
-<path d="M -400,-66 L -400,-80" stroke="#000000" stroke-width="2.8" fill="none"/>
+<path d="M -400,-66 L -400,-86" stroke="#000000" stroke-width="2.8" fill="none"/>
 <path d="M -1128,-560 L -1078,-560" stroke-dasharray="4.0,4.0" stroke="#000000" stroke-width="0.7" fill="none"/>
 <path d="M -1128,-525 L -1078,-525" stroke-dasharray="4.0,4.0" stroke="#000000" stroke-width="0.7" fill="none"/>
 <path d="M -1078,-595 L -1128,-595 L -1128,-490 L -1078,-490 Z" stroke-dasharray="4.0,4.0" stroke="#000000" stroke-width="0.7" fill="none"/>
@@ -47,8 +47,7 @@
 <path d="M 110,300 L 130,300" stroke="#000000" stroke-width="4.199999999999999" fill="none"/>
 <path d="M -290,0 L -270,0" stroke="#000000" stroke-width="4.199999999999999" fill="none"/>
 <path d="M -490,240 L -470,240" stroke="#000000" stroke-width="4.199999999999999" fill="none"/>
-<path d="M -390,-80 L -410,-80" stroke="#000000" stroke-width="4.199999999999999" fill="none"/>
-<path d="M -350,440 L -330,440" stroke="#000000" stroke-width="4.199999999999999" fill="none"/>
+<path d="M -370,300 L -350,300" stroke="#000000" stroke-width="4.199999999999999" fill="none"/>
 <path d="M -520,0 L -500,0 L -500,40" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M -1040,0 L -1020,0" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M -1100,100 L -1060,100" stroke="#0000b2" stroke-width="2.8" fill="none"/>
@@ -65,8 +64,7 @@
 <path d="M -780,-340 L -760,-340" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M -720,-340 L -700,-340 L -680,-340" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M -1040,20 L -1020,20" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M -280,0 L -280,20 L -240,20 L -200,20 L -120,20 L -80,20 L -80,40" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M -400,440 L -380,440 L -360,440 L -360,420" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M -280,0 L -280,20 L -240,20 L -200,20 L -120,20 L -120,40" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M -1100,-380 L -1080,-380 L -1080,-360 L -880,-360" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M -1040,60 L -1020,60" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M -1020,-320 L -1000,-320" stroke="#0000b2" stroke-width="2.8" fill="none"/>
@@ -86,9 +84,9 @@
 <path d="M -720,60 L -720,100" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M -720,220 L -720,260" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M -80,280 L -80,320" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M -80,0 L -80,40" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 80,280 L 80,300" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 80,20 L 80,40" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M -340,420 L -340,440" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M -340,-160 L -340,-140" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M -600,60 L -600,100" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M -600,220 L -600,260" stroke="#0000b2" stroke-width="2.8" fill="none"/>
@@ -103,7 +101,7 @@
 <path d="M -160,280 L -160,320" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M -160,-20 L -160,40" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M -360,-40 L -360,-20 L -360,40" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M -360,280 L -360,360" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M -360,280 L -360,300" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M -680,60 L -680,100" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M -680,220 L -680,260" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M -40,280 L -40,320" stroke="#0000b2" stroke-width="2.8" fill="none"/>
@@ -116,7 +114,6 @@
 <path d="M -560,60 L -560,100" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M -560,220 L -560,260" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M -820,-160 L -820,-140" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M -120,20 L -120,40" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M -120,280 L -120,320" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M -760,60 L -760,100" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M -760,220 L -760,260" stroke="#0000b2" stroke-width="2.8" fill="none"/>
@@ -125,7 +122,6 @@
 <path d="M 120,280 L 120,300" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 120,20 L 120,40" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M -380,-160 L -380,-140" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M -380,420 L -380,440" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M -700,-340 L -700,-300" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M -320,280 L -320,320" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M -640,60 L -640,100" stroke="#0000b2" stroke-width="2.8" fill="none"/>
@@ -138,8 +134,6 @@
 <circle cx="-280.0" cy="20.0" r="4.0" stroke="#0000b2" stroke-width="2.8" fill="#0000b2" />
 <circle cx="-240.0" cy="20.0" r="4.0" stroke="#0000b2" stroke-width="2.8" fill="#0000b2" />
 <circle cx="-200.0" cy="20.0" r="4.0" stroke="#0000b2" stroke-width="2.8" fill="#0000b2" />
-<circle cx="-120.0" cy="20.0" r="4.0" stroke="#0000b2" stroke-width="2.8" fill="#0000b2" />
-<circle cx="-380.0" cy="440.0" r="4.0" stroke="#0000b2" stroke-width="2.8" fill="#0000b2" />
 <circle cx="-1080.0" cy="-320.0" r="4.0" stroke="#0000b2" stroke-width="2.8" fill="#0000b2" />
 </g>
 <g>
@@ -199,6 +193,7 @@
 <text text-anchor="end" x="120.0" y="61.75" fill="#808080" style="font-size:18px" transform="rotate(-90,120.0,55.0)" >D3</text>
 <path d="M -420,270 L -420,170 C -414,170 -410,166 -410,160 C -410,154 -414,150 -420,150 L -420,50 L 140,50 L 140,270 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
 <text text-anchor="start" x="-390.0" y="169.0" fill="#000000" style="font-size:24px">A623308A2WithProgramMemory</text>
+<text text-anchor="middle" x="150.0" y="178.0" fill="#000000" style="font-size:24px" transform="rotate(-90,150.0,160.0)" >RAM</text>
 </g>
 <g>
 </g>
@@ -525,31 +520,18 @@
 <path d="M -620,-20 L -500,-20 L -500,20 L -620,20 Z" stroke-dasharray="4.0,4.0" stroke="#000000" stroke-width="0.7" fill="none"/>
 </g>
 <g>
-<path d="M -393,-41 L -393,-66 L -407,-66 L -407,-41 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-</g>
-<g>
-<path d="M -390,419 L -390,361 L -330,361 L -330,419 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="start" x="-380.0" y="422.75" fill="#808080" style="font-size:18px" transform="rotate(-90,-380.0,416.0)" >J</text>
-<path d="M -353,419 L -360,412 L -367,419" stroke="#000000" stroke-width="1.4" fill="none"/>
-<text text-anchor="start" x="-360.0" y="415.75" fill="#808080" style="font-size:18px" transform="rotate(-90,-360.0,409.0)" >C</text>
-<text text-anchor="start" x="-340.0" y="422.75" fill="#808080" style="font-size:18px" transform="rotate(-90,-340.0,416.0)" >K</text>
-<text text-anchor="end" x="-380.0" y="370.75" fill="#808080" style="font-size:18px" transform="rotate(-90,-380.0,364.0)" >Q</text>
-<text text-anchor="end" x="-360.0" y="370.75" fill="#808080" style="font-size:18px" transform="rotate(-90,-360.0,364.0)" ><tspan style="text-decoration:overline;">Q</tspan></text>
-<text text-anchor="middle" x="-326.0" y="403.5" fill="#808080" style="font-size:18px" transform="rotate(-90,-326.0,390.0)" >JK</text>
-</g>
-<g>
-</g>
-<g>
 <path d="M -1100,-380 L -1114,-388 L -1114,-372 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
 <text text-anchor="end" x="-1119.0" y="-373.25" fill="#808080" style="font-size:18px">CLOCK</text>
 </g>
 <g>
-<path d="M -400,440 L -414,432 L -414,448 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="end" x="-419.0" y="446.75" fill="#808080" style="font-size:18px">CLOCK</text>
+<path d="M -407,-41 L -407,-66 L -393,-66 L -393,-41 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<path d="M -410,-76 L -400,-89 L -390,-76" stroke="#000000" stroke-width="2.8" fill="none"/>
 </g>
 <g>
-<text text-anchor="start" x="-478.0" y="472.0" fill="#000000" style="font-size:12px">Digital workaround. Byte at start address is sometimes not read from program memory. Instead defaulted to 0. This will destroy one byte in an unused region</text>
-<path d="M -300,460 L -480,460 L -480,340 L -300,340 Z" stroke-dasharray="4.0,4.0" stroke="#000000" stroke-width="0.7" fill="none"/>
+<path d="M -65,-32 L -65,-2 L -95,-2 L -95,-32 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<text text-anchor="end" x="-67.0" y="-28.0" fill="#808080" style="font-size:18px" transform="rotate(-90,-67.0,-28.0)" >R</text>
+</g>
+<g>
 </g>
 </g>
 </svg>

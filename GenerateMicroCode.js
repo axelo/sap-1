@@ -13,7 +13,7 @@ const HALT = 1 << 6;
 const PC_COUNT = 1 << 7;
 const ALU_SUBTRACT = 1 << 8;
 const OUT_SIGNED = 1 << 9;
-const INSTRUCTION_COMPLETE = 1 << 15;
+const LAST_STEP = 1 << 15;
 
 const busOut = (from) => {
   switch (from) {
@@ -59,14 +59,14 @@ const instructions = [
   [
     // nop
     busOut(PC) | busIn(MAR),
-    busOut(RAM) | busIn(IR) | PC_COUNT | INSTRUCTION_COMPLETE,
+    busOut(RAM) | busIn(IR) | PC_COUNT | LAST_STEP,
   ],
   [
     // lda
     busOut(PC) | busIn(MAR),
     busOut(RAM) | busIn(IR) | PC_COUNT,
     busOut(IR) | busIn(MAR),
-    busOut(RAM) | busIn(REGA) | INSTRUCTION_COMPLETE,
+    busOut(RAM) | busIn(REGA) | LAST_STEP,
   ],
 ];
 
