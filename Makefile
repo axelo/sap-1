@@ -28,8 +28,5 @@ Schematics/Simulation\ %.svg: Simulation/%.dig
 .javabuild:
 	mkdir .javabuild
 
-.javabuild/Tests/%.class: Tests/%.java
-	javac -cp $(TESTS_CLASSPATH) -d .javabuild $<
-
 $(TESTS_CLASS_FILES): $(TESTS_FILES)
 	javac -cp $(TESTS_CLASSPATH) -d .javabuild $(TESTS_FILES)

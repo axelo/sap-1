@@ -46,8 +46,6 @@ public class TestModel {
             control = signal.apply("CONTROL");
             controlStep = signal.apply("STEP");
             controlLastStep = signal.apply("LAST_STEP");
-            // return new TestModel(model, signal.apply("~CLOCK"), ram,
-            // signal.apply("PC"),
             bus = signal.apply("BUS");
 
             try {
@@ -113,9 +111,8 @@ public class TestModel {
     private TestModel() {
     }
 
-    public static MutableModel init(String digFilename, int... ramMemory) {
-        return new MutableModel(
-                tryCreateDigitalModel(digFilename, Arrays.stream(ramMemory).mapToLong(i -> i).toArray()));
+    public static MutableModel init(String digFilename, int... ram) {
+        return new MutableModel(tryCreateDigitalModel(digFilename, Arrays.stream(ram).mapToLong(i -> i).toArray()));
     }
 
     private static Model tryCreateDigitalModel(String filename, long... ram) {
