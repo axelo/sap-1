@@ -80,10 +80,11 @@ const generate = ({ instructionBits, stepBits }) => {
     ++instructionIndex
   ) {
     for (let step = 0; step < 1 << stepBits; ++step) {
-      const microCode = (instructions[instructionIndex] || [])[step] || HALT;
+      const microcode =
+        (instructions[instructionIndex] || [])[step] || HALT | LAST_STEP;
 
-      high[(instructionIndex << stepBits) + step] = (microCode >> 8) & 0xff;
-      low[(instructionIndex << stepBits) + step] = microCode & 0xff;
+      high[(instructionIndex << stepBits) + step] = (microcode >> 8) & 0xff;
+      low[(instructionIndex << stepBits) + step] = microcode & 0xff;
     }
   }
 
