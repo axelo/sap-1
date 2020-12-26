@@ -7,10 +7,10 @@ TESTS_FILES := $(shell ls Tests/*.java)
 TESTS_CLASS_FILES :=  $(addprefix .javabuild/, $(TESTS_FILES:.java=.class))
 TESTS_CLASSPATH := "$(DIGITAL_JAR_PATH):Tests/lib/junit-platform-console-standalone-1.7.0-all.jar"
 
-.PHONY: run-digital simulation-svgs test
+.PHONY: run-digital simulation-svgs test microcode
 
 run-digital: .digital
-	java -jar $(DIGITAL_JAR_PATH) Simulation/Processor.dig
+	java -jar $(DIGITAL_JAR_PATH) Simulation/Processor.dig &
 
 simulation-svgs: .digital $(SVG_FILES)
 	@echo Done!
@@ -30,3 +30,12 @@ Schematics/Simulation\ %.svg: Simulation/%.dig
 
 $(TESTS_CLASS_FILES): $(TESTS_FILES)
 	javac -cp $(TESTS_CLASSPATH) -d .javabuild $(TESTS_FILES)
+
+microcode: .cbuild .cbuild/Microcode
+	@echo Built as .cbuild/Microcode
+
+.cbuild:
+	mkdir .cbuild
+
+.cbuild/Microcode: Microcode.c
+	cc $< -std=c17 -Wall -Wextra -Wpedantic -g -o $@

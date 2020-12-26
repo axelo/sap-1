@@ -1,6 +1,7 @@
 package Tests;
 
 import static Tests.MutableTestModel.clock;
+import static Tests.MutableTestModel.halted;
 import static Tests.MutableTestModel.init;
 import static Tests.MutableTestModel.signal;
 import static Tests.MutableTestModel.step;
@@ -31,9 +32,17 @@ public class Suite {
         BUS, PC, MAR, IR, CONTROL, STEP, LAST_STEP
     }
 
+    private static String toBinaryString(int bits, int i) {
+        return "0b" + "0".repeat(Integer.numberOfLeadingZeros(i) - bits) + Integer.toBinaryString(i);
+    }
+
+    private static Executable controlSignalEquals(MutableTestModel model, int expected) {
+        return () -> assertEquals(toBinaryString(16, expected),
+                toBinaryString(16, signal(model, Signal.CONTROL.name())), () -> Signal.CONTROL.name());
+    }
+
     private static Executable signalEquals(MutableTestModel model, Signal signalName, int expected) {
-        return () -> assertEquals(expected, signal(model, signalName.name()),
-                () -> signalName.name() + " should be " + expected);
+        return () -> assertEquals((expected), (signal(model, signalName.name())), () -> signalName.name());
     }
 
     @RepeatedTest(1)
@@ -56,7 +65,7 @@ public class Suite {
         // This depends on how we have programmed our microcode.
         // Address 0 in microcode rom should be the fetch operation to get things
         // running.
-        assertAll(signalEquals(model, Signal.CONTROL, PC_OUT | MAR_IN));
+        assertAll(controlSignalEquals(model, PC_OUT | MAR_IN));
 
         step(model); // Execute control signals.
 
@@ -68,7 +77,7 @@ public class Suite {
         // This depends on how we have programmed our microcode.
         // Address 0 in microcode rom should be the fetch operation to get things
         // running.
-        assertAll(signalEquals(model, Signal.CONTROL, PC_COUNT | RAM_OUT | IR_IN | LAST_STEP), //
+        assertAll(controlSignalEquals(model, PC_COUNT | RAM_OUT | IR_IN | LAST_STEP), //
                 signalEquals(model, Signal.STEP, 1), //
                 signalEquals(model, Signal.LAST_STEP, 1));
 
@@ -76,17 +85,22 @@ public class Suite {
 
         assertAll(signalEquals(model, Signal.PC, 1), //
                 signalEquals(model, Signal.BUS, 0xff), //
-                signalEquals(model, Signal.IR, 0) // TODO: Should control signals be affected direct our wait on clock?
-                                                  // (CLOCK or ~CLOCK for IR) Should IR latch on same signal as control?
+                signalEquals(model, Signal.IR, 0xff) // Note that control signals will be affected on this step as high
+                                                     // nibble of IR is part of the microcode address.
         );
 
         step(model); // Latch next control signals, now from memory.
 
         // Control steps should have been restarted. This is due to 0xff is in microcode
         // programmed as HALT | LAST_STEP.
-        assertAll(signalEquals(model, Signal.STEP, 0), //
+        assertAll(controlSignalEquals(model, HALT | LAST_STEP), //
+                signalEquals(model, Signal.STEP, 0), //
                 signalEquals(model, Signal.LAST_STEP, 1) //
         );
+
+        step(model); // Execute control signals.
+
+        assertEquals(true, halted(model));
     }
 
     public static void main(String[] args) {
