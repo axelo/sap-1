@@ -143,11 +143,15 @@ public class Suite {
 
         step(model); // Latch next control signals.
 
+        final int previousPc = signal(model, Signal.PC.name());
+
         assertAll(controlSignalEquals(model, RAM_OUT | IR_IN | PC_COUNT), //
                 signalEquals(model, Signal.STEP, 1), //
                 signalEquals(model, Signal.LAST_STEP, 0));
 
         step(model); // Execute control signals.
+
+        assertAll(signalEquals(model, Signal.PC, previousPc + 1));
     }
 
     @Test
@@ -159,8 +163,7 @@ public class Suite {
 
         assertFetchSteps(model);
 
-        assertAll(signalEquals(model, Signal.PC, 1), //
-                signalEquals(model, Signal.IR, 0));
+        assertAll(signalEquals(model, Signal.IR, 0));
 
         step(model); // Latch next control signals.
 
@@ -185,9 +188,7 @@ public class Suite {
 
         assertFetchSteps(model);
 
-        assertAll(signalEquals(model, Signal.PC, 1), //
-                signalEquals(model, Signal.IR, 0x14) //
-        );
+        assertAll(signalEquals(model, Signal.IR, 0x14));
 
         step(model); // Latch next control signals.
 
