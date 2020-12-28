@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Digital by H.Neemann -->
-<!-- created: Sat Dec 26 16:32:10 CET 2020 -->
+<!-- created: Mon Dec 28 21:22:12 CET 2020 -->
 
 <svg
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
    width="250.2mm"
-   height="290.25mm"
-   viewBox="99 -221 1668 1935">
+   height="301.65mm"
+   viewBox="99 -221 1668 2011">
 <g stroke-linecap="square">
 <path d="M 980,0 L 1000,0 L 1000,20" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 180,0 L 200,0" stroke="#0000b2" stroke-width="2.8" fill="none"/>
@@ -15,12 +15,12 @@
 <path d="M 640,1280 L 660,1280" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 1440,1280 L 1460,1280" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 980,640 L 1000,640 L 1000,660" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 1040,1540 L 1060,1540" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 640,1540 L 660,1540" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 1460,900 L 1480,900" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 1520,900 L 1540,900" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 1040,1540 L 1060,1540" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 600,900 L 620,900 L 620,980 L 640,980" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 660,900 L 680,900" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 1460,900 L 1480,900" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 1520,900 L 1540,900" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 1480,260 L 1500,260 L 1500,300 L 1520,300" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 1280,260 L 1300,260" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 640,1160 L 660,1160" stroke="#0000b2" stroke-width="2.8" fill="none"/>
@@ -29,10 +29,10 @@
 <path d="M 640,1420 L 660,1420" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 1040,1420 L 1060,1420" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 980,780 L 1000,780 L 1000,800" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 1460,780 L 1480,780" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 1520,780 L 1540,780" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 380,780 L 400,780" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 600,780 L 620,780" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 1460,780 L 1480,780" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 1520,780 L 1540,780" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 660,1040 L 680,1040" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 180,-20 L 200,-20" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 640,1300 L 660,1300" stroke="#0000b2" stroke-width="2.8" fill="none"/>
@@ -41,116 +41,120 @@
 <path d="M 380,20 L 400,20" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 380,660 L 400,660" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 600,660 L 620,660" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 640,1560 L 660,1560" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 1460,920 L 1480,920" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 1520,920 L 1540,920" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 380,920 L 400,920" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 660,920 L 680,920" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 1040,1560 L 1060,1560" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 640,1560 L 660,1560" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 380,280 L 400,280" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 640,1180 L 660,1180" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 380,1180 L 400,1180" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 380,540 L 400,540" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 600,540 L 620,540" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 640,1440 L 660,1440" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 1040,1440 L 1060,1440" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 1460,800 L 1480,800" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 1520,800 L 1540,800" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 380,800 L 400,800" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 1040,1440 L 1060,1440" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 640,1440 L 660,1440" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 600,160 L 620,160" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 380,160 L 400,160" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 580,1700 L 600,1700" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 640,1700 L 660,1700" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 1440,1700 L 1460,1700" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 660,1060 L 680,1060" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 1440,1060 L 1460,1060" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 380,420 L 400,420" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 600,420 L 620,420" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 180,-40 L 200,-40" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 260,-40 L 400,-40" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 640,1320 L 660,1320" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 1040,1320 L 1060,1320" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 1460,680 L 1480,680" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 1520,680 L 1540,680" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 640,1320 L 660,1320" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 600,680 L 620,680" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 380,680 L 400,680" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 1460,680 L 1480,680" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 1520,680 L 1540,680" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 600,40 L 620,40" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 380,40 L 400,40" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 640,1580 L 660,1580" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 1440,1580 L 1460,1580" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 1460,940 L 1480,940" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 1520,940 L 1540,940" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 660,940 L 680,940" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 380,940 L 400,940" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 640,1580 L 660,1580" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 1440,1580 L 1460,1580" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 1560,300 L 1580,300" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 380,300 L 400,300" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 640,1200 L 660,1200" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 600,560 L 620,560" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 380,560 L 400,560" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 1440,1460 L 1460,1460" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 640,1460 L 660,1460" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 1040,1460 L 1060,1460" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 380,820 L 400,820" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 1460,820 L 1480,820" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 1520,820 L 1540,820" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 380,820 L 400,820" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 1040,1460 L 1060,1460" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 1440,1460 L 1460,1460" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 640,1460 L 660,1460" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 600,180 L 620,180" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 380,180 L 400,180" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 1440,180 L 1500,180 L 1500,220 L 1480,220" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 660,1080 L 680,1080" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 380,440 L 400,440" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 600,440 L 620,440" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 1440,1340 L 1460,1340" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 640,1340 L 660,1340" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 1040,1340 L 1060,1340" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 380,60 L 400,60" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 1460,700 L 1480,700" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 1520,700 L 1540,700" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 380,700 L 400,700" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 640,1600 L 660,1600" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 1040,1340 L 1060,1340" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 1440,1340 L 1460,1340" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 640,1340 L 660,1340" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 380,60 L 400,60" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 380,960 L 400,960" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 640,1600 L 660,1600" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 600,320 L 620,320" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 640,1220 L 660,1220" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 1040,1220 L 1060,1220" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 1440,1220 L 1460,1220" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 380,580 L 400,580" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 640,1480 L 660,1480" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 1040,1480 L 1060,1480" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 1460,840 L 1480,840" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 1520,840 L 1540,840" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 1040,1480 L 1060,1480" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 640,1480 L 660,1480" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 380,200 L 400,200" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 1440,1100 L 1460,1100" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 660,1100 L 680,1100" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 380,460 L 400,460" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 640,1360 L 660,1360" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 1040,1360 L 1060,1360" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 380,80 L 400,80" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 1460,720 L 1480,720" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 1520,720 L 1540,720" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 1040,1360 L 1060,1360" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 640,1360 L 660,1360" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 380,80 L 400,80" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 1020,980 L 1040,980 L 1040,1000" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 1440,980 L 1460,980" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 660,980 L 680,980" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 380,340 L 400,340" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 640,1240 L 660,1240" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 1040,1240 L 1060,1240" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 1360,220 L 1420,220" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 380,220 L 400,220" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 640,1500 L 660,1500" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 1040,1500 L 1060,1500" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 1460,860 L 1480,860" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 1520,860 L 1540,860" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 640,1380 L 660,1380" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 1040,1380 L 1060,1380" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 380,100 L 400,100" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 1040,1500 L 1060,1500" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 640,1500 L 660,1500" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 1360,220 L 1420,220" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 380,220 L 400,220" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 1440,1760 L 1460,1760" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 1460,740 L 1480,740" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 1520,740 L 1540,740" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 1440,1640 L 1460,1640" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 1040,1380 L 1060,1380" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 640,1380 L 660,1380" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 380,100 L 400,100" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 660,1000 L 680,1000" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 1440,1640 L 1460,1640" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 980,360 L 1000,360 L 1000,380" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 380,360 L 400,360" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 640,1260 L 660,1260" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 1040,1260 L 1060,1260" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 1440,1520 L 1460,1520" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 640,1520 L 660,1520" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 1040,1520 L 1060,1520" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 600,880 L 640,880" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 660,880 L 680,880" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 1460,880 L 1480,880" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 1520,880 L 1540,880" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 600,880 L 640,880" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 660,880 L 680,880" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 1040,1520 L 1060,1520" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 1440,1520 L 1460,1520" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 640,1520 L 660,1520" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 980,240 L 1000,240 L 1000,260" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 1280,240 L 1300,240" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 1400,240 L 1420,240" stroke="#0000b2" stroke-width="2.8" fill="none"/>
@@ -160,15 +164,16 @@
 <path d="M 440,-120 L 460,-120 L 480,-120" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 520,-120 L 540,-120 L 560,-120" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 980,-120 L 1000,-120 L 1000,-100" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 1440,1400 L 1460,1400" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 640,1400 L 660,1400" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 1040,1400 L 1060,1400" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 380,760 L 400,760" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 600,760 L 620,760" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 1460,760 L 1480,760" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 1520,760 L 1540,760" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 380,760 L 400,760" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 600,760 L 620,760" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 1040,1400 L 1060,1400" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 1440,1400 L 1460,1400" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 640,1400 L 660,1400" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 980,120 L 1000,120 L 1000,140" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 600,1660 L 620,1660 L 620,1680" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 1000,1020 L 1020,1020" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 1060,1020 L 1080,1020" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 1440,1020 L 1460,1020" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 660,1020 L 680,1020" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 960,-80 L 960,-60" stroke="#0000b2" stroke-width="2.8" fill="none"/>
@@ -677,7 +682,7 @@
 </g>
 <g>
 <path d="M 620,560 L 634,568 L 634,552 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="start" x="639.0" y="566.75" fill="#808080" style="font-size:18px">REG A</text>
+<text text-anchor="start" x="639.0" y="566.75" fill="#808080" style="font-size:18px">OUT REG A</text>
 </g>
 <g>
 <path d="M 380,540 L 366,532 L 366,548 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
@@ -701,7 +706,7 @@
 </g>
 <g>
 <path d="M 980,500 L 966,492 L 966,508 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="end" x="961.0" y="506.75" fill="#808080" style="font-size:18px">REG A</text>
+<text text-anchor="end" x="961.0" y="506.75" fill="#808080" style="font-size:18px">OUT REG A</text>
 </g>
 <g>
 <circle cx="980.0" cy="571.0" r="10.0" stroke="#000000" stroke-width="2.8" fill="#000000" />
@@ -828,7 +833,7 @@
 </g>
 <g>
 <path d="M 380,760 L 366,752 L 366,768 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="end" x="361.0" y="766.75" fill="#808080" style="font-size:18px">REG A</text>
+<text text-anchor="end" x="361.0" y="766.75" fill="#808080" style="font-size:18px">OUT REG A</text>
 </g>
 <g>
 <path d="M 380,780 L 366,772 L 366,788 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
@@ -1176,7 +1181,7 @@
 <text text-anchor="end" x="636.0" y="1166.75" fill="#808080" style="font-size:18px">PC COUNT</text>
 <text text-anchor="end" x="636.0" y="1186.75" fill="#808080" style="font-size:18px">ALU SUBTRACT</text>
 <text text-anchor="end" x="636.0" y="1206.75" fill="#808080" style="font-size:18px">OUT SIGNED</text>
-<text text-anchor="end" x="636.0" y="1226.75" fill="#808080" style="font-size:18px">CONST BUS <tspan style="text-decoration:overline;">OUT</tspan></text>
+<text text-anchor="end" x="636.0" y="1226.75" fill="#808080" style="font-size:18px">ZERO BUS <tspan style="text-decoration:overline;">OUT</tspan></text>
 <text text-anchor="end" x="636.0" y="1246.75" fill="#808080" style="font-size:18px">RAM BUS <tspan style="text-decoration:overline;">OUT</tspan></text>
 <text text-anchor="end" x="636.0" y="1266.75" fill="#808080" style="font-size:18px">PC BUS <tspan style="text-decoration:overline;">OUT</tspan></text>
 <text text-anchor="end" x="636.0" y="1286.75" fill="#808080" style="font-size:18px">IR BUS <tspan style="text-decoration:overline;">OUT</tspan></text>
@@ -1279,24 +1284,12 @@
 <circle cx="1071.0" cy="1280.0" r="8.0" stroke="#ffff33" stroke-width="0.0" fill="#ffff33" />
 </g>
 <g>
-<circle cx="1071.0" cy="1300.0" r="10.0" stroke="#000000" stroke-width="2.8" fill="#000000" />
-<circle cx="1071.0" cy="1300.0" r="8.0" stroke="#ffff33" stroke-width="0.0" fill="#ffff33" />
+<circle cx="1071.0" cy="1320.0" r="10.0" stroke="#000000" stroke-width="2.8" fill="#000000" />
+<circle cx="1071.0" cy="1320.0" r="8.0" stroke="#ffff33" stroke-width="0.0" fill="#ffff33" />
 </g>
 <g>
-<path d="M 1040,1300 L 1026,1292 L 1026,1308 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="end" x="1021.0" y="1306.75" fill="#808080" style="font-size:18px">RAM BUS OUT</text>
-</g>
-<g>
-<path d="M 1481,668 L 1499,680 L 1481,692 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<circle cx="1510.0" cy="680.0" r="9.0" stroke="#000000" stroke-width="2.8" fill="none" />
-</g>
-<g>
-<path d="M 1540,680 L 1554,688 L 1554,672 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="start" x="1559.0" y="686.75" fill="#808080" style="font-size:18px">RAM BUS OUT</text>
-</g>
-<g>
-<path d="M 1460,680 L 1446,672 L 1446,688 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="end" x="1441.0" y="686.75" fill="#808080" style="font-size:18px">RAM BUS <tspan style="text-decoration:overline;">OUT</tspan></text>
+<path d="M 1040,1320 L 1026,1312 L 1026,1328 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<text text-anchor="end" x="1021.0" y="1326.75" fill="#808080" style="font-size:18px">RAM BUS OUT</text>
 </g>
 <g>
 <path d="M 1481,688 L 1499,700 L 1481,712 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
@@ -1304,31 +1297,31 @@
 </g>
 <g>
 <path d="M 1540,700 L 1554,708 L 1554,692 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="start" x="1559.0" y="706.75" fill="#808080" style="font-size:18px">PC BUS OUT</text>
+<text text-anchor="start" x="1559.0" y="706.75" fill="#808080" style="font-size:18px">RAM BUS OUT</text>
 </g>
 <g>
 <path d="M 1460,700 L 1446,692 L 1446,708 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="end" x="1441.0" y="706.75" fill="#808080" style="font-size:18px">PC BUS <tspan style="text-decoration:overline;">OUT</tspan></text>
+<text text-anchor="end" x="1441.0" y="706.75" fill="#808080" style="font-size:18px">RAM BUS <tspan style="text-decoration:overline;">OUT</tspan></text>
 </g>
 <g>
-<path d="M 1040,1320 L 1026,1312 L 1026,1328 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="end" x="1021.0" y="1326.75" fill="#808080" style="font-size:18px">PC BUS OUT</text>
+<path d="M 1481,708 L 1499,720 L 1481,732 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<circle cx="1510.0" cy="720.0" r="9.0" stroke="#000000" stroke-width="2.8" fill="none" />
 </g>
 <g>
-<circle cx="1071.0" cy="1320.0" r="10.0" stroke="#000000" stroke-width="2.8" fill="#000000" />
-<circle cx="1071.0" cy="1320.0" r="8.0" stroke="#ffff33" stroke-width="0.0" fill="#ffff33" />
+<path d="M 1540,720 L 1554,728 L 1554,712 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<text text-anchor="start" x="1559.0" y="726.75" fill="#808080" style="font-size:18px">PC BUS OUT</text>
 </g>
 <g>
-<path d="M 1481,728 L 1499,740 L 1481,752 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<circle cx="1510.0" cy="740.0" r="9.0" stroke="#000000" stroke-width="2.8" fill="none" />
+<path d="M 1460,720 L 1446,712 L 1446,728 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<text text-anchor="end" x="1441.0" y="726.75" fill="#808080" style="font-size:18px">PC BUS <tspan style="text-decoration:overline;">OUT</tspan></text>
 </g>
 <g>
-<path d="M 1540,740 L 1554,748 L 1554,732 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="start" x="1559.0" y="746.75" fill="#808080" style="font-size:18px">REGA BUS OUT</text>
+<path d="M 1040,1340 L 1026,1332 L 1026,1348 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<text text-anchor="end" x="1021.0" y="1346.75" fill="#808080" style="font-size:18px">PC BUS OUT</text>
 </g>
 <g>
-<path d="M 1460,740 L 1446,732 L 1446,748 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="end" x="1441.0" y="746.75" fill="#808080" style="font-size:18px">REGA BUS <tspan style="text-decoration:overline;">OUT</tspan></text>
+<circle cx="1071.0" cy="1340.0" r="10.0" stroke="#000000" stroke-width="2.8" fill="#000000" />
+<circle cx="1071.0" cy="1340.0" r="8.0" stroke="#ffff33" stroke-width="0.0" fill="#ffff33" />
 </g>
 <g>
 <path d="M 1481,748 L 1499,760 L 1481,772 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
@@ -1336,27 +1329,11 @@
 </g>
 <g>
 <path d="M 1540,760 L 1554,768 L 1554,752 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="start" x="1559.0" y="766.75" fill="#808080" style="font-size:18px">REGB BUS OUT</text>
+<text text-anchor="start" x="1559.0" y="766.75" fill="#808080" style="font-size:18px">REGA BUS OUT</text>
 </g>
 <g>
 <path d="M 1460,760 L 1446,752 L 1446,768 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="end" x="1441.0" y="766.75" fill="#808080" style="font-size:18px">REGB BUS <tspan style="text-decoration:overline;">OUT</tspan></text>
-</g>
-<g>
-<path d="M 1040,1360 L 1026,1352 L 1026,1368 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="end" x="1021.0" y="1366.75" fill="#808080" style="font-size:18px">REGA BUS OUT</text>
-</g>
-<g>
-<path d="M 1040,1380 L 1026,1372 L 1026,1388 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="end" x="1021.0" y="1386.75" fill="#808080" style="font-size:18px">REGB BUS OUT</text>
-</g>
-<g>
-<circle cx="1071.0" cy="1360.0" r="10.0" stroke="#000000" stroke-width="2.8" fill="#000000" />
-<circle cx="1071.0" cy="1360.0" r="8.0" stroke="#ffff33" stroke-width="0.0" fill="#ffff33" />
-</g>
-<g>
-<circle cx="1071.0" cy="1380.0" r="10.0" stroke="#000000" stroke-width="2.8" fill="#000000" />
-<circle cx="1071.0" cy="1380.0" r="8.0" stroke="#ffff33" stroke-width="0.0" fill="#ffff33" />
+<text text-anchor="end" x="1441.0" y="766.75" fill="#808080" style="font-size:18px">REGA BUS <tspan style="text-decoration:overline;">OUT</tspan></text>
 </g>
 <g>
 <path d="M 1481,768 L 1499,780 L 1481,792 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
@@ -1364,15 +1341,23 @@
 </g>
 <g>
 <path d="M 1540,780 L 1554,788 L 1554,772 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="start" x="1559.0" y="786.75" fill="#808080" style="font-size:18px">ALU BUS OUT</text>
+<text text-anchor="start" x="1559.0" y="786.75" fill="#808080" style="font-size:18px">REGB BUS OUT</text>
 </g>
 <g>
 <path d="M 1460,780 L 1446,772 L 1446,788 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="end" x="1441.0" y="786.75" fill="#808080" style="font-size:18px">ALU BUS <tspan style="text-decoration:overline;">OUT</tspan></text>
+<text text-anchor="end" x="1441.0" y="786.75" fill="#808080" style="font-size:18px">REGB BUS <tspan style="text-decoration:overline;">OUT</tspan></text>
+</g>
+<g>
+<path d="M 1040,1380 L 1026,1372 L 1026,1388 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<text text-anchor="end" x="1021.0" y="1386.75" fill="#808080" style="font-size:18px">REGA BUS OUT</text>
 </g>
 <g>
 <path d="M 1040,1400 L 1026,1392 L 1026,1408 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="end" x="1021.0" y="1406.75" fill="#808080" style="font-size:18px">ALU BUS OUT</text>
+<text text-anchor="end" x="1021.0" y="1406.75" fill="#808080" style="font-size:18px">REGB BUS OUT</text>
+</g>
+<g>
+<circle cx="1071.0" cy="1380.0" r="10.0" stroke="#000000" stroke-width="2.8" fill="#000000" />
+<circle cx="1071.0" cy="1380.0" r="8.0" stroke="#ffff33" stroke-width="0.0" fill="#ffff33" />
 </g>
 <g>
 <circle cx="1071.0" cy="1400.0" r="10.0" stroke="#000000" stroke-width="2.8" fill="#000000" />
@@ -1384,35 +1369,43 @@
 </g>
 <g>
 <path d="M 1540,800 L 1554,808 L 1554,792 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="start" x="1559.0" y="806.75" fill="#808080" style="font-size:18px">RAM BUS IN</text>
+<text text-anchor="start" x="1559.0" y="806.75" fill="#808080" style="font-size:18px">ALU BUS OUT</text>
 </g>
 <g>
 <path d="M 1460,800 L 1446,792 L 1446,808 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="end" x="1441.0" y="806.75" fill="#808080" style="font-size:18px">RAM BUS <tspan style="text-decoration:overline;">IN</tspan></text>
+<text text-anchor="end" x="1441.0" y="806.75" fill="#808080" style="font-size:18px">ALU BUS <tspan style="text-decoration:overline;">OUT</tspan></text>
 </g>
 <g>
-<path d="M 1481,828 L 1499,840 L 1481,852 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<circle cx="1510.0" cy="840.0" r="9.0" stroke="#000000" stroke-width="2.8" fill="none" />
+<path d="M 1040,1420 L 1026,1412 L 1026,1428 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<text text-anchor="end" x="1021.0" y="1426.75" fill="#808080" style="font-size:18px">ALU BUS OUT</text>
 </g>
 <g>
-<path d="M 1540,840 L 1554,848 L 1554,832 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="start" x="1559.0" y="846.75" fill="#808080" style="font-size:18px">PC BUS IN</text>
+<circle cx="1071.0" cy="1420.0" r="10.0" stroke="#000000" stroke-width="2.8" fill="#000000" />
+<circle cx="1071.0" cy="1420.0" r="8.0" stroke="#ffff33" stroke-width="0.0" fill="#ffff33" />
 </g>
 <g>
-<path d="M 1460,840 L 1446,832 L 1446,848 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="end" x="1441.0" y="846.75" fill="#808080" style="font-size:18px">PC BUS <tspan style="text-decoration:overline;">IN</tspan></text>
+<path d="M 1481,808 L 1499,820 L 1481,832 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<circle cx="1510.0" cy="820.0" r="9.0" stroke="#000000" stroke-width="2.8" fill="none" />
 </g>
 <g>
-<path d="M 1481,868 L 1499,880 L 1481,892 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<circle cx="1510.0" cy="880.0" r="9.0" stroke="#000000" stroke-width="2.8" fill="none" />
+<path d="M 1540,820 L 1554,828 L 1554,812 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<text text-anchor="start" x="1559.0" y="826.75" fill="#808080" style="font-size:18px">RAM BUS IN</text>
 </g>
 <g>
-<path d="M 1540,880 L 1554,888 L 1554,872 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="start" x="1559.0" y="886.75" fill="#808080" style="font-size:18px">REGA BUS IN</text>
+<path d="M 1460,820 L 1446,812 L 1446,828 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<text text-anchor="end" x="1441.0" y="826.75" fill="#808080" style="font-size:18px">RAM BUS <tspan style="text-decoration:overline;">IN</tspan></text>
 </g>
 <g>
-<path d="M 1460,880 L 1446,872 L 1446,888 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="end" x="1441.0" y="886.75" fill="#808080" style="font-size:18px">REGA BUS <tspan style="text-decoration:overline;">IN</tspan></text>
+<path d="M 1481,848 L 1499,860 L 1481,872 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<circle cx="1510.0" cy="860.0" r="9.0" stroke="#000000" stroke-width="2.8" fill="none" />
+</g>
+<g>
+<path d="M 1540,860 L 1554,868 L 1554,852 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<text text-anchor="start" x="1559.0" y="866.75" fill="#808080" style="font-size:18px">PC BUS IN</text>
+</g>
+<g>
+<path d="M 1460,860 L 1446,852 L 1446,868 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<text text-anchor="end" x="1441.0" y="866.75" fill="#808080" style="font-size:18px">PC BUS <tspan style="text-decoration:overline;">IN</tspan></text>
 </g>
 <g>
 <path d="M 1481,888 L 1499,900 L 1481,912 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
@@ -1420,11 +1413,11 @@
 </g>
 <g>
 <path d="M 1540,900 L 1554,908 L 1554,892 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="start" x="1559.0" y="906.75" fill="#808080" style="font-size:18px">REGB BUS IN</text>
+<text text-anchor="start" x="1559.0" y="906.75" fill="#808080" style="font-size:18px">REGA BUS IN</text>
 </g>
 <g>
 <path d="M 1460,900 L 1446,892 L 1446,908 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="end" x="1441.0" y="906.75" fill="#808080" style="font-size:18px">REGB BUS <tspan style="text-decoration:overline;">IN</tspan></text>
+<text text-anchor="end" x="1441.0" y="906.75" fill="#808080" style="font-size:18px">REGA BUS <tspan style="text-decoration:overline;">IN</tspan></text>
 </g>
 <g>
 <path d="M 1481,908 L 1499,920 L 1481,932 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
@@ -1432,55 +1425,67 @@
 </g>
 <g>
 <path d="M 1540,920 L 1554,928 L 1554,912 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="start" x="1559.0" y="926.75" fill="#808080" style="font-size:18px">OUT BUS IN</text>
+<text text-anchor="start" x="1559.0" y="926.75" fill="#808080" style="font-size:18px">REGB BUS IN</text>
 </g>
 <g>
 <path d="M 1460,920 L 1446,912 L 1446,928 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="end" x="1441.0" y="926.75" fill="#808080" style="font-size:18px">OUT BUS <tspan style="text-decoration:overline;">IN</tspan></text>
+<text text-anchor="end" x="1441.0" y="926.75" fill="#808080" style="font-size:18px">REGB BUS <tspan style="text-decoration:overline;">IN</tspan></text>
 </g>
 <g>
-<path d="M 1040,1460 L 1026,1452 L 1026,1468 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="end" x="1021.0" y="1466.75" fill="#808080" style="font-size:18px">PC BUS IN</text>
+<path d="M 1481,928 L 1499,940 L 1481,952 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<circle cx="1510.0" cy="940.0" r="9.0" stroke="#000000" stroke-width="2.8" fill="none" />
 </g>
 <g>
-<path d="M 1040,1500 L 1026,1492 L 1026,1508 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="end" x="1021.0" y="1506.75" fill="#808080" style="font-size:18px">REGA BUS IN</text>
+<path d="M 1540,940 L 1554,948 L 1554,932 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<text text-anchor="start" x="1559.0" y="946.75" fill="#808080" style="font-size:18px">OUT BUS IN</text>
 </g>
 <g>
-<path d="M 1040,1540 L 1026,1532 L 1026,1548 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="end" x="1021.0" y="1546.75" fill="#808080" style="font-size:18px">OUT BUS IN</text>
+<path d="M 1460,940 L 1446,932 L 1446,948 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<text text-anchor="end" x="1441.0" y="946.75" fill="#808080" style="font-size:18px">OUT BUS <tspan style="text-decoration:overline;">IN</tspan></text>
 </g>
 <g>
-<circle cx="1071.0" cy="1420.0" r="10.0" stroke="#000000" stroke-width="2.8" fill="#000000" />
-<circle cx="1071.0" cy="1420.0" r="8.0" stroke="#ffff33" stroke-width="0.0" fill="#ffff33" />
+<path d="M 1040,1480 L 1026,1472 L 1026,1488 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<text text-anchor="end" x="1021.0" y="1486.75" fill="#808080" style="font-size:18px">PC BUS IN</text>
 </g>
 <g>
-<circle cx="1071.0" cy="1460.0" r="10.0" stroke="#000000" stroke-width="2.8" fill="#000000" />
-<circle cx="1071.0" cy="1460.0" r="8.0" stroke="#ffff33" stroke-width="0.0" fill="#ffff33" />
+<path d="M 1040,1520 L 1026,1512 L 1026,1528 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<text text-anchor="end" x="1021.0" y="1526.75" fill="#808080" style="font-size:18px">REGA BUS IN</text>
 </g>
 <g>
-<circle cx="1071.0" cy="1500.0" r="10.0" stroke="#000000" stroke-width="2.8" fill="#000000" />
-<circle cx="1071.0" cy="1500.0" r="8.0" stroke="#ffff33" stroke-width="0.0" fill="#ffff33" />
+<path d="M 1040,1560 L 1026,1552 L 1026,1568 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<text text-anchor="end" x="1021.0" y="1566.75" fill="#808080" style="font-size:18px">OUT BUS IN</text>
+</g>
+<g>
+<circle cx="1071.0" cy="1440.0" r="10.0" stroke="#000000" stroke-width="2.8" fill="#000000" />
+<circle cx="1071.0" cy="1440.0" r="8.0" stroke="#ffff33" stroke-width="0.0" fill="#ffff33" />
+</g>
+<g>
+<circle cx="1071.0" cy="1480.0" r="10.0" stroke="#000000" stroke-width="2.8" fill="#000000" />
+<circle cx="1071.0" cy="1480.0" r="8.0" stroke="#ffff33" stroke-width="0.0" fill="#ffff33" />
 </g>
 <g>
 <circle cx="1071.0" cy="1520.0" r="10.0" stroke="#000000" stroke-width="2.8" fill="#000000" />
 <circle cx="1071.0" cy="1520.0" r="8.0" stroke="#ffff33" stroke-width="0.0" fill="#ffff33" />
 </g>
 <g>
-<path d="M 1040,1420 L 1026,1412 L 1026,1428 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="end" x="1021.0" y="1426.75" fill="#808080" style="font-size:18px">RAM BUS IN</text>
-</g>
-<g>
 <circle cx="1071.0" cy="1540.0" r="10.0" stroke="#000000" stroke-width="2.8" fill="#000000" />
 <circle cx="1071.0" cy="1540.0" r="8.0" stroke="#ffff33" stroke-width="0.0" fill="#ffff33" />
 </g>
 <g>
-<path d="M 1040,1520 L 1026,1512 L 1026,1528 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="end" x="1021.0" y="1526.75" fill="#808080" style="font-size:18px">REGB BUS IN</text>
+<path d="M 1040,1440 L 1026,1432 L 1026,1448 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<text text-anchor="end" x="1021.0" y="1446.75" fill="#808080" style="font-size:18px">RAM BUS IN</text>
+</g>
+<g>
+<circle cx="1071.0" cy="1560.0" r="10.0" stroke="#000000" stroke-width="2.8" fill="#000000" />
+<circle cx="1071.0" cy="1560.0" r="8.0" stroke="#ffff33" stroke-width="0.0" fill="#ffff33" />
+</g>
+<g>
+<path d="M 1040,1540 L 1026,1532 L 1026,1548 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<text text-anchor="end" x="1021.0" y="1546.75" fill="#808080" style="font-size:18px">REGB BUS IN</text>
 </g>
 <g>
 <text text-anchor="start" x="1302.0" y="657.0" fill="#000000" style="font-size:14px">Digital workaround as leds can only be connected from cathode</text>
-<path d="M 1300,660 L 1700,660 L 1700,940 L 1300,940 Z" stroke-dasharray="4.0,4.0" stroke="#000000" stroke-width="0.7" fill="none"/>
+<path d="M 1300,660 L 1700,660 L 1700,960 L 1300,960 Z" stroke-dasharray="4.0,4.0" stroke="#000000" stroke-width="0.7" fill="none"/>
 </g>
 <g>
 <path d="M 660,1240 L 674,1248 L 674,1232 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
@@ -1492,7 +1497,7 @@
 </g>
 <g>
 <path d="M 660,1220 L 674,1228 L 674,1212 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="start" x="679.0" y="1226.75" fill="#808080" style="font-size:18px">CONST BUS <tspan style="text-decoration:overline;">OUT</tspan></text>
+<text text-anchor="start" x="679.0" y="1226.75" fill="#808080" style="font-size:18px">ZERO BUS <tspan style="text-decoration:overline;">OUT</tspan></text>
 </g>
 <g>
 <path d="M 401,406 L 599,406 L 599,474 L 401,474 Z" stroke="#ffffb4" stroke-width="0.0" fill="#ffffb4" fill-opacity="0.7843137254901961"/>
@@ -1515,7 +1520,7 @@
 </g>
 <g>
 <path d="M 380,420 L 366,412 L 366,428 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="end" x="361.0" y="426.75" fill="#808080" style="font-size:18px">CLOCK</text>
+<text text-anchor="end" x="361.0" y="426.75" fill="#808080" style="font-size:18px"><tspan style="text-decoration:overline;">CLOCK</tspan></text>
 </g>
 <g>
 <path d="M 620,420 L 634,428 L 634,412 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
@@ -1606,12 +1611,12 @@
 <text text-anchor="start" x="679.0" y="1346.75" fill="#808080" style="font-size:18px">ALU BUS <tspan style="text-decoration:overline;">OUT</tspan></text>
 </g>
 <g>
-<path d="M 1040,1340 L 1026,1332 L 1026,1348 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="end" x="1021.0" y="1346.75" fill="#808080" style="font-size:18px">IR BUS OUT</text>
+<path d="M 1040,1360 L 1026,1352 L 1026,1368 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<text text-anchor="end" x="1021.0" y="1366.75" fill="#808080" style="font-size:18px">IR BUS OUT</text>
 </g>
 <g>
-<circle cx="1071.0" cy="1340.0" r="10.0" stroke="#000000" stroke-width="2.8" fill="#000000" />
-<circle cx="1071.0" cy="1340.0" r="8.0" stroke="#ffff33" stroke-width="0.0" fill="#ffff33" />
+<circle cx="1071.0" cy="1360.0" r="10.0" stroke="#000000" stroke-width="2.8" fill="#000000" />
+<circle cx="1071.0" cy="1360.0" r="8.0" stroke="#ffff33" stroke-width="0.0" fill="#ffff33" />
 </g>
 <g>
 <path d="M 660,1400 L 674,1408 L 674,1392 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
@@ -1626,56 +1631,56 @@
 <text text-anchor="start" x="679.0" y="1426.75" fill="#808080" style="font-size:18px">IR BUS <tspan style="text-decoration:overline;">IN</tspan></text>
 </g>
 <g>
-<circle cx="1071.0" cy="1440.0" r="10.0" stroke="#000000" stroke-width="2.8" fill="#000000" />
-<circle cx="1071.0" cy="1440.0" r="8.0" stroke="#ffff33" stroke-width="0.0" fill="#ffff33" />
+<circle cx="1071.0" cy="1460.0" r="10.0" stroke="#000000" stroke-width="2.8" fill="#000000" />
+<circle cx="1071.0" cy="1460.0" r="8.0" stroke="#ffff33" stroke-width="0.0" fill="#ffff33" />
 </g>
 <g>
-<path d="M 1040,1440 L 1026,1432 L 1026,1448 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="end" x="1021.0" y="1446.75" fill="#808080" style="font-size:18px">MAR BUS IN</text>
+<path d="M 1040,1460 L 1026,1452 L 1026,1468 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<text text-anchor="end" x="1021.0" y="1466.75" fill="#808080" style="font-size:18px">MAR BUS IN</text>
 </g>
 <g>
-<path d="M 1040,1480 L 1026,1472 L 1026,1488 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="end" x="1021.0" y="1486.75" fill="#808080" style="font-size:18px">IR BUS IN</text>
+<path d="M 1040,1500 L 1026,1492 L 1026,1508 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<text text-anchor="end" x="1021.0" y="1506.75" fill="#808080" style="font-size:18px">IR BUS IN</text>
 </g>
 <g>
-<circle cx="1071.0" cy="1480.0" r="10.0" stroke="#000000" stroke-width="2.8" fill="#000000" />
-<circle cx="1071.0" cy="1480.0" r="8.0" stroke="#ffff33" stroke-width="0.0" fill="#ffff33" />
+<circle cx="1071.0" cy="1500.0" r="10.0" stroke="#000000" stroke-width="2.8" fill="#000000" />
+<circle cx="1071.0" cy="1500.0" r="8.0" stroke="#ffff33" stroke-width="0.0" fill="#ffff33" />
 </g>
 <g>
-<path d="M 1481,708 L 1499,720 L 1481,732 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<circle cx="1510.0" cy="720.0" r="9.0" stroke="#000000" stroke-width="2.8" fill="none" />
+<path d="M 1481,728 L 1499,740 L 1481,752 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<circle cx="1510.0" cy="740.0" r="9.0" stroke="#000000" stroke-width="2.8" fill="none" />
 </g>
 <g>
-<path d="M 1540,720 L 1554,728 L 1554,712 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="start" x="1559.0" y="726.75" fill="#808080" style="font-size:18px">IR BUS OUT</text>
+<path d="M 1540,740 L 1554,748 L 1554,732 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<text text-anchor="start" x="1559.0" y="746.75" fill="#808080" style="font-size:18px">IR BUS OUT</text>
 </g>
 <g>
-<path d="M 1460,720 L 1446,712 L 1446,728 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="end" x="1441.0" y="726.75" fill="#808080" style="font-size:18px">IR BUS <tspan style="text-decoration:overline;">OUT</tspan></text>
+<path d="M 1460,740 L 1446,732 L 1446,748 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<text text-anchor="end" x="1441.0" y="746.75" fill="#808080" style="font-size:18px">IR BUS <tspan style="text-decoration:overline;">OUT</tspan></text>
 </g>
 <g>
-<path d="M 1481,808 L 1499,820 L 1481,832 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<circle cx="1510.0" cy="820.0" r="9.0" stroke="#000000" stroke-width="2.8" fill="none" />
+<path d="M 1481,828 L 1499,840 L 1481,852 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<circle cx="1510.0" cy="840.0" r="9.0" stroke="#000000" stroke-width="2.8" fill="none" />
 </g>
 <g>
-<path d="M 1540,820 L 1554,828 L 1554,812 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="start" x="1559.0" y="826.75" fill="#808080" style="font-size:18px">MAR BUS IN</text>
+<path d="M 1540,840 L 1554,848 L 1554,832 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<text text-anchor="start" x="1559.0" y="846.75" fill="#808080" style="font-size:18px">MAR BUS IN</text>
 </g>
 <g>
-<path d="M 1460,820 L 1446,812 L 1446,828 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="end" x="1441.0" y="826.75" fill="#808080" style="font-size:18px">MAR BUS <tspan style="text-decoration:overline;">IN</tspan></text>
+<path d="M 1460,840 L 1446,832 L 1446,848 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<text text-anchor="end" x="1441.0" y="846.75" fill="#808080" style="font-size:18px">MAR BUS <tspan style="text-decoration:overline;">IN</tspan></text>
 </g>
 <g>
-<path d="M 1481,848 L 1499,860 L 1481,872 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<circle cx="1510.0" cy="860.0" r="9.0" stroke="#000000" stroke-width="2.8" fill="none" />
+<path d="M 1481,868 L 1499,880 L 1481,892 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<circle cx="1510.0" cy="880.0" r="9.0" stroke="#000000" stroke-width="2.8" fill="none" />
 </g>
 <g>
-<path d="M 1540,860 L 1554,868 L 1554,852 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="start" x="1559.0" y="866.75" fill="#808080" style="font-size:18px">IR BUS IN</text>
+<path d="M 1540,880 L 1554,888 L 1554,872 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<text text-anchor="start" x="1559.0" y="886.75" fill="#808080" style="font-size:18px">IR BUS IN</text>
 </g>
 <g>
-<path d="M 1460,860 L 1446,852 L 1446,868 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="end" x="1441.0" y="866.75" fill="#808080" style="font-size:18px">IR BUS <tspan style="text-decoration:overline;">IN</tspan></text>
+<path d="M 1460,880 L 1446,872 L 1446,888 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<text text-anchor="end" x="1441.0" y="886.75" fill="#808080" style="font-size:18px">IR BUS <tspan style="text-decoration:overline;">IN</tspan></text>
 </g>
 <g>
 <path d="M 380,1140 L 366,1132 L 366,1148 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
@@ -1800,19 +1805,19 @@
 <text text-anchor="end" x="1421.0" y="1406.75" fill="#808080" style="font-size:18px">PEEK LAST STEP</text>
 </g>
 <g>
-<text text-anchor="end" x="577.0" y="1709.0" fill="#000000" style="font-size:24px">0b11111111</text>
+<text text-anchor="end" x="997.0" y="1029.0" fill="#000000" style="font-size:24px">0b00000000</text>
 </g>
 <g>
-<path d="M 601,1688 L 639,1700 L 601,1712 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<circle cx="620.0" cy="1686.0" r="6.0" stroke="#000000" stroke-width="2.8" fill="none" />
+<path d="M 1021,1008 L 1059,1020 L 1021,1032 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<circle cx="1040.0" cy="1006.0" r="6.0" stroke="#000000" stroke-width="2.8" fill="none" />
 </g>
 <g>
-<path d="M 660,1700 L 674,1708 L 674,1692 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="start" x="679.0" y="1706.75" fill="#808080" style="font-size:18px">BUS</text>
+<path d="M 1080,1020 L 1094,1028 L 1094,1012 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<text text-anchor="start" x="1099.0" y="1026.75" fill="#808080" style="font-size:18px">BUS</text>
 </g>
 <g>
-<path d="M 600,1660 L 586,1652 L 586,1668 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="end" x="581.0" y="1666.75" fill="#808080" style="font-size:18px">CONST BUS <tspan style="text-decoration:overline;">OUT</tspan></text>
+<path d="M 1020,980 L 1006,972 L 1006,988 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<text text-anchor="end" x="1001.0" y="986.75" fill="#808080" style="font-size:18px">ZERO BUS <tspan style="text-decoration:overline;">OUT</tspan></text>
 </g>
 <g>
 <path d="M 380,360 L 366,352 L 366,368 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
@@ -1914,6 +1919,42 @@
 <g>
 <path d="M 380,20 L 366,12 L 366,28 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
 <text text-anchor="end" x="361.0" y="26.75" fill="#808080" style="font-size:18px">CLOCK</text>
+</g>
+<g>
+<circle cx="1071.0" cy="1300.0" r="10.0" stroke="#000000" stroke-width="2.8" fill="#000000" />
+<circle cx="1071.0" cy="1300.0" r="8.0" stroke="#ffff33" stroke-width="0.0" fill="#ffff33" />
+</g>
+<g>
+<path d="M 1040,1300 L 1026,1292 L 1026,1308 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<text text-anchor="end" x="1021.0" y="1306.75" fill="#808080" style="font-size:18px">ZERO BUS OUT</text>
+</g>
+<g>
+<path d="M 1481,668 L 1499,680 L 1481,692 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<circle cx="1510.0" cy="680.0" r="9.0" stroke="#000000" stroke-width="2.8" fill="none" />
+</g>
+<g>
+<path d="M 1540,680 L 1554,688 L 1554,672 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<text text-anchor="start" x="1559.0" y="686.75" fill="#808080" style="font-size:18px">ZERO BUS OUT</text>
+</g>
+<g>
+<path d="M 1460,680 L 1446,672 L 1446,688 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<text text-anchor="end" x="1441.0" y="686.75" fill="#808080" style="font-size:18px">ZERO BUS <tspan style="text-decoration:overline;">OUT</tspan></text>
+</g>
+<g>
+<text text-anchor="start" x="1462.0" y="1696.0" fill="#000000" style="font-size:24px">REGA</text>
+<text text-anchor="start" x="1462.0" y="1722.0" fill="#000000" style="font-size:24px">?</text>
+</g>
+<g>
+<path d="M 1440,1700 L 1426,1692 L 1426,1708 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<text text-anchor="end" x="1421.0" y="1706.75" fill="#808080" style="font-size:18px">OUT REG A</text>
+</g>
+<g>
+<text text-anchor="start" x="1462.0" y="1756.0" fill="#000000" style="font-size:24px">REGB</text>
+<text text-anchor="start" x="1462.0" y="1782.0" fill="#000000" style="font-size:24px">?</text>
+</g>
+<g>
+<path d="M 1440,1760 L 1426,1752 L 1426,1768 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<text text-anchor="end" x="1421.0" y="1766.75" fill="#808080" style="font-size:18px">OUT REG B</text>
 </g>
 </g>
 </svg>

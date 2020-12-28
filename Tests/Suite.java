@@ -1,25 +1,31 @@
 package Tests;
 
 import static Tests.MutableTestModel.clock;
-import static Tests.MutableTestModel.halted;
 import static Tests.MutableTestModel.init;
 import static Tests.MutableTestModel.signal;
 import static Tests.MutableTestModel.step;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.jupiter.api.RepeatedTest;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
 
 public class Suite {
 
     // Bus out control signal addresses.
+    private static final int ZERO_OUT = 0;
     private static final int RAM_OUT = 1;
     private static final int PC_OUT = 2;
+    private static final int IR_OUT = 3;
 
     // Bus in control signal addresses.
     private static final int MAR_IN = 2 << 3;
+    private static final int PC_IN = 3 << 3;
     private static final int IR_IN = 4 << 3;
+    private static final int REGA_IN = 5 << 3;
+    private static final int REGB_IN = 6 << 3;
+    private static final int OUT_IN = 7 << 3;
 
     // Control signals.
     private static final int HALT = 1 << 6;
@@ -29,7 +35,7 @@ public class Suite {
     private static final int LAST_STEP = 1 << 15;
 
     private static enum Signal {
-        BUS, PC, MAR, IR, CONTROL, STEP, LAST_STEP
+        BUS, PC, MAR, IR, REGA, REGB, CONTROL, STEP, LAST_STEP
     }
 
     private static String toBinaryString(int bits, int i) {
@@ -42,69 +48,167 @@ public class Suite {
     }
 
     private static Executable signalEquals(MutableTestModel model, Signal signalName, int expected) {
-        return () -> assertEquals((expected), (signal(model, signalName.name())), () -> signalName.name());
+        return () -> assertEquals(expected, signal(model, signalName.name()), () -> signalName.name());
     }
 
-    @RepeatedTest(1)
-    public void reset() {
-        final var ram = new int[] { 0xff };
+    private static Executable signalEquals(MutableTestModel model, Signal signalName, Signal expected) {
+        return () -> assertEquals(signal(model, expected.name()), signal(model, signalName.name()),
+                () -> signalName.name());
+    }
+
+    private static MutableTestModel initModelWithRam(int... ram) {
         final var model = init("Simulation/Processor.dig", ram);
 
         assertEquals(false, clock(model), () -> "CLOCK should start false");
 
-        step(model);
-        step(model); // One clock cycle for resetting PC, MAR and CONTROL STEP.
+        return model;
+    }
 
-        assertAll(signalEquals(model, Signal.PC, 0), //
-                signalEquals(model, Signal.MAR, 0), //
-                signalEquals(model, Signal.STEP, 0), //
+    private static void assertResetSteps(MutableTestModel model) {
+        step(model);
+        step(model); // One clock cycle for resetting IR and control STEP.
+
+        assertAll(signalEquals(model, Signal.STEP, 0), //
                 signalEquals(model, Signal.LAST_STEP, 0), //
                 signalEquals(model, Signal.IR, 0) // TODO: This is not guaranteed yet. We're missing reset logic for IR.
         );
 
-        // This depends on how we have programmed our microcode.
-        // Address 0 in microcode rom should be the fetch operation to get things
-        // running.
-        assertAll(controlSignalEquals(model, PC_OUT | MAR_IN));
+        // This depends on how we have programmed our microcode. We should be using
+        // reset steps at 0x400.
+        assertAll(controlSignalEquals(model, ZERO_OUT | PC_IN));
 
         step(model); // Execute control signals.
 
         assertAll(signalEquals(model, Signal.BUS, 0), //
-                signalEquals(model, Signal.MAR, 0));
+                signalEquals(model, Signal.PC, 0));
 
         step(model); // Latch next control signals.
 
-        // This depends on how we have programmed our microcode.
-        // Address 0 in microcode rom should be the fetch operation to get things
-        // running.
-        assertAll(controlSignalEquals(model, PC_COUNT | RAM_OUT | IR_IN | LAST_STEP), //
+        assertAll(controlSignalEquals(model, REGA_IN), //
                 signalEquals(model, Signal.STEP, 1), //
+                signalEquals(model, Signal.LAST_STEP, 0));
+
+        step(model); // Execute control signals.
+
+        assertAll(signalEquals(model, Signal.REGA, 0));
+
+        step(model); // Latch next control signals.
+
+        assertAll(controlSignalEquals(model, REGB_IN), //
+                signalEquals(model, Signal.STEP, 2), //
+                signalEquals(model, Signal.LAST_STEP, 0));
+
+        step(model); // Execute control signals.
+
+        assertAll(signalEquals(model, Signal.REGB, 0));
+
+        step(model); // Latch next control signals.
+
+        assertAll(controlSignalEquals(model, OUT_IN), //
+                signalEquals(model, Signal.STEP, 3), //
+                signalEquals(model, Signal.LAST_STEP, 0));
+
+        step(model); // Execute control signals.
+
+        step(model); // Latch next control signals.
+
+        assertAll(controlSignalEquals(model, MAR_IN), //
+                signalEquals(model, Signal.STEP, 4), //
+                signalEquals(model, Signal.LAST_STEP, 0));
+
+        step(model); // Execute control signals.
+
+        assertAll(signalEquals(model, Signal.MAR, 0));
+
+        step(model); // Latch next control signals.
+
+        assertAll(controlSignalEquals(model, RAM_OUT | IR_IN | LAST_STEP), //
+                signalEquals(model, Signal.STEP, 5), //
+                signalEquals(model, Signal.LAST_STEP, 1));
+
+        step(model); // Execute control signals.
+    }
+
+    private static void assertFetchSteps(MutableTestModel model) {
+        step(model); // Latch next control signals.
+
+        assertAll(controlSignalEquals(model, PC_OUT | MAR_IN), //
+                signalEquals(model, Signal.STEP, 0), //
+                signalEquals(model, Signal.LAST_STEP, 0));
+
+        step(model); // Execute control signals.
+
+        assertAll(signalEquals(model, Signal.BUS, Signal.PC), //
+                signalEquals(model, Signal.MAR, Signal.BUS));
+
+        step(model); // Latch next control signals.
+
+        assertAll(controlSignalEquals(model, RAM_OUT | IR_IN | PC_COUNT), //
+                signalEquals(model, Signal.STEP, 1), //
+                signalEquals(model, Signal.LAST_STEP, 0));
+
+        step(model); // Execute control signals.
+    }
+
+    @Test
+    @DisplayName("nop")
+    public void noOperation() {
+        final var model = initModelWithRam(0x00);
+
+        assertResetSteps(model);
+
+        assertFetchSteps(model);
+
+        assertAll(signalEquals(model, Signal.PC, 1), //
+                signalEquals(model, Signal.IR, 0));
+
+        step(model); // Latch next control signals.
+
+        assertAll(controlSignalEquals(model, LAST_STEP), //
+                signalEquals(model, Signal.STEP, 2), //
                 signalEquals(model, Signal.LAST_STEP, 1));
 
         step(model); // Execute control signals.
 
+        step(model); // Latch next control signals.
+
+        assertAll(signalEquals(model, Signal.STEP, 0), //
+                signalEquals(model, Signal.LAST_STEP, 0));
+    }
+
+    @Test
+    @DisplayName("mov a, [4]")
+    public void setRegAToValueAtImmediateAddress() {
+        final var model = initModelWithRam(0x14, 0, 0, 0, 0xf);
+
+        assertResetSteps(model);
+
+        assertFetchSteps(model);
+
         assertAll(signalEquals(model, Signal.PC, 1), //
-                signalEquals(model, Signal.BUS, 0xff), //
-                signalEquals(model, Signal.IR, 0xff) // Note that control signals will be affected on this step as high
-                                                     // nibble of IR is part of the microcode address.
+                signalEquals(model, Signal.IR, 0x14) //
         );
 
-        step(model); // Latch next control signals, now from memory.
+        step(model); // Latch next control signals.
 
-        // Control steps should have been restarted. This is due to 0xff is in microcode
-        // programmed as HALT | LAST_STEP.
-        assertAll(controlSignalEquals(model, HALT | LAST_STEP), //
-                signalEquals(model, Signal.STEP, 0), //
-                signalEquals(model, Signal.LAST_STEP, 1) //
-        );
+        assertAll(controlSignalEquals(model, IR_OUT | MAR_IN));
 
         step(model); // Execute control signals.
 
-        assertEquals(true, halted(model));
+        assertAll(signalEquals(model, Signal.BUS, 4), // Lower 4 bit of 0x14 are outputted to the bus.
+                signalEquals(model, Signal.MAR, 4));
+
+        step(model); // Latch next control signals.
+
+        assertAll(controlSignalEquals(model, RAM_OUT | REGA_IN | LAST_STEP));
+
+        step(model); // Execute control signals.
+
+        assertAll(signalEquals(model, Signal.REGA, 0xf)); // 0xf is stored at address 4 in ram.
     }
 
     public static void main(String[] args) {
         // Uncomment this when debugging.
-        // new Suite().reset();
+        // new Suite().noOperation();
     }
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Digital by H.Neemann -->
-<!-- created: Sun Dec 06 22:28:38 CET 2020 -->
+<!-- created: Mon Dec 28 21:22:09 CET 2020 -->
 
 <svg
    xmlns:svg="http://www.w3.org/2000/svg"
@@ -43,24 +43,24 @@
 <path d="M 180,160 L 200,160" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 520,640 L 540,640" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 180,100 L 200,100" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 240,260 L 260,260" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 520,580 L 540,580" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 240,260 L 260,260" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 180,40 L 200,40" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 180,360 L 220,360" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 240,360 L 260,360" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 520,520 L 540,520" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 240,300 L 260,300" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 520,620 L 540,620" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 240,240 L 260,240" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 520,560 L 540,560" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 240,240 L 260,240" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 420,500 L 460,500 L 500,500" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 520,500 L 540,500" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 240,340 L 260,340" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 240,280 L 260,280" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 480,420 L 480,440 L 500,440" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 520,600 L 540,600" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 240,220 L 260,220" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 240,280 L 260,280" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 660,240 L 660,220 L 700,220 L 740,220 L 780,220 L 800,220" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 240,220 L 260,220" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 520,540 L 540,540" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 960,360 L 960,400" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 960,200 L 960,240" stroke="#0000b2" stroke-width="2.8" fill="none"/>
@@ -255,18 +255,6 @@
 <path d="M 232,362 L 228,362 L 228,218 L 232,218 Z" stroke="#000000" stroke-width="2.8" fill="#000000" fill-opacity="1.0"/>
 </g>
 <g>
-<path d="M 260,240 L 274,248 L 274,232 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="start" x="279.0" y="246.75" fill="#808080" style="font-size:18px">Q6</text>
-</g>
-<g>
-<path d="M 260,260 L 274,268 L 274,252 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="start" x="279.0" y="266.75" fill="#808080" style="font-size:18px">Q5</text>
-</g>
-<g>
-<path d="M 260,280 L 274,288 L 274,272 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="start" x="279.0" y="286.75" fill="#808080" style="font-size:18px">Q4</text>
-</g>
-<g>
 <path d="M 260,300 L 274,308 L 274,292 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
 <text text-anchor="start" x="279.0" y="306.75" fill="#808080" style="font-size:18px">Q3</text>
 </g>
@@ -281,10 +269,6 @@
 <g>
 <path d="M 260,360 L 274,368 L 274,352 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
 <text text-anchor="start" x="279.0" y="366.75" fill="#808080" style="font-size:18px">Q0</text>
-</g>
-<g>
-<path d="M 260,220 L 274,228 L 274,212 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="start" x="279.0" y="226.75" fill="#808080" style="font-size:18px">Q7</text>
 </g>
 <g>
 <path d="M 1000,220 L 1008,206 L 992,206 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
@@ -452,6 +436,22 @@
 </g>
 <g>
 <text text-anchor="start" x="803.0" y="229.0" fill="#000000" style="font-size:24px">0</text>
+</g>
+<g>
+<path d="M 260,240 L 274,248 L 274,232 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<text text-anchor="start" x="279.0" y="246.75" fill="#808080" style="font-size:18px">Q6</text>
+</g>
+<g>
+<path d="M 260,260 L 274,268 L 274,252 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<text text-anchor="start" x="279.0" y="266.75" fill="#808080" style="font-size:18px">Q5</text>
+</g>
+<g>
+<path d="M 260,280 L 274,288 L 274,272 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<text text-anchor="start" x="279.0" y="286.75" fill="#808080" style="font-size:18px">Q4</text>
+</g>
+<g>
+<path d="M 260,220 L 274,228 L 274,212 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<text text-anchor="start" x="279.0" y="226.75" fill="#808080" style="font-size:18px">Q7</text>
 </g>
 </g>
 </svg>
