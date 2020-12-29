@@ -38,4 +38,4 @@ microcode: .cbuild .cbuild/Microcode
 	mkdir .cbuild
 
 .cbuild/Microcode: Microcode.c
-	cc $< -std=c17 -Wall -Wextra -Wpedantic -O1 -g -o $@
+	cc $< -std=c17 -Wall -Wextra -Wpedantic -Werror -O1 -g -o $@
