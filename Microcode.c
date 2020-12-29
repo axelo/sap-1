@@ -46,18 +46,27 @@ enum BusInAddress {
 
 enum {
     MAX_NB_OF_CONTROL_STEPS = 16, // Low 4 bits of microcode address.
-    NB_OF_INSTRUCTIONS = 2,       // High 4 bits of microcode address.
+    NB_OF_INSTRUCTIONS = 3,       // High 4 bits of microcode address.
     DEFAULT_MICROCODE = HALT | LAST_STEP
 };
 
 uint16_t microcode[NB_OF_INSTRUCTIONS][MAX_NB_OF_CONTROL_STEPS] = {
     // nop
     {LAST_STEP},
+
     // mov a, [immediate]
     {
         IR_OUT | MAR_IN,
         RAM_OUT | REGA_IN | LAST_STEP,
     },
+
+    // add a, [immediate]
+    {
+        IR_OUT | MAR_IN,
+        RAM_OUT | REGB_IN,
+        ALU_OUT | REGA_IN | LAST_STEP,
+    }
+    //
 };
 
 enum OUTPUT_FORMAT {

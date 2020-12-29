@@ -2,6 +2,7 @@ package Tests;
 
 import static Tests.MutableTestModel.clock;
 import static Tests.MutableTestModel.init;
+import static Tests.MutableTestModel.readRam;
 import static Tests.MutableTestModel.signal;
 import static Tests.MutableTestModel.step;
 import static org.junit.jupiter.api.Assertions.assertAll;
@@ -18,6 +19,7 @@ public class Suite {
     private static final int RAM_OUT = 1;
     private static final int PC_OUT = 2;
     private static final int IR_OUT = 3;
+    private static final int ALU_OUT = 6;
 
     // Bus in control signal addresses.
     private static final int MAR_IN = 2 << 3;
@@ -154,6 +156,78 @@ public class Suite {
         assertAll(signalEquals(model, Signal.PC, previousPc + 1));
     }
 
+    private static void assertMovRegAImmediateAddressSteps(MutableTestModel model) {
+        step(model); // Latch next control signals. Need to do this before testing IR as IR is
+                     // latched on the same clock as control signals.
+
+        final int ir = signal(model, Signal.IR.name());
+        final int movRegAImmediate = ir & 0xf0;
+        final int immediate = ir & 0x0f;
+
+        assertEquals(0x10, movRegAImmediate, () -> "High 4-bits of IR should be 0b0001");
+
+        assertAll(controlSignalEquals(model, IR_OUT | MAR_IN));
+
+        step(model); // Execute control signals.
+
+        assertAll(signalEquals(model, Signal.BUS, immediate), // Lower 4 bit of IR are outputted to the bus.
+                signalEquals(model, Signal.MAR, immediate));
+
+        step(model); // Latch next control signals.
+
+        assertAll(controlSignalEquals(model, RAM_OUT | REGA_IN | LAST_STEP));
+
+        final var valueInRamAtAddress = readRam(model, immediate);
+
+        step(model); // Execute control signals.
+
+        // valueInRamAtAddress is stored at address immediate in ram.
+        assertAll(signalEquals(model, Signal.REGA, valueInRamAtAddress));
+    }
+
+    private static void assertAddRegAImmediateAddressSteps(MutableTestModel model) {
+        step(model); // Latch next control signals. Need to do this before testing IR as IR is
+                     // latched on the same clock as control signals.
+
+        final int regA = signal(model, Signal.REGA.name());
+
+        final int ir = signal(model, Signal.IR.name());
+        final int addRegAImmediate = ir & 0xf0;
+        final int immediate = ir & 0x0f;
+
+        assertEquals(0x20, addRegAImmediate, () -> "High 4-bits of IR should be 0b0002");
+
+        assertAll(controlSignalEquals(model, IR_OUT | MAR_IN));
+
+        step(model); // Execute control signals.
+
+        assertAll(signalEquals(model, Signal.BUS, immediate), // Lower 4 bit of IR are outputted to the bus.
+                signalEquals(model, Signal.MAR, immediate));
+
+        step(model); // Latch next control signals.
+
+        assertAll(controlSignalEquals(model, RAM_OUT | REGB_IN));
+
+        final var valueInRamAtAddress = readRam(model, immediate);
+
+        step(model); // Execute control signals.
+
+        // valueInRamAtAddress is stored at address immediate in ram.
+        assertAll(signalEquals(model, Signal.REGB, valueInRamAtAddress));
+
+        step(model); // Latch next control signals.
+
+        assertAll(controlSignalEquals(model, ALU_OUT | REGA_IN | LAST_STEP));
+
+        step(model); // Execute control signals.
+
+        final int regB = signal(model, Signal.REGB.name());
+
+        final int sum = (regA + regB) & 0xff;
+
+        assertAll(signalEquals(model, Signal.REGA, sum));
+    }
+
     @Test
     @DisplayName("nop")
     public void noOperation() {
@@ -188,28 +262,41 @@ public class Suite {
 
         assertFetchSteps(model);
 
-        assertAll(signalEquals(model, Signal.IR, 0x14));
+        assertMovRegAImmediateAddressSteps(model);
+    }
 
-        step(model); // Latch next control signals.
+    @Test
+    @DisplayName("add a, [3]")
+    public void addRegAWithValueAtImmediateAddress() {
+        final var model = initModelWithRam(0x23, 0, 0, 0xa);
 
-        assertAll(controlSignalEquals(model, IR_OUT | MAR_IN));
+        assertResetSteps(model);
 
-        step(model); // Execute control signals.
+        assertFetchSteps(model);
 
-        assertAll(signalEquals(model, Signal.BUS, 4), // Lower 4 bit of 0x14 are outputted to the bus.
-                signalEquals(model, Signal.MAR, 4));
+        assertAddRegAImmediateAddressSteps(model);
+    }
 
-        step(model); // Latch next control signals.
+    @Test
+    @DisplayName("mov a, [14]\nadd a, [15]")
+    public void setAndAddRegFromMemoryImmediate() {
+        final var model = initModelWithRam(0x1e, 0x2f, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 20, 22);
 
-        assertAll(controlSignalEquals(model, RAM_OUT | REGA_IN | LAST_STEP));
+        assertResetSteps(model);
 
-        step(model); // Execute control signals.
+        assertFetchSteps(model);
 
-        assertAll(signalEquals(model, Signal.REGA, 0xf)); // 0xf is stored at address 4 in ram.
+        assertMovRegAImmediateAddressSteps(model);
+
+        assertFetchSteps(model);
+
+        assertAddRegAImmediateAddressSteps(model);
+
+        assertAll(signalEquals(model, Signal.REGA, 42));
     }
 
     public static void main(String[] args) {
-        // Uncomment this when debugging.
-        // new Suite().noOperation();
+        // When debugging.
+        new Suite().noOperation();
     }
 }
