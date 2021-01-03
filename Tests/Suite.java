@@ -19,6 +19,7 @@ public class Suite {
     private static final int RAM_OUT = 1;
     private static final int PC_OUT = 2;
     private static final int IR_OUT = 3;
+    private static final int REGA_OUT = 4;
     private static final int ALU_OUT = 6;
 
     // Bus in control signal addresses.
@@ -33,7 +34,7 @@ public class Suite {
     private static final int HALT = 1 << 6;
     private static final int PC_COUNT = 1 << 7;
     private static final int ALU_SUBTRACT = 1 << 8;
-    private static final int OUT_SIGNED = 1 << 9;
+    private static final int OUT_SIGNED_IN = 1 << 9;
     private static final int LAST_STEP = 1 << 15;
 
     private static enum Signal {
@@ -293,6 +294,35 @@ public class Suite {
         assertAddRegAImmediateAddressSteps(model);
 
         assertAll(signalEquals(model, Signal.REGA, 42));
+    }
+
+    @Test
+    @DisplayName("out a, signed")
+    public void outputRegAInSigned() {
+        final var model = initModelWithRam(0x31);
+
+        assertResetSteps(model);
+
+        assertFetchSteps(model);
+
+        step(model); // Latch next control signals. Need to do this before testing IR as IR is
+                     // latched on the same clock as control signals.
+
+        assertAll(signalEquals(model, Signal.IR, 0x31));
+
+        assertAll(controlSignalEquals(model, IR_OUT | OUT_SIGNED_IN));
+
+        step(model); // Execute control signals.
+
+        assertAll(signalEquals(model, Signal.BUS, 0x1)); // output flag 1 = signed mode
+
+        step(model); // Latch next control signals.
+
+        assertAll(controlSignalEquals(model, REGA_OUT | OUT_IN | LAST_STEP));
+
+        step(model); // Execute control signals.
+
+        assertAll(signalEquals(model, Signal.BUS, 0x0)); // Reset value of register a.
     }
 
     public static void main(String[] args) {
