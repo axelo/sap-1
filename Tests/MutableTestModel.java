@@ -6,7 +6,6 @@ import java.io.File;
 import java.util.Arrays;
 import java.util.Map;
 import java.util.Optional;
-import java.util.AbstractMap.SimpleEntry;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -16,14 +15,13 @@ import de.neemann.digital.core.ModelEvent;
 import de.neemann.digital.core.ObservableValue;
 import de.neemann.digital.core.Signal;
 import de.neemann.digital.core.memory.DataField;
+import de.neemann.digital.core.memory.RAMSinglePortSel;
 import de.neemann.digital.testing.UnitTester;
 
 public class MutableTestModel {
 
     public static MutableTestModel init(String digFilename, int... ram) {
-        final var pair = tryCreateDigitalModel(digFilename, Arrays.stream(ram).mapToLong(i -> i).toArray());
-
-        return new MutableTestModel(pair.getKey(), pair.getValue());
+        return new MutableTestModel(tryCreateDigitalModel(digFilename, Arrays.stream(ram).mapToLong(i -> i).toArray()));
     }
 
     public static void step(MutableTestModel model) {
@@ -54,14 +52,13 @@ public class MutableTestModel {
         return (int) signal.getValue().getValue();
     }
 
-    private static SimpleEntry<Model, DataField> tryCreateDigitalModel(String filename, long... ram) {
+    private static Model tryCreateDigitalModel(String filename, long... ram) {
         try {
             final var tester = new UnitTester(new File(filename));
-            final var ramDataField = new DataField(ram);
 
-            tester.writeDataTo(pm -> pm.getLabel().equals("RAM"), ramDataField);
+            tester.writeDataTo(pm -> pm.getLabel().equals("RAM"), new DataField(ram));
 
-            return new SimpleEntry<>(tester.getModel(), ramDataField);
+            return tester.getModel();
         } catch (Exception e) {
             throw new IllegalStateException("Failed to construct Digital model from file.", e);
         }
@@ -94,14 +91,16 @@ public class MutableTestModel {
                 .orElseThrow(() -> new IllegalStateException("Missing signal " + name + " in Digital model."));
     }
 
-    private MutableTestModel(Model digitalModel, DataField digitalRamDataField) {
+    private MutableTestModel(Model digitalModel) {
         signalsByName = digitalModel.getSignalsCopy().stream()
                 .collect(Collectors.toUnmodifiableMap(Signal::getName, Function.identity()));
 
         clock = Optional.ofNullable(digitalModel.getClocks().get(0))
                 .orElseThrow(() -> new IllegalStateException("Missing clock in Digital model.")).getClockOutput();
 
-        ram = digitalRamDataField;
+        ram = Optional.ofNullable(digitalModel.findNode(RAMSinglePortSel.class, _n -> true).get(0))
+                .map(RAMSinglePortSel::getMemory)
+                .orElseThrow(() -> new IllegalStateException("Missing ram in Digital model."));
 
         model = tryStartDigitalModel(digitalModel);
     }
