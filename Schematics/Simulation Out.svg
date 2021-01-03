@@ -1,21 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Digital by H.Neemann -->
-<!-- created: Sun Dec 06 22:28:42 CET 2020 -->
+<!-- created: Sun Jan 03 15:08:59 CET 2021 -->
 
 <svg
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   width="211.5mm"
-   height="104.85mm"
-   viewBox="252 -2 1410 699">
+   width="211.8mm"
+   height="107.4mm"
+   viewBox="250 -2 1412 716">
 <g stroke-linecap="square">
-<path d="M 1290,520 L 1310,520" stroke="#000000" stroke-width="4.199999999999999" fill="none"/>
-<path d="M 1630,540 L 1650,540" stroke="#000000" stroke-width="4.199999999999999" fill="none"/>
-<path d="M 1390,360 L 1410,360" stroke="#000000" stroke-width="4.199999999999999" fill="none"/>
-<path d="M 1090,540 L 1110,540" stroke="#000000" stroke-width="4.199999999999999" fill="none"/>
-<path d="M 1210,160 L 1230,160" stroke="#000000" stroke-width="4.199999999999999" fill="none"/>
-<path d="M 750,160 L 770,160" stroke="#000000" stroke-width="4.199999999999999" fill="none"/>
-<path d="M 950,520 L 970,520" stroke="#000000" stroke-width="4.199999999999999" fill="none"/>
 <path d="M 900,100 L 910,100 L 920,100" stroke="#000000" stroke-width="2.8" fill="none"/>
 <path d="M 920,120 L 910,120" stroke="#000000" stroke-width="2.8" fill="none"/>
 <path d="M 920,140 L 910,140" stroke="#000000" stroke-width="2.8" fill="none"/>
@@ -62,6 +55,13 @@
 <path d="M 480,300 L 470,300" stroke="#000000" stroke-width="2.8" fill="none"/>
 <path d="M 480,320 L 470,320" stroke="#000000" stroke-width="2.8" fill="none"/>
 <path d="M 480,340 L 470,340" stroke="#000000" stroke-width="2.8" fill="none"/>
+<path d="M 1290,520 L 1310,520" stroke="#000000" stroke-width="4.199999999999999" fill="none"/>
+<path d="M 1630,540 L 1650,540" stroke="#000000" stroke-width="4.199999999999999" fill="none"/>
+<path d="M 1390,360 L 1410,360" stroke="#000000" stroke-width="4.199999999999999" fill="none"/>
+<path d="M 1090,540 L 1110,540" stroke="#000000" stroke-width="4.199999999999999" fill="none"/>
+<path d="M 1210,160 L 1230,160" stroke="#000000" stroke-width="4.199999999999999" fill="none"/>
+<path d="M 750,160 L 770,160" stroke="#000000" stroke-width="4.199999999999999" fill="none"/>
+<path d="M 950,520 L 970,520" stroke="#000000" stroke-width="4.199999999999999" fill="none"/>
 <path d="M 480,320 L 500,320" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 480,640 L 500,640" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 480,580 L 500,580" stroke="#0000b2" stroke-width="2.8" fill="none"/>
@@ -82,6 +82,9 @@
 <path d="M 420,80 L 440,80" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 700,80 L 720,80" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 420,400 L 440,400" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 900,660 L 920,660" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 820,660 L 840,660" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 680,660 L 700,660" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 480,660 L 500,660" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 480,340 L 500,340" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 420,20 L 440,20" stroke="#0000b2" stroke-width="2.8" fill="none"/>
@@ -97,9 +100,10 @@
 <path d="M 700,100 L 720,100" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 860,100 L 900,100" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 920,100 L 940,100" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 1260,380 L 1260,360 L 1300,360 L 1300,380" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 780,680 L 840,680" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 420,680 L 460,680" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 480,680 L 500,680" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 1260,380 L 1260,360 L 1300,360 L 1300,380" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 480,300 L 500,300" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 480,620 L 500,620" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 680,240 L 720,240" stroke="#0000b2" stroke-width="2.8" fill="none"/>
@@ -118,6 +122,7 @@
 <path d="M 760,100 L 760,120 L 780,120" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 740,60 L 800,60" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 700,60 L 720,60" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 680,700 L 700,700" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 960,500 L 960,520" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 960,360 L 960,380" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 1600,360 L 1600,380" stroke="#0000b2" stroke-width="2.8" fill="none"/>
@@ -586,7 +591,7 @@
 <g>
 <path d="M 389,385 L 419,385 L 419,415 L 389,415 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
 <circle cx="404.0" cy="400.0" r="9.0" stroke="#000000" stroke-width="2.8" fill="none" />
-<text text-anchor="end" x="375.0" y="409.0" fill="#000000" style="font-size:24px"><tspan style="font-style:italic;">SIGNED</tspan></text>
+<text text-anchor="end" x="375.0" y="409.0" fill="#000000" style="font-size:24px"><tspan style="font-style:italic;">SIGNED IN</tspan></text>
 </g>
 <g>
 <path d="M 389,125 L 419,125 L 419,155 L 389,155 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
@@ -615,11 +620,7 @@
 </g>
 <g>
 <path d="M 440,400 L 454,408 L 454,392 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="start" x="459.0" y="406.75" fill="#808080" style="font-size:18px">SIGNED</text>
-</g>
-<g>
-<path d="M 680,260 L 666,252 L 666,268 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="end" x="661.0" y="266.75" fill="#808080" style="font-size:18px">SIGNED</text>
+<text text-anchor="start" x="459.0" y="406.75" fill="#808080" style="font-size:18px">SIGNED IN</text>
 </g>
 <g>
 <text text-anchor="end" x="458.0" y="197.0" fill="#808080" style="font-size:12px">0-7</text>
@@ -764,6 +765,38 @@
 <g>
 <text text-anchor="start" x="1142.0" y="193.5" fill="#000000" style="font-size:14px">Digital workaround. Use z for faking led refresh rate.</text>
 <path d="M 1140,0 L 1500,0 L 1500,180 L 1140,180 Z" stroke-dasharray="4.0,4.0" stroke="#000000" stroke-width="0.7" fill="none"/>
+</g>
+<g>
+<path d="M 841,650 L 899,650 L 899,690 L 841,690 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<text text-anchor="start" x="844.0" y="666.75" fill="#808080" style="font-size:18px">D</text>
+<path d="M 841,687 L 848,680 L 841,673" stroke="#000000" stroke-width="1.4" fill="none"/>
+<text text-anchor="start" x="851.0" y="686.75" fill="#808080" style="font-size:18px">C</text>
+<text text-anchor="end" x="896.0" y="666.75" fill="#808080" style="font-size:18px">Q</text>
+<text text-anchor="end" x="896.0" y="686.75" fill="#808080" style="font-size:18px"><tspan style="text-decoration:overline;">Q</tspan></text>
+<text text-anchor="middle" x="870.0" y="707.5" fill="#808080" style="font-size:18px">D</text>
+</g>
+<g>
+<path d="M 920,660 L 934,668 L 934,652 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<text text-anchor="start" x="939.0" y="666.75" fill="#808080" style="font-size:18px">OUT SIGNED</text>
+</g>
+<g>
+<path d="M 820,660 L 806,652 L 806,668 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<text text-anchor="end" x="801.0" y="666.75" fill="#808080" style="font-size:18px">D0</text>
+</g>
+<g>
+<path d="M 750,710 L 701,710 L 701,650 L 750,650 C 760,650 780,660 779,680 C 779,700 760,710 750,710 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+</g>
+<g>
+<path d="M 680,660 L 666,652 L 666,668 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<text text-anchor="end" x="661.0" y="666.75" fill="#808080" style="font-size:18px">SIGNED IN</text>
+</g>
+<g>
+<path d="M 680,700 L 666,692 L 666,708 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<text text-anchor="end" x="661.0" y="706.75" fill="#808080" style="font-size:18px">CLOCK</text>
+</g>
+<g>
+<path d="M 680,260 L 666,252 L 666,268 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<text text-anchor="end" x="661.0" y="266.75" fill="#808080" style="font-size:18px">OUT SIGNED</text>
 </g>
 </g>
 </svg>

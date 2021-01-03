@@ -15,7 +15,7 @@ enum Signal {
     HALT = 1 << 6,
     PC_COUNT = 1 << 7,
     ALU_SUBTRACT = 1 << 8,
-    OUT_SIGNED = 1 << 9,
+    OUT_SIGNED_IN = 1 << 9,
     // 1 << 10 Unused.
     // 1 << 11 Unused.
     // 1 << 12 Unused.
@@ -46,7 +46,7 @@ enum BusInAddress {
 
 enum {
     MAX_NB_OF_CONTROL_STEPS = 16, // Low 4 bits of microcode address.
-    NB_OF_INSTRUCTIONS = 3,       // High 4 bits of microcode address.
+    NB_OF_INSTRUCTIONS = 4,       // High 4 bits of microcode address.
     DEFAULT_MICROCODE = HALT | LAST_STEP
 };
 
@@ -54,19 +54,24 @@ uint16_t microcode[NB_OF_INSTRUCTIONS][MAX_NB_OF_CONTROL_STEPS] = {
     // nop
     {LAST_STEP},
 
-    // mov a, [immediate]
+    // mov a, [immediate address]
     {
         IR_OUT | MAR_IN,
         RAM_OUT | REGA_IN | LAST_STEP,
     },
 
-    // add a, [immediate]
+    // add a, [immediate address]
     {
         IR_OUT | MAR_IN,
         RAM_OUT | REGB_IN,
         ALU_OUT | REGA_IN | LAST_STEP,
-    }
-    //
+    },
+
+    // out a, immediate flags
+    {
+        IR_OUT | OUT_SIGNED_IN,
+        REGA_OUT | OUT_IN | LAST_STEP,
+    },
 };
 
 enum OUTPUT_FORMAT {
