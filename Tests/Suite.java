@@ -313,7 +313,7 @@ public class Suite {
 
         step(model); // Execute control signals.
 
-        assertAll(signalEquals(model, Signal.BUS, 0x1)); // output flag 1 = signed mode
+        assertAll(signalEquals(model, Signal.BUS, 0x1)); // output flag 1 = signed mode.
 
         step(model); // Latch next control signals.
 
