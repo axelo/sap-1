@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Digital by H.Neemann -->
-<!-- created: Sun Jan 03 15:09:02 CET 2021 -->
+<!-- created: Sun Jan 03 20:47:00 CET 2021 -->
 
 <svg
    xmlns:svg="http://www.w3.org/2000/svg"
@@ -33,8 +33,8 @@
 <path d="M 600,780 L 640,780" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 380,780 L 400,780" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 660,780 L 680,780" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 400,1040 L 420,1040" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 620,1040 L 640,1040" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 380,1040 L 400,1040" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 600,1040 L 620,1040" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 180,-20 L 200,-20" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 640,1300 L 660,1300" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 1040,1300 L 1060,1300" stroke="#0000b2" stroke-width="2.8" fill="none"/>
@@ -62,8 +62,8 @@
 <path d="M 380,160 L 400,160" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 1440,1700 L 1460,1700" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 1440,1060 L 1460,1060" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 400,1060 L 420,1060" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 620,1060 L 640,1060" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 380,1060 L 400,1060" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 600,1060 L 620,1060" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 180,-40 L 200,-40" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 260,-40 L 400,-40" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 380,680 L 400,680" stroke="#0000b2" stroke-width="2.8" fill="none"/>
@@ -98,7 +98,7 @@
 <path d="M 1440,180 L 1500,180 L 1500,220 L 1480,220" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 380,440 L 400,440" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 600,440 L 620,440" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 400,1080 L 420,1080" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 380,1080 L 400,1080" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 380,700 L 400,700" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 1460,700 L 1480,700" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 1520,700 L 1540,700" stroke="#0000b2" stroke-width="2.8" fill="none"/>
@@ -151,7 +151,7 @@
 <path d="M 1040,1380 L 1060,1380" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 640,1380 L 660,1380" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 380,100 L 400,100" stroke="#0000b2" stroke-width="2.8" fill="none"/>
-<path d="M 660,1000 L 680,1000" stroke="#0000b2" stroke-width="2.8" fill="none"/>
+<path d="M 640,1000 L 660,1000" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 1440,1640 L 1460,1640" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 980,360 L 1000,360 L 1000,380" stroke="#0000b2" stroke-width="2.8" fill="none"/>
 <path d="M 380,360 L 400,360" stroke="#0000b2" stroke-width="2.8" fill="none"/>
@@ -1950,35 +1950,35 @@
 <text text-anchor="end" x="361.0" y="806.75" fill="#808080" style="font-size:18px">REFRESH</text>
 </g>
 <g>
-<path d="M 421,1026 L 619,1026 L 619,1094 L 421,1094 Z" stroke="#ffffb4" stroke-width="0.0" fill="#ffffb4" fill-opacity="0.7843137254901961"/>
-<path d="M 421,1026 L 619,1026 L 619,1094 L 421,1094 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<path d="M 421,1047 L 428,1040 L 421,1033" stroke="#000000" stroke-width="1.4" fill="none"/>
-<text text-anchor="start" x="431.0" y="1046.75" fill="#808080" style="font-size:18px">CLOCK</text>
-<text text-anchor="start" x="424.0" y="1066.75" fill="#808080" style="font-size:18px">BUS <tspan style="text-decoration:overline;">IN</tspan></text>
-<text text-anchor="start" x="424.0" y="1086.75" fill="#808080" style="font-size:18px">BUS <tspan style="text-decoration:overline;">OUT</tspan></text>
-<text text-anchor="end" x="616.0" y="1046.75" fill="#808080" style="font-size:18px">BUS</text>
-<text text-anchor="end" x="616.0" y="1066.75" fill="#808080" style="font-size:18px">OUT</text>
-<text text-anchor="middle" x="520.0" y="1111.5" fill="#808080" style="font-size:18px">IR</text>
+<path d="M 401,1026 L 599,1026 L 599,1094 L 401,1094 Z" stroke="#ffffb4" stroke-width="0.0" fill="#ffffb4" fill-opacity="0.7843137254901961"/>
+<path d="M 401,1026 L 599,1026 L 599,1094 L 401,1094 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<path d="M 401,1047 L 408,1040 L 401,1033" stroke="#000000" stroke-width="1.4" fill="none"/>
+<text text-anchor="start" x="411.0" y="1046.75" fill="#808080" style="font-size:18px">CLOCK</text>
+<text text-anchor="start" x="404.0" y="1066.75" fill="#808080" style="font-size:18px">BUS <tspan style="text-decoration:overline;">IN</tspan></text>
+<text text-anchor="start" x="404.0" y="1086.75" fill="#808080" style="font-size:18px">BUS <tspan style="text-decoration:overline;">OUT</tspan></text>
+<text text-anchor="end" x="596.0" y="1046.75" fill="#808080" style="font-size:18px">BUS</text>
+<text text-anchor="end" x="596.0" y="1066.75" fill="#808080" style="font-size:18px">OUT</text>
+<text text-anchor="middle" x="500.0" y="1111.5" fill="#808080" style="font-size:18px">IR</text>
 </g>
 <g>
-<path d="M 400,1080 L 386,1072 L 386,1088 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="end" x="381.0" y="1086.75" fill="#808080" style="font-size:18px">IR BUS <tspan style="text-decoration:overline;">OUT</tspan></text>
+<path d="M 380,1080 L 366,1072 L 366,1088 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<text text-anchor="end" x="361.0" y="1086.75" fill="#808080" style="font-size:18px">IR BUS <tspan style="text-decoration:overline;">OUT</tspan></text>
 </g>
 <g>
-<path d="M 400,1060 L 386,1052 L 386,1068 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="end" x="381.0" y="1066.75" fill="#808080" style="font-size:18px">IR BUS <tspan style="text-decoration:overline;">IN</tspan></text>
+<path d="M 380,1060 L 366,1052 L 366,1068 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<text text-anchor="end" x="361.0" y="1066.75" fill="#808080" style="font-size:18px">IR BUS <tspan style="text-decoration:overline;">IN</tspan></text>
 </g>
 <g>
-<path d="M 400,1040 L 386,1032 L 386,1048 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="end" x="381.0" y="1046.75" fill="#808080" style="font-size:18px"><tspan style="text-decoration:overline;">CLOCK</tspan></text>
+<path d="M 380,1040 L 366,1032 L 366,1048 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<text text-anchor="end" x="361.0" y="1046.75" fill="#808080" style="font-size:18px"><tspan style="text-decoration:overline;">CLOCK</tspan></text>
 </g>
 <g>
-<path d="M 640,1040 L 654,1048 L 654,1032 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="start" x="659.0" y="1046.75" fill="#808080" style="font-size:18px">BUS</text>
+<path d="M 620,1040 L 634,1048 L 634,1032 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<text text-anchor="start" x="639.0" y="1046.75" fill="#808080" style="font-size:18px">BUS</text>
 </g>
 <g>
-<path d="M 640,1060 L 654,1068 L 654,1052 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
-<text text-anchor="start" x="659.0" y="1066.75" fill="#808080" style="font-size:18px">OUT IR</text>
+<path d="M 620,1060 L 634,1068 L 634,1052 Z" stroke="#000000" stroke-width="2.8" fill="none"/>
+<text text-anchor="start" x="639.0" y="1066.75" fill="#808080" style="font-size:18px">OUT IR</text>
 </g>
 </g>
 </svg>
