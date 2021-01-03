@@ -26,6 +26,7 @@ public class Suite {
     private static final int ALU_BUS_OUT = 6;
 
     // Bus in control signal addresses.
+    private static final int RAM_BUS_IN = 1 << 3;
     private static final int MAR_BUS_IN = 2 << 3;
     private static final int PC_BUS_IN = 3 << 3;
     private static final int IR_BUS_IN = 4 << 3;
@@ -275,6 +276,23 @@ public class Suite {
         assertAll(signalEquals(model, Signal.REGA, sum));
     }
 
+    private static void assertSetRegAImmediateSteps(MutableTestModel model) {
+        step(model); // Latch next control signals. Need to do this before testing IR as IR is
+                     // latched on the same clock as control signals.
+
+        final int ir = signal(model, Signal.IR.name());
+        final int immediate = ir & 0x0f;
+
+        assertEquals(0x50, ir & 0xf0, () -> "High 4-bits of IR should be 0b0101");
+
+        assertAll(controlSignalEquals(model, IR_BUS_OUT | REGA_BUS_IN | LAST_STEP));
+
+        step(model); // Execute control signals.
+
+        assertAll(signalEquals(model, Signal.BUS, immediate), // Lower 4 bit of IR are outputted to the bus.
+                signalEquals(model, Signal.REGA, immediate));
+    }
+
     @Test
     @DisplayName("nop")
     public void noOperation() {
@@ -343,26 +361,70 @@ public class Suite {
     }
 
     @Test
-    @DisplayName("a = mem[14]; a += mem[15]; a -= mem[13]")
-    public void setAndAddRegFromMemoryImmediate() {
-        final var model = initModelWithRam(0x1e, 0x2f, 0x3d, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-                2, 20, 24);
+    @DisplayName("mem[immediate] = a")
+    public void setMemAtAddressImmediateToValueOfRegA() {
+        final var model = initModelWithRam(0x58, 0x42, 0x00);
 
         assertResetSteps(model);
 
         assertFetchSteps(model);
 
-        assertSetRegAToMemoryAtImmediateAddressSteps(model);
+        assertSetRegAImmediateSteps(model);
+
+        assertAll(signalEquals(model, Signal.REGA, 8));
 
         assertFetchSteps(model);
 
-        assertAddRegAWithMemoryAtImmediateAddressSteps(model);
+        step(model); // Latch next control signals.
+
+        assertAll(signalEquals(model, Signal.IR, 0x42), //
+                controlSignalEquals(model, IR_BUS_OUT | MAR_BUS_IN));
+
+        step(model); // Execute control signals.
+
+        assertAll(signalEquals(model, Signal.MAR, 2));
+
+        step(model); // Latch next control signals.
+
+        assertAll(controlSignalEquals(model, REGA_BUS_OUT | RAM_BUS_IN | LAST_STEP));
+
+        step(model); // Execute control signals.
+
+        assertEquals(8, readRam(model, 2), () -> "mem[2] should be 8");
+    }
+
+    @Test
+    @DisplayName("a = immediate")
+    public void setRegAToImmediate() {
+        final var model = initModelWithRam(0x57);
+
+        assertResetSteps(model);
 
         assertFetchSteps(model);
 
-        assertSubRegAWithMemoryAtImmediateAddressSteps(model);
+        assertSetRegAImmediateSteps(model);
 
-        assertAll(signalEquals(model, Signal.REGA, 42));
+        assertAll(signalEquals(model, Signal.REGA, 7));
+    }
+
+    @Test
+    @DisplayName("goto immediate")
+    public void setPcToImmediate() {
+        final var model = initModelWithRam(0x6a);
+
+        assertResetSteps(model);
+
+        assertFetchSteps(model);
+
+        step(model); // Latch next control signals. Need to do this before testing IR as IR is
+                     // latched on the same clock as control signals.
+
+        assertAll(signalEquals(model, Signal.IR, 0x6a), //
+                controlSignalEquals(model, IR_BUS_OUT | PC_BUS_IN | LAST_STEP));
+
+        step(model); // Execute control signals.
+
+        assertAll(signalEquals(model, Signal.PC, 10));
     }
 
     @Test
@@ -383,6 +445,29 @@ public class Suite {
         step(model); // Execute control signals.
 
         assertAll(signalEquals(model, Signal.BUS, 0x0)); // Reset value of register a.
+    }
+
+    @Test
+    @DisplayName("a = mem[14]; a += mem[15]; a -= mem[13]")
+    public void setAndAddRegFromMemoryImmediate() {
+        final var model = initModelWithRam(0x1e, 0x2f, 0x3d, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                2, 20, 24);
+
+        assertResetSteps(model);
+
+        assertFetchSteps(model);
+
+        assertSetRegAToMemoryAtImmediateAddressSteps(model);
+
+        assertFetchSteps(model);
+
+        assertAddRegAWithMemoryAtImmediateAddressSteps(model);
+
+        assertFetchSteps(model);
+
+        assertSubRegAWithMemoryAtImmediateAddressSteps(model);
+
+        assertAll(signalEquals(model, Signal.REGA, 42));
     }
 
     public static void main(String[] args) {

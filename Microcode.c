@@ -48,34 +48,41 @@ const uint16_t instructionSteps[NB_OF_INSTRUCTIONS][MAX_NB_OF_CONTROL_STEPS] = {
     // 0x0: nop
     {LAST_STEP},
 
-    // 0x1: a = mem[immediate address]
+    // 0x1: a = mem[immediate]
     {
         IR_BUS_OUT | MAR_BUS_IN,
         RAM_BUS_OUT | REGA_BUS_IN | LAST_STEP,
     },
 
-    // 0x2: a += mem[immediate address]
+    // 0x2: a += mem[immediate]
     {
         IR_BUS_OUT | MAR_BUS_IN,
         RAM_BUS_OUT | REGB_BUS_IN,
         ALU_BUS_OUT | REGA_BUS_IN | LAST_STEP,
     },
 
-    // 0x3: a -= mem[immediate address]
+    // 0x3: a -= mem[immediate]
     {
         IR_BUS_OUT | MAR_BUS_IN,
         RAM_BUS_OUT | REGB_BUS_IN,
         ALU_SUBTRACT | ALU_BUS_OUT | REGA_BUS_IN | LAST_STEP,
     },
 
-    // 0x4:
-    {LAST_STEP},
+    // 0x4: mem[immediate] = a
+    {
+        IR_BUS_OUT | MAR_BUS_IN,
+        REGA_BUS_OUT | RAM_BUS_IN | LAST_STEP,
+    },
 
-    // 0x5:
-    {LAST_STEP},
+    // 0x5: a = immediate
+    {
+        IR_BUS_OUT | REGA_BUS_IN | LAST_STEP,
+    },
 
-    // 0x6:
-    {LAST_STEP},
+    // 0x6: goto immediate
+    {
+        IR_BUS_OUT | PC_BUS_IN | LAST_STEP,
+    },
 
     // 0x7:
     {LAST_STEP},
@@ -103,7 +110,7 @@ const uint16_t instructionSteps[NB_OF_INSTRUCTIONS][MAX_NB_OF_CONTROL_STEPS] = {
         REGA_BUS_OUT | OUT_BUS_IN | LAST_STEP,
     },
 
-    // 0fx: halt
+    // 0xf: halt
     {HALT | LAST_STEP},
 };
 
