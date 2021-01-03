@@ -308,9 +308,8 @@ public class Suite {
         step(model); // Latch next control signals. Need to do this before testing IR as IR is
                      // latched on the same clock as control signals.
 
-        assertAll(signalEquals(model, Signal.IR, 0x31));
-
-        assertAll(controlSignalEquals(model, IR_OUT | OUT_SIGNED_IN));
+        assertAll(signalEquals(model, Signal.IR, 0x31), //
+                controlSignalEquals(model, IR_OUT | OUT_SIGNED_IN));
 
         step(model); // Execute control signals.
 
