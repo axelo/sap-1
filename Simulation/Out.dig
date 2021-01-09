@@ -110,7 +110,7 @@ fc,fc,fc,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
         </entry>
         <entry>
           <string>lastDataFile</string>
-          <string>/Users/axel/Hobby/sap1/simulation/rom/Out.hex</string>
+          <string>/Users/axel/Hobby/sap1/Roms/Out.hex</string>
         </entry>
       </elementAttributes>
       <pos x="800" y="60"/>

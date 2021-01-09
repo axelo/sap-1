@@ -1,5 +1,5 @@
 v2.0 raw
-50 # a = 0
+1e # a = mem[14]
 e0 # countUp: out = a
 2f # a += mem[15] (1)
 75 # goto countDown when carry
@@ -13,5 +13,5 @@ e0 # out = a
 00
 00
 00
-00
+fa # mem[14]
 01 # mem[15]

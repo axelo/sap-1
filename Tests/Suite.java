@@ -78,12 +78,10 @@ public class Suite {
 
     private static void assertResetSteps(MutableTestModel model) {
         assertAll(signalEquals(model, Signal.STEP, 0), //
-                signalEquals(model, Signal.LAST_STEP, 0), //
-                signalEquals(model, Signal.IR, 0) // TODO: This is not guaranteed yet. We're missing reset logic for IR.
-        );
+                signalEquals(model, Signal.LAST_STEP, 0));
 
         // This depends on how we have programmed our microcode. We should be using
-        // reset steps at 0x400.
+        // reset steps at 0x2000.
         assertAll(controlSignalEquals(model, ZERO_BUS_OUT | PC_BUS_IN));
 
         step(model); // Execute control signals.
