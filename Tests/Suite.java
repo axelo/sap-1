@@ -162,14 +162,13 @@ public class Suite {
     }
 
     private static void assertSetRegAToMemoryAtImmediateAddressSteps(MutableTestModel model) {
-        step(model); // Latch next control signals. Need to do this before testing IR as IR is
-                     // latched on the same clock as control signals.
-
         final int ir = signal(model, Signal.IR.name());
         final int movRegAImmediate = ir & 0xf0;
         final int immediate = ir & 0x0f;
 
         assertEquals(0x10, movRegAImmediate, () -> "High 4-bits of IR should be 0b0001");
+
+        step(model); // Latch next control signals.
 
         assertAll(controlSignalEquals(model, IR_BUS_OUT | MAR_BUS_IN));
 
@@ -191,9 +190,6 @@ public class Suite {
     }
 
     private static void assertAddRegAWithMemoryAtImmediateAddressSteps(MutableTestModel model) {
-        step(model); // Latch next control signals. Need to do this before testing IR as IR is
-                     // latched on the same clock as control signals.
-
         final int regA = signal(model, Signal.REGA.name());
 
         final int ir = signal(model, Signal.IR.name());
@@ -201,6 +197,8 @@ public class Suite {
         final int immediate = ir & 0x0f;
 
         assertEquals(0x20, addRegAImmediate, () -> "High 4-bits of IR should be 0b0002");
+
+        step(model); // Latch next control signals.
 
         assertAll(controlSignalEquals(model, IR_BUS_OUT | MAR_BUS_IN));
 
@@ -234,9 +232,6 @@ public class Suite {
     }
 
     private static void assertSubRegAWithMemoryAtImmediateAddressSteps(MutableTestModel model) {
-        step(model); // Latch next control signals. Need to do this before testing IR as IR is
-                     // latched on the same clock as control signals.
-
         final int regA = signal(model, Signal.REGA.name());
 
         final int ir = signal(model, Signal.IR.name());
@@ -244,6 +239,8 @@ public class Suite {
         final int immediate = ir & 0x0f;
 
         assertEquals(0x30, addRegAImmediate, () -> "High 4-bits of IR should be 0b0003");
+
+        step(model); // Latch next control signals.
 
         assertAll(controlSignalEquals(model, IR_BUS_OUT | MAR_BUS_IN));
 
@@ -277,13 +274,12 @@ public class Suite {
     }
 
     private static void assertSetRegAImmediateSteps(MutableTestModel model) {
-        step(model); // Latch next control signals. Need to do this before testing IR as IR is
-                     // latched on the same clock as control signals.
-
         final int ir = signal(model, Signal.IR.name());
         final int immediate = ir & 0x0f;
 
         assertEquals(0x50, ir & 0xf0, () -> "High 4-bits of IR should be 0b0101");
+
+        step(model); // Latch next control signals.
 
         assertAll(controlSignalEquals(model, IR_BUS_OUT | REGA_BUS_IN | LAST_STEP));
 
@@ -299,18 +295,28 @@ public class Suite {
         final var model = initModelWithRam(0x00);
 
         assertResetSteps(model);
+        step(model); // Latch next control signals.
 
-        assertFetchSteps(model);
+        assertAll(controlSignalEquals(model, PC_BUS_OUT | MAR_BUS_IN), //
+                signalEquals(model, Signal.STEP, 0), //
+                signalEquals(model, Signal.LAST_STEP, 0));
 
-        assertAll(signalEquals(model, Signal.IR, 0));
+        step(model); // Execute control signals.
+
+        assertAll(signalEquals(model, Signal.BUS, Signal.PC), //
+                signalEquals(model, Signal.MAR, Signal.BUS));
 
         step(model); // Latch next control signals.
 
-        assertAll(controlSignalEquals(model, LAST_STEP), //
-                signalEquals(model, Signal.STEP, 2), //
+        final int previousPc = signal(model, Signal.PC.name());
+
+        assertAll(controlSignalEquals(model, RAM_BUS_OUT | IR_BUS_IN | PC_COUNT | LAST_STEP), //
+                signalEquals(model, Signal.STEP, 1), //
                 signalEquals(model, Signal.LAST_STEP, 1));
 
         step(model); // Execute control signals.
+
+        assertAll(signalEquals(model, Signal.PC, previousPc + 1));
 
         step(model); // Latch next control signals.
 

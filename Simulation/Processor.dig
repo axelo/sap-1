@@ -4655,7 +4655,7 @@
         </entry>
         <entry>
           <string>NetName</string>
-          <string>~CLOCK</string>
+          <string>CLOCK</string>
         </entry>
       </elementAttributes>
       <pos x="380" y="1160"/>

@@ -39,11 +39,17 @@ enum {
     NB_OF_FLAG_PERMUTATIONS = 4  // Next 2 bits of microcode address.
 };
 
-const uint16_t fetchSteps[] =
-    {PC_BUS_OUT | MAR_BUS_IN,
-     RAM_BUS_OUT | IR_BUS_IN | PC_COUNT};
+#define FETCH_STEP0 PC_BUS_OUT | MAR_BUS_IN
+#define FETCH_STEP1 RAM_BUS_OUT | IR_BUS_IN | PC_COUNT
 
-enum { FETCH_STEPS_LENGTH = sizeof(fetchSteps) / sizeof(fetchSteps[0]) };
+#define ONLY_FETCH_STEPS \
+    { FETCH_STEP0,       \
+      FETCH_STEP1 | LAST_STEP }
+
+#define WITH_FETCH_STEPS(...) \
+    { FETCH_STEP0,            \
+      FETCH_STEP1,            \
+      __VA_ARGS__ | LAST_STEP }
 
 #define ANY_FLAG_PERMUATATION(...)   \
     { __VA_ARGS__,  /* ZF=0, CF=0 */ \
@@ -51,83 +57,98 @@ enum { FETCH_STEPS_LENGTH = sizeof(fetchSteps) / sizeof(fetchSteps[0]) };
       __VA_ARGS__,  /* ZF=1, CF=0 */ \
       __VA_ARGS__ } /* ZF=1, CF=1 */
 
-#define CARRY_FLAG_PERMUATATION(...) \
-    { {LAST_STEP},  /* ZF=0, CF=0 */ \
-      __VA_ARGS__,  /* ZF=0, CF=1 */ \
-      {LAST_STEP},  /* ZF=1, CF=0 */ \
-      __VA_ARGS__ } /* ZF=1, CF=1 */
+#define CARRY_FLAG_PERMUATATION(...)     \
+    { ONLY_FETCH_STEPS, /* ZF=0, CF=0 */ \
+      __VA_ARGS__,      /* ZF=0, CF=1 */ \
+      ONLY_FETCH_STEPS, /* ZF=1, CF=0 */ \
+      __VA_ARGS__ }     /* ZF=1, CF=1 */
 
-#define ZERO_FLAG_PERMUATATION(...)  \
-    { {LAST_STEP},  /* ZF=0, CF=0 */ \
-      {LAST_STEP},  /* ZF=0, CF=1 */ \
-      __VA_ARGS__,  /* ZF=1, CF=0 */ \
-      __VA_ARGS__ } /* ZF=1, CF=1 */
+#define ZERO_FLAG_PERMUATATION(...)      \
+    { ONLY_FETCH_STEPS, /* ZF=0, CF=0 */ \
+      ONLY_FETCH_STEPS, /* ZF=0, CF=1 */ \
+      __VA_ARGS__,      /* ZF=1, CF=0 */ \
+      __VA_ARGS__ }     /* ZF=1, CF=1 */
 
 static const uint16_t instructionSteps[NB_OF_INSTRUCTIONS][NB_OF_FLAG_PERMUTATIONS][MAX_NB_OF_CONTROL_STEPS] = {
     // 0x0: nop
     ANY_FLAG_PERMUATATION(
-        {LAST_STEP}),
+        ONLY_FETCH_STEPS),
 
     // 0x1: a = mem[immediate]
     ANY_FLAG_PERMUATATION(
-        {IR_BUS_OUT | MAR_BUS_IN,
-         RAM_BUS_OUT | REGA_BUS_IN | LAST_STEP}),
+        WITH_FETCH_STEPS(
+            IR_BUS_OUT | MAR_BUS_IN,
+            RAM_BUS_OUT | REGA_BUS_IN)),
 
     // 0x2: a += mem[immediate]
     ANY_FLAG_PERMUATATION(
-        {IR_BUS_OUT | MAR_BUS_IN,
-         RAM_BUS_OUT | REGB_BUS_IN,
-         ALU_BUS_OUT | FLAGS_IN | REGA_BUS_IN | LAST_STEP}),
+        WITH_FETCH_STEPS(
+            IR_BUS_OUT | MAR_BUS_IN,
+            RAM_BUS_OUT | REGB_BUS_IN,
+            ALU_BUS_OUT | FLAGS_IN | REGA_BUS_IN)),
 
     // 0x3: a -= mem[immediate]
     ANY_FLAG_PERMUATATION(
-        {IR_BUS_OUT | MAR_BUS_IN,
-         RAM_BUS_OUT | REGB_BUS_IN | ALU_SUBTRACT,
-         ALU_SUBTRACT | ALU_BUS_OUT | FLAGS_IN | REGA_BUS_IN | LAST_STEP}),
+        WITH_FETCH_STEPS(
+            IR_BUS_OUT | MAR_BUS_IN,
+            RAM_BUS_OUT | REGB_BUS_IN | ALU_SUBTRACT,
+            ALU_SUBTRACT | ALU_BUS_OUT | FLAGS_IN | REGA_BUS_IN)),
 
     // 0x4: mem[immediate] = a
     ANY_FLAG_PERMUATATION(
-        {IR_BUS_OUT | MAR_BUS_IN,
-         REGA_BUS_OUT | RAM_BUS_IN | LAST_STEP}),
+        WITH_FETCH_STEPS(
+            IR_BUS_OUT | MAR_BUS_IN,
+            REGA_BUS_OUT | RAM_BUS_IN)),
 
     // 0x5: a = immediate
     ANY_FLAG_PERMUATATION(
-        {IR_BUS_OUT | REGA_BUS_IN | LAST_STEP}),
+        WITH_FETCH_STEPS(
+            IR_BUS_OUT | REGA_BUS_IN)),
 
     // 0x6: goto immediate
     ANY_FLAG_PERMUATATION(
-        {IR_BUS_OUT | PC_BUS_IN | LAST_STEP}),
+        WITH_FETCH_STEPS(
+            IR_BUS_OUT | PC_BUS_IN)),
 
     // 0x7: goto immediate when carry
     CARRY_FLAG_PERMUATATION(
-        {IR_BUS_OUT | PC_BUS_IN | LAST_STEP}),
+        WITH_FETCH_STEPS(
+            IR_BUS_OUT | PC_BUS_IN)),
 
     // 0x8: goto immediate when zero
     ZERO_FLAG_PERMUATATION(
-        {IR_BUS_OUT | PC_BUS_IN | LAST_STEP}),
+        WITH_FETCH_STEPS(
+            IR_BUS_OUT | PC_BUS_IN)),
 
     // 0x9:
-    ANY_FLAG_PERMUATATION({LAST_STEP}),
+    ANY_FLAG_PERMUATATION(
+        ONLY_FETCH_STEPS),
 
     // 0xa:
-    ANY_FLAG_PERMUATATION({LAST_STEP}),
+    ANY_FLAG_PERMUATATION(
+        ONLY_FETCH_STEPS),
 
     // 0xb:
-    ANY_FLAG_PERMUATATION({LAST_STEP}),
+    ANY_FLAG_PERMUATATION(
+        ONLY_FETCH_STEPS),
 
     // 0xc:
-    ANY_FLAG_PERMUATATION({LAST_STEP}),
+    ANY_FLAG_PERMUATATION(
+        ONLY_FETCH_STEPS),
 
     // 0xd:
-    ANY_FLAG_PERMUATATION({LAST_STEP}),
+    ANY_FLAG_PERMUATATION(
+        ONLY_FETCH_STEPS),
 
     // 0xe: out = a
     ANY_FLAG_PERMUATATION(
-        {REGA_BUS_OUT | OUT_BUS_IN | LAST_STEP}),
+        WITH_FETCH_STEPS(
+            REGA_BUS_OUT | OUT_BUS_IN)),
 
     // 0xf: halt
     ANY_FLAG_PERMUATATION(
-        {HALT | LAST_STEP}),
+        WITH_FETCH_STEPS(
+            HALT)),
 };
 
 const uint16_t resetSteps[MAX_NB_OF_CONTROL_STEPS] =
@@ -179,18 +200,16 @@ void makeMicrocode(uint8_t (*microcode)[32768]) {
     enum { SIZE = sizeof(*microcode) };
 
     for (uint16_t i = 0; i < SIZE; ++i) {
-        const uint8_t step = i & 0b111;
-        const uint8_t opcode = (i >> 3) & 0b1111;
-        const uint8_t flag = (i >> 7) & 0b11;
+        const uint8_t step = i & 0x7;          // 3 bits.
+        const uint8_t opcode = (i >> 3) & 0xf; // 4 bits.
+        const uint8_t flag = (i >> 7) & 0x3;   // 2 bits.
         const uint8_t reset = (i >> 13) & 1;
         const uint8_t highByte = (i >> 14) & 1;
 
         const uint16_t controlWord =
             reset == 1
                 ? resetSteps[step]
-                : step < FETCH_STEPS_LENGTH
-                      ? fetchSteps[step]
-                      : instructionSteps[opcode][flag][step - FETCH_STEPS_LENGTH];
+                : instructionSteps[opcode][flag][step];
 
         (*microcode)[i] =
             highByte == 1
