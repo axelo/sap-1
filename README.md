@@ -64,6 +64,12 @@ to run all [tests](./Tests/Suite.java).
 
 8 bit to decimal representation is done with a look up table. Using 2 extra bits for outputting 1s, 10s, 100s or signed position and 1 extra bit for signed mode. 2^11 combinations in total making up 2 kB.
 
+### Flags register
+
+[dig file](./Simulation/Flags.dig)
+
+![Flags simulation](./Schematics/Simulation%20Flags.svg)
+
 ### Instruction register
 
 [dig file](./Simulation/Ir.dig)
