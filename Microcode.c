@@ -51,19 +51,19 @@ enum {
       FETCH_STEP1,            \
       __VA_ARGS__ | LAST_STEP }
 
-#define ANY_FLAG_PERMUATATION(...)   \
+#define ANY_FLAG_PERMUTATION(...)    \
     { __VA_ARGS__,  /* ZF=0, CF=0 */ \
       __VA_ARGS__,  /* ZF=0, CF=1 */ \
       __VA_ARGS__,  /* ZF=1, CF=0 */ \
       __VA_ARGS__ } /* ZF=1, CF=1 */
 
-#define CARRY_FLAG_PERMUATATION(...)     \
+#define CARRY_FLAG_PERMUTATION(...)      \
     { ONLY_FETCH_STEPS, /* ZF=0, CF=0 */ \
       __VA_ARGS__,      /* ZF=0, CF=1 */ \
       ONLY_FETCH_STEPS, /* ZF=1, CF=0 */ \
       __VA_ARGS__ }     /* ZF=1, CF=1 */
 
-#define ZERO_FLAG_PERMUATATION(...)      \
+#define ZERO_FLAG_PERMUTATION(...)       \
     { ONLY_FETCH_STEPS, /* ZF=0, CF=0 */ \
       ONLY_FETCH_STEPS, /* ZF=0, CF=1 */ \
       __VA_ARGS__,      /* ZF=1, CF=0 */ \
@@ -71,82 +71,82 @@ enum {
 
 static const uint16_t instructionSteps[NB_OF_INSTRUCTIONS][NB_OF_FLAG_PERMUTATIONS][MAX_NB_OF_CONTROL_STEPS] = {
     // 0x0: nop
-    ANY_FLAG_PERMUATATION(
+    ANY_FLAG_PERMUTATION(
         ONLY_FETCH_STEPS),
 
     // 0x1: a = mem[immediate]
-    ANY_FLAG_PERMUATATION(
+    ANY_FLAG_PERMUTATION(
         WITH_FETCH_STEPS(
             IR_BUS_OUT | MAR_BUS_IN,
             RAM_BUS_OUT | REGA_BUS_IN)),
 
     // 0x2: a += mem[immediate]
-    ANY_FLAG_PERMUATATION(
+    ANY_FLAG_PERMUTATION(
         WITH_FETCH_STEPS(
             IR_BUS_OUT | MAR_BUS_IN,
             RAM_BUS_OUT | REGB_BUS_IN,
             ALU_BUS_OUT | FLAGS_IN | REGA_BUS_IN)),
 
     // 0x3: a -= mem[immediate]
-    ANY_FLAG_PERMUATATION(
+    ANY_FLAG_PERMUTATION(
         WITH_FETCH_STEPS(
             IR_BUS_OUT | MAR_BUS_IN,
             RAM_BUS_OUT | REGB_BUS_IN | ALU_SUBTRACT,
             ALU_SUBTRACT | ALU_BUS_OUT | FLAGS_IN | REGA_BUS_IN)),
 
     // 0x4: mem[immediate] = a
-    ANY_FLAG_PERMUATATION(
+    ANY_FLAG_PERMUTATION(
         WITH_FETCH_STEPS(
             IR_BUS_OUT | MAR_BUS_IN,
             REGA_BUS_OUT | RAM_BUS_IN)),
 
     // 0x5: a = immediate
-    ANY_FLAG_PERMUATATION(
+    ANY_FLAG_PERMUTATION(
         WITH_FETCH_STEPS(
             IR_BUS_OUT | REGA_BUS_IN)),
 
     // 0x6: goto immediate
-    ANY_FLAG_PERMUATATION(
+    ANY_FLAG_PERMUTATION(
         WITH_FETCH_STEPS(
             IR_BUS_OUT | PC_BUS_IN)),
 
     // 0x7: goto immediate when carry
-    CARRY_FLAG_PERMUATATION(
+    CARRY_FLAG_PERMUTATION(
         WITH_FETCH_STEPS(
             IR_BUS_OUT | PC_BUS_IN)),
 
     // 0x8: goto immediate when zero
-    ZERO_FLAG_PERMUATATION(
+    ZERO_FLAG_PERMUTATION(
         WITH_FETCH_STEPS(
             IR_BUS_OUT | PC_BUS_IN)),
 
     // 0x9:
-    ANY_FLAG_PERMUATATION(
+    ANY_FLAG_PERMUTATION(
         ONLY_FETCH_STEPS),
 
     // 0xa:
-    ANY_FLAG_PERMUATATION(
+    ANY_FLAG_PERMUTATION(
         ONLY_FETCH_STEPS),
 
     // 0xb:
-    ANY_FLAG_PERMUATATION(
+    ANY_FLAG_PERMUTATION(
         ONLY_FETCH_STEPS),
 
     // 0xc:
-    ANY_FLAG_PERMUATATION(
+    ANY_FLAG_PERMUTATION(
         ONLY_FETCH_STEPS),
 
     // 0xd:
-    ANY_FLAG_PERMUATATION(
+    ANY_FLAG_PERMUTATION(
         ONLY_FETCH_STEPS),
 
     // 0xe: out = a
-    ANY_FLAG_PERMUATATION(
+    ANY_FLAG_PERMUTATION(
         WITH_FETCH_STEPS(
             REGA_BUS_OUT | OUT_BUS_IN)),
 
     // 0xf: halt
-    ANY_FLAG_PERMUATATION(
+    ANY_FLAG_PERMUTATION(
         WITH_FETCH_STEPS(
             HALT)),
 };
