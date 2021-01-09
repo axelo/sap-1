@@ -185,7 +185,7 @@ void makeMicrocode(uint8_t (*microcode)[32768]) {
         const uint8_t reset = (i >> 13) & 1;
         const uint8_t highByte = (i >> 14) & 1;
 
-        const uint16_t signals =
+        const uint16_t controlWord =
             reset == 1
                 ? resetSteps[step]
                 : step < FETCH_STEPS_LENGTH
@@ -194,8 +194,8 @@ void makeMicrocode(uint8_t (*microcode)[32768]) {
 
         (*microcode)[i] =
             highByte == 1
-                ? signals >> 8
-                : signals & 0xff;
+                ? controlWord >> 8
+                : controlWord & 0xff;
     }
 }
 
