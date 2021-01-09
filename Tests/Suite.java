@@ -39,10 +39,15 @@ public class Suite {
     private static final int PC_COUNT = 1 << 7;
     private static final int ALU_SUBTRACT = 1 << 8;
     private static final int OUT_SIGNED_IN = 1 << 9;
+    private static final int FLAGS_IN = 1 << 10;
     private static final int LAST_STEP = 1 << 15;
 
+    // Flags
+    private static final int CARRY_FLAG = 0b01;
+    private static final int ZERO_FLAG = 0b10;
+
     private static enum Signal {
-        BUS, PC, MAR, IR, REGA, REGB, CONTROL, STEP, LAST_STEP
+        BUS, PC, MAR, IR, REGA, REGB, FLAGS, CONTROL, STEP, LAST_STEP
     }
 
     private static String toBinaryString(int bits, int i) {
@@ -72,9 +77,6 @@ public class Suite {
     }
 
     private static void assertResetSteps(MutableTestModel model) {
-        step(model);
-        step(model); // One clock cycle for resetting IR and control STEP.
-
         assertAll(signalEquals(model, Signal.STEP, 0), //
                 signalEquals(model, Signal.LAST_STEP, 0), //
                 signalEquals(model, Signal.IR, 0) // TODO: This is not guaranteed yet. We're missing reset logic for IR.
@@ -222,7 +224,7 @@ public class Suite {
 
         step(model); // Latch next control signals.
 
-        assertAll(controlSignalEquals(model, ALU_BUS_OUT | REGA_BUS_IN | LAST_STEP));
+        assertAll(controlSignalEquals(model, ALU_BUS_OUT | FLAGS_IN | REGA_BUS_IN | LAST_STEP));
 
         step(model); // Execute control signals.
 
@@ -254,7 +256,7 @@ public class Suite {
 
         step(model); // Latch next control signals.
 
-        assertAll(controlSignalEquals(model, RAM_BUS_OUT | REGB_BUS_IN));
+        assertAll(controlSignalEquals(model, RAM_BUS_OUT | REGB_BUS_IN | ALU_SUBTRACT));
 
         final var valueInRamAtAddress = readRam(model, immediate);
 
@@ -265,7 +267,7 @@ public class Suite {
 
         step(model); // Latch next control signals.
 
-        assertAll(controlSignalEquals(model, ALU_SUBTRACT | ALU_BUS_OUT | REGA_BUS_IN | LAST_STEP));
+        assertAll(controlSignalEquals(model, ALU_SUBTRACT | ALU_BUS_OUT | FLAGS_IN | REGA_BUS_IN | LAST_STEP));
 
         step(model); // Execute control signals.
 
@@ -347,7 +349,51 @@ public class Suite {
     }
 
     @Test
-    @DisplayName("a -= mem[2]")
+    @DisplayName("a += mem[3] # Should set carry flag")
+    public void addRegAWithValueAtImmediateAddressSetCarryFlag() {
+        final var model = initModelWithRam(0x5f, 0x23, 0x00, 0xff);
+
+        assertResetSteps(model);
+
+        assertFetchSteps(model);
+
+        assertSetRegAImmediateSteps(model);
+
+        assertAll(signalEquals(model, Signal.REGA, 15), //
+                signalEquals(model, Signal.FLAGS, 0));
+
+        assertFetchSteps(model);
+
+        assertAddRegAWithMemoryAtImmediateAddressSteps(model); // 0xf + 0xff => 270, 14 with carry flag
+
+        assertAll(signalEquals(model, Signal.REGA, 14), //
+                signalEquals(model, Signal.FLAGS, CARRY_FLAG));
+    }
+
+    @Test
+    @DisplayName("a += mem[3] # Should set carry and zero flag")
+    public void addRegAWithValueAtImmediateAddressSetZeroFlag() {
+        final var model = initModelWithRam(0x5f, 0x23, 0x00, 0xf1);
+
+        assertResetSteps(model);
+
+        assertFetchSteps(model);
+
+        assertSetRegAImmediateSteps(model);
+
+        assertAll(signalEquals(model, Signal.REGA, 15), //
+                signalEquals(model, Signal.FLAGS, 0));
+
+        assertFetchSteps(model);
+
+        assertAddRegAWithMemoryAtImmediateAddressSteps(model); // 0xf + 0xf1 => 256, 0 with carry and zero flag.
+
+        assertAll(signalEquals(model, Signal.REGA, 0), //
+                signalEquals(model, Signal.FLAGS, ZERO_FLAG | CARRY_FLAG));
+    }
+
+    @Test
+    @DisplayName("a -= mem[2] # Should set carry flag")
     public void subRegAWithValueAtImmediateAddress() {
         final var model = initModelWithRam(0x32, 0x00, 1);
 
@@ -355,9 +401,54 @@ public class Suite {
 
         assertFetchSteps(model);
 
-        assertSubRegAWithMemoryAtImmediateAddressSteps(model);
+        assertSubRegAWithMemoryAtImmediateAddressSteps(model); // 0 - 1 => 255, carry set
 
-        assertAll(signalEquals(model, Signal.REGA, 0xff));
+        assertAll(signalEquals(model, Signal.REGA, 255), //
+                signalEquals(model, Signal.FLAGS, CARRY_FLAG));
+    }
+
+    @Test
+    @DisplayName("a -= mem[2] # Should clear carry flag")
+    public void subRegAWithValueAtImmediateAddressSetCarryFlag() {
+        final var model = initModelWithRam(0x5f, 0x32, 0x01);
+
+        assertResetSteps(model);
+
+        assertFetchSteps(model);
+
+        assertSetRegAImmediateSteps(model);
+
+        assertAll(signalEquals(model, Signal.REGA, 0xf), //
+                signalEquals(model, Signal.FLAGS, 0));
+
+        assertFetchSteps(model);
+
+        assertSubRegAWithMemoryAtImmediateAddressSteps(model); // 0xf - 0x1 => 0xe, carry flag clear.
+
+        assertAll(signalEquals(model, Signal.REGA, 0xe), //
+                signalEquals(model, Signal.FLAGS, 0));
+    }
+
+    @Test
+    @DisplayName("a -= mem[2] # Should set zero flag")
+    public void subRegAWithValueAtImmediateAddressSetZeroFlag() {
+        final var model = initModelWithRam(0x5f, 0x32, 0x0f);
+
+        assertResetSteps(model);
+
+        assertFetchSteps(model);
+
+        assertSetRegAImmediateSteps(model);
+
+        assertAll(signalEquals(model, Signal.REGA, 0xf), //
+                signalEquals(model, Signal.FLAGS, 0));
+
+        assertFetchSteps(model);
+
+        assertSubRegAWithMemoryAtImmediateAddressSteps(model); // 0xf - 0x1 => 0xe, carry flag set (not borrow).
+
+        assertAll(signalEquals(model, Signal.REGA, 0), //
+                signalEquals(model, Signal.FLAGS, ZERO_FLAG));
     }
 
     @Test
