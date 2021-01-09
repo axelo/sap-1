@@ -36,8 +36,7 @@ enum Signal {
 enum {
     MAX_NB_OF_CONTROL_STEPS = 8, // First 3 bits of microcode address.
     NB_OF_INSTRUCTIONS = 16,     // Next 4 bits of microcode address.
-    NB_OF_FLAG_PERMUTATIONS = 4, // Next 2 bits of microcode address.
-    DEFAULT_MICROCODE = HALT | LAST_STEP
+    NB_OF_FLAG_PERMUTATIONS = 4  // Next 2 bits of microcode address.
 };
 
 const uint16_t fetchSteps[] =
@@ -46,11 +45,23 @@ const uint16_t fetchSteps[] =
 
 enum { FETCH_STEPS_LENGTH = sizeof(fetchSteps) / sizeof(fetchSteps[0]) };
 
-#define ANY_FLAG_PERMUATATION(...) \
-    { __VA_ARGS__,                 \
-      __VA_ARGS__,                 \
-      __VA_ARGS__,                 \
-      __VA_ARGS__ }
+#define ANY_FLAG_PERMUATATION(...)   \
+    { __VA_ARGS__,  /* ZF=0, CF=0 */ \
+      __VA_ARGS__,  /* ZF=0, CF=1 */ \
+      __VA_ARGS__,  /* ZF=1, CF=0 */ \
+      __VA_ARGS__ } /* ZF=1, CF=1 */
+
+#define CARRY_FLAG_PERMUATATION(...) \
+    { {LAST_STEP},  /* ZF=0, CF=0 */ \
+      __VA_ARGS__,  /* ZF=0, CF=1 */ \
+      {LAST_STEP},  /* ZF=1, CF=0 */ \
+      __VA_ARGS__ } /* ZF=1, CF=1 */
+
+#define ZERO_FLAG_PERMUATATION(...)  \
+    { {LAST_STEP},  /* ZF=0, CF=0 */ \
+      {LAST_STEP},  /* ZF=0, CF=1 */ \
+      __VA_ARGS__,  /* ZF=1, CF=0 */ \
+      __VA_ARGS__ } /* ZF=1, CF=1 */
 
 static const uint16_t instructionSteps[NB_OF_INSTRUCTIONS][NB_OF_FLAG_PERMUTATIONS][MAX_NB_OF_CONTROL_STEPS] = {
     // 0x0: nop
@@ -88,20 +99,12 @@ static const uint16_t instructionSteps[NB_OF_INSTRUCTIONS][NB_OF_FLAG_PERMUTATIO
         {IR_BUS_OUT | PC_BUS_IN | LAST_STEP}),
 
     // 0x7: goto immediate when carry
-    {
-        {LAST_STEP},                          // ZF=0, CF=0
-        {IR_BUS_OUT | PC_BUS_IN | LAST_STEP}, // ZF=0, CF=1
-        {LAST_STEP},                          // ZF=1, CF=0
-        {IR_BUS_OUT | PC_BUS_IN | LAST_STEP}  // ZF=1, CF=1
-    },
+    CARRY_FLAG_PERMUATATION(
+        {IR_BUS_OUT | PC_BUS_IN | LAST_STEP}),
 
-    // 0x8: goto immediate when carry
-    {
-        {LAST_STEP},                          // ZF=0, CF=0
-        {LAST_STEP},                          // ZF=0, CF=1
-        {IR_BUS_OUT | PC_BUS_IN | LAST_STEP}, // ZF=1, CF=0
-        {IR_BUS_OUT | PC_BUS_IN | LAST_STEP}  // ZF=1, CF=1
-    },
+    // 0x8: goto immediate when zero
+    ZERO_FLAG_PERMUATATION(
+        {IR_BUS_OUT | PC_BUS_IN | LAST_STEP}),
 
     // 0x9:
     ANY_FLAG_PERMUATATION({LAST_STEP}),
@@ -127,42 +130,36 @@ static const uint16_t instructionSteps[NB_OF_INSTRUCTIONS][NB_OF_FLAG_PERMUTATIO
         {HALT | LAST_STEP}),
 };
 
-// Reset steps at 0x2000 beacuse address bit 13 is held high until first encountered LAST_STEP.
-// Assumes IR and STEP is zero at startup.
-// TODO: Add reset stes at all possible IR values to remove 0 at start up requirement.
-const uint16_t resetAddress = 1 << 13;
-
-const uint16_t resetSteps[NB_OF_FLAG_PERMUTATIONS][MAX_NB_OF_CONTROL_STEPS] =
-    ANY_FLAG_PERMUATATION(
-        {ZERO_BUS_OUT | PC_BUS_IN,
-         REGA_BUS_IN,
-         REGB_BUS_IN,
-         OUT_BUS_IN,
-         MAR_BUS_IN,
-         RAM_BUS_OUT | IR_BUS_IN | LAST_STEP});
+const uint16_t resetSteps[MAX_NB_OF_CONTROL_STEPS] =
+    {ZERO_BUS_OUT | PC_BUS_IN,
+     REGA_BUS_IN,
+     REGB_BUS_IN,
+     OUT_BUS_IN,
+     MAR_BUS_IN,
+     RAM_BUS_OUT | IR_BUS_IN | LAST_STEP};
 
 enum OUTPUT_FORMAT {
     BINARY_OUTPUT,
     HEX_STRING_OUTPUT
 };
 
-int writeToFile(const enum OUTPUT_FORMAT format, const char *filename, const uint8_t (*rom)[32768]) {
+int writeToFile(const enum OUTPUT_FORMAT format, const char *filename, const uint8_t (*data)[32768]) {
     FILE *file = fopen(filename, "w");
 
-    enum { size = sizeof(*rom) };
+    enum { SIZE = sizeof(*data) };
 
     if (file == NULL) {
         return errno;
     } else {
         if (format == BINARY_OUTPUT) {
-            fwrite(rom, sizeof(uint8_t), size, file);
+            fwrite(data, sizeof(uint8_t), SIZE, file);
         } else if (format == HEX_STRING_OUTPUT) {
             enum { HEX_STRING_LEN = 3 }; // "FF\n" is 3 chars for each uint8_t.
 
-            char hex[size * HEX_STRING_LEN];
+            char hex[SIZE * HEX_STRING_LEN];
 
-            for (int i = 0; i < size; ++i) {
-                snprintf(hex + (i * HEX_STRING_LEN), HEX_STRING_LEN, "%02x", (*rom)[i]);
+            for (int i = 0; i < SIZE; ++i) {
+                snprintf(hex + (i * HEX_STRING_LEN), HEX_STRING_LEN, "%02x", (*data)[i]);
 
                 // Replace '\0' introduced by snprintf with '\n'.
                 hex[(i * HEX_STRING_LEN) + (HEX_STRING_LEN - 1)] = '\n';
@@ -179,33 +176,26 @@ int writeToFile(const enum OUTPUT_FORMAT format, const char *filename, const uin
 }
 
 void makeMicrocode(uint8_t (*microcode)[32768]) {
-    for (uint16_t i = 0; i < 32768; ++i) {
+    enum { SIZE = sizeof(*microcode) };
+
+    for (uint16_t i = 0; i < SIZE; ++i) {
         const uint8_t step = i & 0b111;
         const uint8_t opcode = (i >> 3) & 0b1111;
         const uint8_t flag = (i >> 7) & 0b11;
-        const uint8_t highByte = (i >> 14) & 0b1;
+        const uint8_t reset = (i >> 13) & 1;
+        const uint8_t highByte = (i >> 14) & 1;
 
         const uint16_t signals =
-            step < FETCH_STEPS_LENGTH
-                ? fetchSteps[step]
-                : instructionSteps[opcode][flag][step - FETCH_STEPS_LENGTH];
+            reset == 1
+                ? resetSteps[step]
+                : step < FETCH_STEPS_LENGTH
+                      ? fetchSteps[step]
+                      : instructionSteps[opcode][flag][step - FETCH_STEPS_LENGTH];
 
         (*microcode)[i] =
             highByte == 1
                 ? signals >> 8
                 : signals & 0xff;
-    }
-
-    uint16_t address = resetAddress;
-
-    for (int f = 0; f < 4; ++f) {
-        for (int s = 0; s < 8; ++s) {
-            const uint16_t code = resetSteps[f][s];
-
-            (*microcode)[address] = code & 0xff;
-            (*microcode)[address | 0x4000] = code >> 8;
-            ++address;
-        }
     }
 }
 

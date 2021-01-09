@@ -21,7 +21,7 @@
     </entry>
     <entry>
       <string>preloadProgramFile</string>
-      <file>/Users/axel/Hobby/sap1/Simulation/ram/Count up then down.hex</file>
+      <file>/Users/axel/Hobby/sap1/Programs/Count up then down.hex</file>
     </entry>
   </attributes>
   <visualElements>
@@ -774,7 +774,7 @@
         </entry>
         <entry>
           <string>Frequency</string>
-          <int>50</int>
+          <int>32</int>
         </entry>
       </elementAttributes>
       <pos x="440" y="-180"/>
