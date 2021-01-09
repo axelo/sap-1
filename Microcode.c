@@ -24,6 +24,7 @@ enum Signal {
     PC_COUNT = 1 << 7,
     ALU_SUBTRACT = 1 << 8,
     OUT_SIGNED_IN = 1 << 9,
+    FLAGS_IN = 1 << 10,
     // 1 << 10 Unused.
     // 1 << 11 Unused.
     // 1 << 12 Unused.
@@ -33,8 +34,9 @@ enum Signal {
 };
 
 enum {
-    MAX_NB_OF_CONTROL_STEPS = 16, // Low 4 bits of microcode address.
-    NB_OF_INSTRUCTIONS = 16,      // High 4 bits of microcode address.
+    MAX_NB_OF_CONTROL_STEPS = 8, // First 3 bits of microcode address.
+    NB_OF_INSTRUCTIONS = 16,     // Next 4 bits of microcode address.
+    NB_OF_FLAG_PERMUTATIONS = 4, // Next 2 bits of microcode address.
     DEFAULT_MICROCODE = HALT | LAST_STEP
 };
 
@@ -44,109 +46,122 @@ const uint16_t fetchSteps[] =
 
 enum { FETCH_STEPS_LENGTH = sizeof(fetchSteps) / sizeof(fetchSteps[0]) };
 
-const uint16_t instructionSteps[NB_OF_INSTRUCTIONS][MAX_NB_OF_CONTROL_STEPS] = {
+#define ANY_FLAG_PERMUATATION(...) \
+    { __VA_ARGS__,                 \
+      __VA_ARGS__,                 \
+      __VA_ARGS__,                 \
+      __VA_ARGS__ }
+
+static const uint16_t instructionSteps[NB_OF_INSTRUCTIONS][NB_OF_FLAG_PERMUTATIONS][MAX_NB_OF_CONTROL_STEPS] = {
     // 0x0: nop
-    {LAST_STEP},
+    ANY_FLAG_PERMUATATION(
+        {LAST_STEP}),
 
     // 0x1: a = mem[immediate]
-    {
-        IR_BUS_OUT | MAR_BUS_IN,
-        RAM_BUS_OUT | REGA_BUS_IN | LAST_STEP,
-    },
+    ANY_FLAG_PERMUATATION(
+        {IR_BUS_OUT | MAR_BUS_IN,
+         RAM_BUS_OUT | REGA_BUS_IN | LAST_STEP}),
 
     // 0x2: a += mem[immediate]
-    {
-        IR_BUS_OUT | MAR_BUS_IN,
-        RAM_BUS_OUT | REGB_BUS_IN,
-        ALU_BUS_OUT | REGA_BUS_IN | LAST_STEP,
-    },
+    ANY_FLAG_PERMUATATION(
+        {IR_BUS_OUT | MAR_BUS_IN,
+         RAM_BUS_OUT | REGB_BUS_IN,
+         ALU_BUS_OUT | FLAGS_IN | REGA_BUS_IN | LAST_STEP}),
 
     // 0x3: a -= mem[immediate]
-    {
-        IR_BUS_OUT | MAR_BUS_IN,
-        RAM_BUS_OUT | REGB_BUS_IN,
-        ALU_SUBTRACT | ALU_BUS_OUT | REGA_BUS_IN | LAST_STEP,
-    },
+    ANY_FLAG_PERMUATATION(
+        {IR_BUS_OUT | MAR_BUS_IN,
+         RAM_BUS_OUT | REGB_BUS_IN | ALU_SUBTRACT,
+         ALU_SUBTRACT | ALU_BUS_OUT | FLAGS_IN | REGA_BUS_IN | LAST_STEP}),
 
     // 0x4: mem[immediate] = a
-    {
-        IR_BUS_OUT | MAR_BUS_IN,
-        REGA_BUS_OUT | RAM_BUS_IN | LAST_STEP,
-    },
+    ANY_FLAG_PERMUATATION(
+        {IR_BUS_OUT | MAR_BUS_IN,
+         REGA_BUS_OUT | RAM_BUS_IN | LAST_STEP}),
 
     // 0x5: a = immediate
-    {
-        IR_BUS_OUT | REGA_BUS_IN | LAST_STEP,
-    },
+    ANY_FLAG_PERMUATATION(
+        {IR_BUS_OUT | REGA_BUS_IN | LAST_STEP}),
 
     // 0x6: goto immediate
+    ANY_FLAG_PERMUATATION(
+        {IR_BUS_OUT | PC_BUS_IN | LAST_STEP}),
+
+    // 0x7: goto immediate when carry
     {
-        IR_BUS_OUT | PC_BUS_IN | LAST_STEP,
+        {LAST_STEP},                          // ZF=0, CF=0
+        {IR_BUS_OUT | PC_BUS_IN | LAST_STEP}, // ZF=0, CF=1
+        {LAST_STEP},                          // ZF=1, CF=0
+        {IR_BUS_OUT | PC_BUS_IN | LAST_STEP}  // ZF=1, CF=1
     },
 
-    // 0x7:
-    {LAST_STEP},
-
-    // 0x8:
-    {LAST_STEP},
+    // 0x8: goto immediate when carry
+    {
+        {LAST_STEP},                          // ZF=0, CF=0
+        {LAST_STEP},                          // ZF=0, CF=1
+        {IR_BUS_OUT | PC_BUS_IN | LAST_STEP}, // ZF=1, CF=0
+        {IR_BUS_OUT | PC_BUS_IN | LAST_STEP}  // ZF=1, CF=1
+    },
 
     // 0x9:
-    {LAST_STEP},
+    ANY_FLAG_PERMUATATION({LAST_STEP}),
 
     // 0xa:
-    {LAST_STEP},
+    ANY_FLAG_PERMUATATION({LAST_STEP}),
 
     // 0xb:
-    {LAST_STEP},
+    ANY_FLAG_PERMUATATION({LAST_STEP}),
 
     // 0xc:
-    {LAST_STEP},
+    ANY_FLAG_PERMUATATION({LAST_STEP}),
 
     // 0xd:
-    {LAST_STEP},
+    ANY_FLAG_PERMUATATION({LAST_STEP}),
 
     // 0xe: out = a
-    {
-        REGA_BUS_OUT | OUT_BUS_IN | LAST_STEP,
-    },
+    ANY_FLAG_PERMUATATION(
+        {REGA_BUS_OUT | OUT_BUS_IN | LAST_STEP}),
 
     // 0xf: halt
-    {HALT | LAST_STEP},
+    ANY_FLAG_PERMUATATION(
+        {HALT | LAST_STEP}),
 };
 
-// Reset steps at 0x400 beacuse address bit 10 is held high until first encountered LAST_STEP.
+// Reset steps at 0x2000 beacuse address bit 13 is held high until first encountered LAST_STEP.
 // Assumes IR and STEP is zero at startup.
 // TODO: Add reset stes at all possible IR values to remove 0 at start up requirement.
-const uint16_t resetAddress = 1 << 10;
+const uint16_t resetAddress = 1 << 13;
 
-const uint16_t resetSteps[] =
-    {
-        ZERO_BUS_OUT | PC_BUS_IN,
-        REGA_BUS_IN,
-        REGB_BUS_IN,
-        OUT_BUS_IN,
-        MAR_BUS_IN,
-        RAM_BUS_OUT | IR_BUS_IN | LAST_STEP};
+const uint16_t resetSteps[NB_OF_FLAG_PERMUTATIONS][MAX_NB_OF_CONTROL_STEPS] =
+    ANY_FLAG_PERMUATATION(
+        {ZERO_BUS_OUT | PC_BUS_IN,
+         REGA_BUS_IN,
+         REGB_BUS_IN,
+         OUT_BUS_IN,
+         MAR_BUS_IN,
+         RAM_BUS_OUT | IR_BUS_IN | LAST_STEP});
 
 enum OUTPUT_FORMAT {
     BINARY_OUTPUT,
     HEX_STRING_OUTPUT
 };
 
-int writeToFile(const enum OUTPUT_FORMAT format, const char *filename, const uint8_t (*rom)[2048]) {
+int writeToFile(const enum OUTPUT_FORMAT format, const char *filename, const uint8_t (*rom)[32768]) {
     FILE *file = fopen(filename, "w");
+
+    enum { size = sizeof(*rom) };
 
     if (file == NULL) {
         return errno;
     } else {
         if (format == BINARY_OUTPUT) {
-            fwrite(rom, sizeof(uint8_t), 2048, file);
+            fwrite(rom, sizeof(uint8_t), size, file);
         } else if (format == HEX_STRING_OUTPUT) {
             enum { HEX_STRING_LEN = 3 }; // "FF\n" is 3 chars for each uint8_t.
 
-            char hex[2048 * HEX_STRING_LEN];
+            char hex[size * HEX_STRING_LEN];
 
-            for (int i = 0; i < 2048; ++i) {
+            for (int i = 0; i < size; ++i) {
                 snprintf(hex + (i * HEX_STRING_LEN), HEX_STRING_LEN, "%02x", (*rom)[i]);
 
                 // Replace '\0' introduced by snprintf with '\n'.
@@ -163,86 +178,60 @@ int writeToFile(const enum OUTPUT_FORMAT format, const char *filename, const uin
     }
 }
 
-void makeMicrocodes(uint8_t (*microcodeLow)[2048], uint8_t (*microcodeHigh)[2048]) {
-    for (int i = 0; i < NB_OF_INSTRUCTIONS; ++i) {
-        for (int s = 0; s < FETCH_STEPS_LENGTH; ++s) {
-            const uint16_t address = (i << 4) + s;
-            const uint16_t code = fetchSteps[s];
+void makeMicrocode(uint8_t (*microcode)[32768]) {
+    for (uint16_t i = 0; i < 32768; ++i) {
+        const uint8_t step = i & 0b111;
+        const uint8_t opcode = (i >> 3) & 0b1111;
+        const uint8_t flag = (i >> 7) & 0b11;
+        const uint8_t highByte = (i >> 14) & 0b1;
 
-            (*microcodeLow)[address] = code & 0xff;
-            (*microcodeHigh)[address] = (code >> 8) & 0xff;
-        }
+        const uint16_t signals =
+            step < FETCH_STEPS_LENGTH
+                ? fetchSteps[step]
+                : instructionSteps[opcode][flag][step - FETCH_STEPS_LENGTH];
 
-        for (int s = 0; s < (MAX_NB_OF_CONTROL_STEPS - FETCH_STEPS_LENGTH); ++s) {
-            const uint16_t address = (i << 4) + FETCH_STEPS_LENGTH + s;
-            uint16_t code = instructionSteps[i][s];
-
-            if (code == 0) {
-                code = DEFAULT_MICROCODE;
-            }
-
-            (*microcodeLow)[address] = code & 0xff;
-            (*microcodeHigh)[address] = (code >> 8) & 0xff;
-        }
+        (*microcode)[i] =
+            highByte == 1
+                ? signals >> 8
+                : signals & 0xff;
     }
 
-    // Fill in possible instructions with fetch steps and DEFAULT_MICROCODE.
-    for (int i = NB_OF_INSTRUCTIONS; i < 16; ++i) {
-        for (int s = 0; s < FETCH_STEPS_LENGTH; ++s) {
-            const uint16_t address = (i << 4) + s;
-            const uint16_t code = fetchSteps[s];
+    uint16_t address = resetAddress;
 
-            (*microcodeLow)[address] = code & 0xff;
-            (*microcodeHigh)[address] = (code >> 8) & 0xff;
+    for (int f = 0; f < 4; ++f) {
+        for (int s = 0; s < 8; ++s) {
+            const uint16_t code = resetSteps[f][s];
+
+            (*microcode)[address] = code & 0xff;
+            (*microcode)[address | 0x4000] = code >> 8;
+            ++address;
         }
-
-        for (int s = FETCH_STEPS_LENGTH; s < MAX_NB_OF_CONTROL_STEPS; ++s) {
-            const uint16_t address = (i << 4) + s; // To be able to fill 2k, 8 bits won't fit.
-            const uint16_t code = DEFAULT_MICROCODE;
-
-            (*microcodeLow)[address] = code & 0xff;
-            (*microcodeHigh)[address] = (code >> 8) & 0xff;
-        }
-    }
-
-    for (int s = 0; s < (int)(sizeof(resetSteps) / sizeof(resetSteps[0])); ++s) {
-        const uint16_t address = resetAddress + s;
-        const uint16_t code = resetSteps[s];
-
-        (*microcodeLow)[address] = code & 0xff;
-        (*microcodeHigh)[address] = (code >> 8) & 0xff;
     }
 }
 
 void printUsage() {
-    printf("Usage: Microcode [h] -L low output filename -H high output filename\n");
+    printf("Usage: Microcode [h] -O output filename\n");
 }
 
 int main(int argc, char *argv[]) {
-    if (argc < 2) {
+    if (argc < 1) {
         printUsage();
         return 1;
     }
 
     // Start with `:` to disable getopt error printing.
     // -h Help. (h).
-    // -L Output file of low microcode. Required (L:).
-    // -H Output file of high microcode. Required (H:).
-    const char *cliOptions = ":hL:H:";
+    // -O Output file of low microcode. Required (O:).
+    const char *cliOptions = ":hO:";
     int currentOption = -1;
 
-    char *microCodeLowFilename = "";
-    char *microCodeHighFilename = "";
+    char *microcodeFilename = "";
 
     while ((currentOption = getopt(argc, argv, cliOptions)) != -1) {
         switch (currentOption) {
 
-        case 'L':
-            microCodeLowFilename = optarg;
-            break;
-
-        case 'H':
-            microCodeHighFilename = optarg;
+        case 'O':
+            microcodeFilename = optarg;
             break;
 
         case 'h':
@@ -261,24 +250,15 @@ int main(int argc, char *argv[]) {
         }
     }
 
-    uint8_t microcodeLow[2048] = {0};
-    uint8_t microcodeHigh[2048] = {0};
+    uint8_t microcode[32768] = {0};
 
-    makeMicrocodes(&microcodeLow, &microcodeHigh);
+    makeMicrocode(&microcode);
 
-    const int resultLow = writeToFile(HEX_STRING_OUTPUT, microCodeLowFilename, &microcodeLow);
-    const int resultHigh = writeToFile(HEX_STRING_OUTPUT, microCodeHighFilename, &microcodeHigh);
+    const int result = writeToFile(HEX_STRING_OUTPUT, microcodeFilename, &microcode);
 
-    if (resultLow | resultHigh) {
-        if (resultLow != 0) {
-            fprintf(stderr, "Cannot write file '%s': %s.\n",
-                    microCodeLowFilename, strerror(resultLow));
-        }
-
-        if (resultHigh != 0) {
-            fprintf(stderr, "Cannot write file '%s': %s.\n",
-                    microCodeHighFilename, strerror(resultHigh));
-        }
+    if (result != 0) {
+        fprintf(stderr, "Cannot write file '%s': %s.\n",
+                microcodeFilename, strerror(result));
 
         return 1;
     } else {
