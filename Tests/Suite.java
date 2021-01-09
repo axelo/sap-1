@@ -517,6 +517,54 @@ public class Suite {
     }
 
     @Test
+    @DisplayName("goto immediate when carry")
+    public void setPcToImmediateWhenCarry() {
+        final var model = initModelWithRam(0x32, 0x73, 0x01, 0xf0);
+
+        assertResetSteps(model);
+
+        assertFetchSteps(model);
+
+        assertSubRegAWithMemoryAtImmediateAddressSteps(model); // a -= 1
+
+        assertFetchSteps(model);
+
+        step(model); // Latch next control signals. Need to do this before testing IR as IR is
+                     // latched on the same clock as control signals.
+
+        assertAll(signalEquals(model, Signal.IR, 0x73), //
+                controlSignalEquals(model, IR_BUS_OUT | PC_BUS_IN | LAST_STEP));
+
+        step(model); // Execute control signals.
+
+        assertAll(signalEquals(model, Signal.PC, 3));
+    }
+
+    @Test
+    @DisplayName("goto immediate when zero")
+    public void setPcToImmediateWhenZero() {
+        final var model = initModelWithRam(0x22, 0x83, 0x00, 0xf0);
+
+        assertResetSteps(model);
+
+        assertFetchSteps(model);
+
+        assertAddRegAWithMemoryAtImmediateAddressSteps(model); // a = 0 + 0
+
+        assertFetchSteps(model);
+
+        step(model); // Latch next control signals. Need to do this before testing IR as IR is
+                     // latched on the same clock as control signals.
+
+        assertAll(signalEquals(model, Signal.IR, 0x83), //
+                controlSignalEquals(model, IR_BUS_OUT | PC_BUS_IN | LAST_STEP));
+
+        step(model); // Execute control signals.
+
+        assertAll(signalEquals(model, Signal.PC, 3));
+    }
+
+    @Test
     @DisplayName("out = a")
     public void setOutputToValueInRegA() {
         final var model = initModelWithRam(0xe0);
