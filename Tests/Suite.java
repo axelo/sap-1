@@ -599,9 +599,11 @@ public class Suite {
     @DisplayName("goto immediate when zero")
     public void setPcToImmediateWhenZero() {
         final var model = initModelWithRam(//
-                0x20, 0x03, // a += mem[3]
-                0x84, // goto 4 when zero
-                0x00, 0xf0);
+                0x20, 0x04, // a += mem[4]
+                0x80, 0x05, // goto 6 when zero
+                0x00, //
+                0xf0 // halt
+        );
 
         assertResetSteps(model);
 
@@ -611,14 +613,21 @@ public class Suite {
 
         assertFetchSteps(model);
 
+        assertAll(signalEquals(model, Signal.IR, 0x80));
+
         step(model); // Latch next control signals.
 
-        assertAll(signalEquals(model, Signal.IR, 0x84), //
-                controlSignalEquals(model, IR_BUS_OUT | PC_BUS_IN | LAST_STEP));
+        assertAll(controlSignalEquals(model, PC_BUS_OUT | MAR_BUS_IN));
 
         step(model); // Execute control signals.
 
-        assertAll(signalEquals(model, Signal.PC, 4));
+        step(model); // Latch next control signals.
+
+        assertAll(controlSignalEquals(model, RAM_BUS_OUT | PC_BUS_IN | LAST_STEP));
+
+        step(model); // Execute control signals.
+
+        assertAll(signalEquals(model, Signal.PC, 5));
     }
 
     @Test

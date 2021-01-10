@@ -1,17 +1,21 @@
 v2.0 raw
 10 # a = mem[address].
-0e # address = 14.
+12 # address = 18.
 e0 # 2.countUp: out = a.
 20 # a += mem[address]
-0f # address = 15 (1).
-78 # goto countDown when carry.
+13 # address = 19 (1).
+70 # goto when carry
+09 # startCountDown.
 60 # goto
 02 # countUp.
-30 # 8.countDown: a -= mem[address]s
-0f # address = 15 (1).
+50 # 9.startCountDown: a =
+0a # 10.
+30 # b.countDown: a -= mem[address]s
+13 # address = 19 (1).
 e0 # out = a.
-82 # goto countUp when zero.
+82 # goto when zero.
+02 # countUp.
 60 # goto
-08 # countDown.
-fa # mem[14]
-01 # mem[15]
+0b # countDown.
+fa # mem[0x12]
+01 # mem[0x13]
