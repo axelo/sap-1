@@ -6,11 +6,11 @@ e0 # 2.countUp: out = a.
 0f # address = 15 (1).
 77 # goto countDown when carry.
 62 # goto countUp.
-3f # 7.countDown: a -= mem[15] (1).
+30 # 7.countDown: a -= mem[address]s
+0f # address = 15 (1).
 e0 # out = a.
 82 # goto countUp when zero.
 67 # goto countDown.
-00
 00
 00
 fa # mem[14]
