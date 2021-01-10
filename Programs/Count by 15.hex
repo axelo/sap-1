@@ -1,6 +1,6 @@
 v2.0 raw
 50 # a =
-0f # 1f.
+0f # 15.
 40 # mem[address] = a
 0e # address = 14.
 50 # a =
