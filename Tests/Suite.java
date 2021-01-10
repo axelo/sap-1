@@ -275,18 +275,25 @@ public class Suite {
 
     private static void assertSetRegAImmediateSteps(MutableTestModel model) {
         final int ir = signal(model, Signal.IR.name());
-        final int immediate = ir & 0x0f;
+        final int pc = signal(model, Signal.PC.name());
+        final int immediate = readRam(model, pc);
 
-        assertEquals(0x50, ir & 0xf0, () -> "High 4-bits of IR should be 0b0101");
+        assertEquals(0x50, ir & 0xf0, () -> "IR should be 0x50");
 
         step(model); // Latch next control signals.
 
-        assertAll(controlSignalEquals(model, IR_BUS_OUT | REGA_BUS_IN | LAST_STEP));
+        assertAll(controlSignalEquals(model, PC_BUS_OUT | MAR_BUS_IN));
 
         step(model); // Execute control signals.
 
-        assertAll(signalEquals(model, Signal.BUS, immediate), // Lower 4 bit of IR are outputted to the bus.
-                signalEquals(model, Signal.REGA, immediate));
+        step(model); // Latch next control signals.
+
+        assertAll(controlSignalEquals(model, RAM_BUS_OUT | REGA_BUS_IN | PC_COUNT | LAST_STEP));
+
+        step(model); // Execute control signals.
+
+        assertAll(signalEquals(model, Signal.REGA, immediate), //
+                signalEquals(model, Signal.PC, pc + 1));
     }
 
     @Test
@@ -295,6 +302,7 @@ public class Suite {
         final var model = initModelWithRam(0x00);
 
         assertResetSteps(model);
+
         step(model); // Latch next control signals.
 
         assertAll(controlSignalEquals(model, PC_BUS_OUT | MAR_BUS_IN), //
@@ -310,7 +318,7 @@ public class Suite {
 
         final int previousPc = signal(model, Signal.PC.name());
 
-        assertAll(controlSignalEquals(model, RAM_BUS_OUT | IR_BUS_IN | PC_COUNT | LAST_STEP), //
+        assertAll(controlSignalEquals(model, RAM_BUS_OUT | IR_BUS_IN | PC_COUNT | LAST_STEP),
                 signalEquals(model, Signal.STEP, 1), //
                 signalEquals(model, Signal.LAST_STEP, 1));
 
@@ -355,7 +363,7 @@ public class Suite {
     @Test
     @DisplayName("a += mem[3] # Should set carry flag")
     public void addRegAWithValueAtImmediateAddressSetCarryFlag() {
-        final var model = initModelWithRam(0x5f, 0x23, 0x00, 0xff);
+        final var model = initModelWithRam(0x50, 0x0f, 0x23, 0xff);
 
         assertResetSteps(model);
 
@@ -377,7 +385,7 @@ public class Suite {
     @Test
     @DisplayName("a += mem[3] # Should set carry and zero flag")
     public void addRegAWithValueAtImmediateAddressSetZeroFlag() {
-        final var model = initModelWithRam(0x5f, 0x23, 0x00, 0xf1);
+        final var model = initModelWithRam(0x50, 0x0f, 0x23, 0xf1);
 
         assertResetSteps(model);
 
@@ -414,7 +422,7 @@ public class Suite {
     @Test
     @DisplayName("a -= mem[2] # Should clear carry flag")
     public void subRegAWithValueAtImmediateAddressSetCarryFlag() {
-        final var model = initModelWithRam(0x5f, 0x32, 0x01);
+        final var model = initModelWithRam(0x50, 0x0f, 0x33, 0x01);
 
         assertResetSteps(model);
 
@@ -436,7 +444,7 @@ public class Suite {
     @Test
     @DisplayName("a -= mem[2] # Should set zero flag")
     public void subRegAWithValueAtImmediateAddressSetZeroFlag() {
-        final var model = initModelWithRam(0x5f, 0x32, 0x0f);
+        final var model = initModelWithRam(0x50, 0x0f, 0x33, 0x0f);
 
         assertResetSteps(model);
 
@@ -458,7 +466,7 @@ public class Suite {
     @Test
     @DisplayName("mem[immediate] = a")
     public void setMemAtAddressImmediateToValueOfRegA() {
-        final var model = initModelWithRam(0x58, 0x42, 0x00);
+        final var model = initModelWithRam(0x50, 0x08, 0x43, 0x00);
 
         assertResetSteps(model);
 
@@ -472,12 +480,12 @@ public class Suite {
 
         step(model); // Latch next control signals.
 
-        assertAll(signalEquals(model, Signal.IR, 0x42), //
+        assertAll(signalEquals(model, Signal.IR, 0x43), //
                 controlSignalEquals(model, IR_BUS_OUT | MAR_BUS_IN));
 
         step(model); // Execute control signals.
 
-        assertAll(signalEquals(model, Signal.MAR, 2));
+        assertAll(signalEquals(model, Signal.MAR, 3));
 
         step(model); // Latch next control signals.
 
@@ -485,13 +493,13 @@ public class Suite {
 
         step(model); // Execute control signals.
 
-        assertEquals(8, readRam(model, 2), () -> "mem[2] should be 8");
+        assertEquals(8, readRam(model, 3), () -> "mem[2] should be 8");
     }
 
     @Test
     @DisplayName("a = immediate")
     public void setRegAToImmediate() {
-        final var model = initModelWithRam(0x57);
+        final var model = initModelWithRam(0x50, 0x07);
 
         assertResetSteps(model);
 
