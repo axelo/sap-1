@@ -8,7 +8,8 @@ v2.0 raw
 e0 # 6.loop: out = a.
 20 # a += mem[address]
 0e # address = 14.
-66 # goto loop.
+60 # goto
+06 # 6.loop.
 00
 00
 00

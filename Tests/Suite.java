@@ -537,17 +537,23 @@ public class Suite {
     @Test
     @DisplayName("goto immediate")
     public void setPcToImmediate() {
-        final var model = initModelWithRam(0x6a);
+        final var model = initModelWithRam(0x60, 0x0a);
 
         assertResetSteps(model);
 
         assertFetchSteps(model);
 
-        step(model); // Latch next control signals. Need to do this before testing IR as IR is
-                     // latched on the same clock as control signals.
+        assertAll(signalEquals(model, Signal.IR, 0x60));
 
-        assertAll(signalEquals(model, Signal.IR, 0x6a), //
-                controlSignalEquals(model, IR_BUS_OUT | PC_BUS_IN | LAST_STEP));
+        step(model); // Latch next control signals.
+
+        assertAll(controlSignalEquals(model, PC_BUS_OUT | MAR_BUS_IN));
+
+        step(model); // Execute control signals.
+
+        step(model); // Latch next control signals.
+
+        assertAll(controlSignalEquals(model, RAM_BUS_OUT | PC_BUS_IN | LAST_STEP));
 
         step(model); // Execute control signals.
 
