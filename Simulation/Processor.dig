@@ -5384,6 +5384,39 @@
       </elementAttributes>
       <pos x="620" y="300"/>
     </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
+          <string>PEEK LAST STEP</string>
+        </entry>
+      </elementAttributes>
+      <pos x="1060" y="1720"/>
+    </visualElement>
+    <visualElement>
+      <elementName>LED</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Size</string>
+          <int>0</int>
+        </entry>
+        <entry>
+          <string>Color</string>
+          <awt-color>
+            <red>0</red>
+            <green>102</green>
+            <blue>255</blue>
+            <alpha>255</alpha>
+          </awt-color>
+        </entry>
+      </elementAttributes>
+      <pos x="1080" y="1720"/>
+    </visualElement>
   </visualElements>
   <wires>
     <wire>
@@ -5829,6 +5862,10 @@
     <wire>
       <p1 x="640" y="1720"/>
       <p2 x="660" y="1720"/>
+    </wire>
+    <wire>
+      <p1 x="1060" y="1720"/>
+      <p2 x="1080" y="1720"/>
     </wire>
     <wire>
       <p1 x="660" y="1080"/>
