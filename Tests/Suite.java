@@ -466,7 +466,10 @@ public class Suite {
     @Test
     @DisplayName("mem[immediate] = a")
     public void setMemAtAddressImmediateToValueOfRegA() {
-        final var model = initModelWithRam(0x50, 0x08, 0x43, 0x00);
+        final var model = initModelWithRam(//
+                0x50, 0x08, // a = 8
+                0x40, 0x04, // mem[4] = a
+                0x00);
 
         assertResetSteps(model);
 
@@ -480,12 +483,16 @@ public class Suite {
 
         step(model); // Latch next control signals.
 
-        assertAll(signalEquals(model, Signal.IR, 0x43), //
-                controlSignalEquals(model, IR_BUS_OUT | MAR_BUS_IN));
+        assertAll(signalEquals(model, Signal.IR, 0x40), //
+                controlSignalEquals(model, PC_BUS_OUT | MAR_BUS_IN));
 
         step(model); // Execute control signals.
 
-        assertAll(signalEquals(model, Signal.MAR, 3));
+        step(model); // Latch next control signals.
+
+        assertAll(controlSignalEquals(model, RAM_BUS_OUT | MAR_BUS_IN | PC_COUNT));
+
+        step(model); // Execute control signals.
 
         step(model); // Latch next control signals.
 
@@ -493,7 +500,7 @@ public class Suite {
 
         step(model); // Execute control signals.
 
-        assertEquals(8, readRam(model, 3), () -> "mem[2] should be 8");
+        assertEquals(8, readRam(model, 4), () -> "mem[4] should be 8");
     }
 
     @Test

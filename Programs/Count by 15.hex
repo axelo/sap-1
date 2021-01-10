@@ -1,17 +1,17 @@
 v2.0 raw
 50 # a =
-0f # 15
-4f # mem[15] = a
+0f # 1f.
+40 # mem[address] = a
+0e # address = 14.
 50 # a =
-00 # 0
-e0 # loop: out = a
-2f # a += mem[15]
-65 # goto loop
+00 # 0.
+e0 # loop: out = a.
+2e # a += mem[14].
+66 # goto loop.
 00
 00
 00
 00
 00
+00 # mem[14]
 00
-00
-05 # mem[15]

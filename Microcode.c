@@ -94,10 +94,11 @@ static const uint16_t instructionSteps[NB_OF_INSTRUCTIONS][NB_OF_FLAG_PERMUTATIO
             RAM_BUS_OUT | REGB_BUS_IN | ALU_SUBTRACT,
             ALU_SUBTRACT | ALU_BUS_OUT | FLAGS_IN | REGA_BUS_IN)),
 
-    // 0x4: mem[immediate] = a
+    // 0x4: mem[immediate] = a where immediate = mem[pc]
     ANY_FLAG_PERMUTATION(
         WITH_FETCH_STEPS(
-            IR_BUS_OUT | MAR_BUS_IN,
+            PC_BUS_OUT | MAR_BUS_IN,
+            RAM_BUS_OUT | MAR_BUS_IN | PC_COUNT,
             REGA_BUS_OUT | RAM_BUS_IN)),
 
     // 0x5: a = immediate where immediate = mem[pc]
