@@ -77,7 +77,8 @@ static const uint16_t instructionSteps[NB_OF_INSTRUCTIONS][NB_OF_FLAG_PERMUTATIO
     // 0x1: a = mem[immediate]
     ANY_FLAG_PERMUTATION(
         WITH_FETCH_STEPS(
-            IR_BUS_OUT | MAR_BUS_IN,
+            PC_BUS_OUT | MAR_BUS_IN,
+            RAM_BUS_OUT | MAR_BUS_IN | PC_COUNT,
             RAM_BUS_OUT | REGA_BUS_IN)),
 
     // 0x2: a += mem[immediate]

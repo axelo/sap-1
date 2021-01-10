@@ -21,7 +21,7 @@
     </entry>
     <entry>
       <string>preloadProgramFile</string>
-      <file>/Users/axel/Hobby/sap1/Programs/Count by 15.hex</file>
+      <file>/Users/axel/Hobby/sap1/Programs/Count up then down.hex</file>
     </entry>
   </attributes>
   <visualElements>
@@ -750,10 +750,6 @@
     <visualElement>
       <elementName>Clock</elementName>
       <elementAttributes>
-        <entry>
-          <string>runRealTime</string>
-          <boolean>true</boolean>
-        </entry>
         <entry>
           <string>Label</string>
           <string>CLOCK</string>

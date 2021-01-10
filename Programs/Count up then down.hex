@@ -1,14 +1,14 @@
 v2.0 raw
-1e # a = mem[14]
-e0 # countUp: out = a
-2f # a += mem[15] (1)
-75 # goto countDown when carry
-61 # goto countUp
-3f # countDown: a -= mem[15] (1)
-e0 # out = a
-81 # goto countUp when zero
-65 # goto countDown
-00
+10 # a = mem[address].
+0e # address = 14.
+e0 # 2.countUp: out = a.
+2f # a += mem[15] (1).
+76 # goto countDown when carry.
+62 # goto countUp.
+3f # 6.countDown: a -= mem[15] (1).
+e0 # out = a.
+82 # goto countUp when zero.
+66 # goto countDown.
 00
 00
 00

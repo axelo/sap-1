@@ -163,30 +163,35 @@ public class Suite {
 
     private static void assertSetRegAToMemoryAtImmediateAddressSteps(MutableTestModel model) {
         final int ir = signal(model, Signal.IR.name());
-        final int movRegAImmediate = ir & 0xf0;
-        final int immediate = ir & 0x0f;
+        final int pc = signal(model, Signal.PC.name());
+        final int immediate = readRam(model, pc);
+        final var valueInRamAtAddress = readRam(model, immediate);
 
-        assertEquals(0x10, movRegAImmediate, () -> "High 4-bits of IR should be 0b0001");
+        assertEquals(0x10, ir, () -> "IR should be 0x10");
 
         step(model); // Latch next control signals.
 
-        assertAll(controlSignalEquals(model, IR_BUS_OUT | MAR_BUS_IN));
+        assertAll(controlSignalEquals(model, PC_BUS_OUT | MAR_BUS_IN));
 
         step(model); // Execute control signals.
 
-        assertAll(signalEquals(model, Signal.BUS, immediate), // Lower 4 bit of IR are outputted to the bus.
-                signalEquals(model, Signal.MAR, immediate));
+        step(model); // Latch next control signals.
+
+        assertAll(controlSignalEquals(model, RAM_BUS_OUT | MAR_BUS_IN | PC_COUNT));
+
+        step(model); // Execute control signals.
+
+        assertAll(signalEquals(model, Signal.MAR, immediate));
 
         step(model); // Latch next control signals.
 
         assertAll(controlSignalEquals(model, RAM_BUS_OUT | REGA_BUS_IN | LAST_STEP));
 
-        final var valueInRamAtAddress = readRam(model, immediate);
-
         step(model); // Execute control signals.
 
         // valueInRamAtAddress is stored at address immediate in ram.
-        assertAll(signalEquals(model, Signal.REGA, valueInRamAtAddress));
+        assertAll(signalEquals(model, Signal.REGA, valueInRamAtAddress), //
+                signalEquals(model, Signal.PC, pc + 1));
     }
 
     private static void assertAddRegAWithMemoryAtImmediateAddressSteps(MutableTestModel model) {
@@ -335,7 +340,9 @@ public class Suite {
     @Test
     @DisplayName("a = mem[4]")
     public void setRegAToValueAtImmediateAddress() {
-        final var model = initModelWithRam(0x14, 0x00, 0x00, 0x00, 15);
+        final var model = initModelWithRam(//
+                0x10, 0x04, // a = mem[4]
+                0x00, 0x00, 15);
 
         assertResetSteps(model);
 
@@ -608,8 +615,11 @@ public class Suite {
     @Test
     @DisplayName("a = mem[14]; a += mem[15]; a -= mem[13]")
     public void setAndAddRegFromMemoryImmediate() {
-        final var model = initModelWithRam(0x1e, 0x2f, 0x3d, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-                2, 20, 24);
+        final var model = initModelWithRam(//
+                0x10, 0x0e, // a = mem[e]
+                0x2f, // a += mem[f]
+                0x3d, // a -= mem[d]
+                0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 2, 20, 24);
 
         assertResetSteps(model);
 
