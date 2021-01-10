@@ -5,10 +5,10 @@ v2.0 raw
 0e # address = 14.
 50 # a =
 00 # 0.
-e0 # loop: out = a.
-2e # a += mem[14].
+e0 # 6.loop: out = a.
+20 # a += mem[address]
+0e # address = 14.
 66 # goto loop.
-00
 00
 00
 00
