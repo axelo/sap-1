@@ -116,10 +116,11 @@ static const uint16_t instructionSteps[NB_OF_INSTRUCTIONS][NB_OF_FLAG_PERMUTATIO
             PC_BUS_OUT | MAR_BUS_IN,
             RAM_BUS_OUT | PC_BUS_IN)),
 
-    // 0x7: goto immediate when carry
+    // 0x7: goto immediate when carry where immediate = mem[pc]
     CARRY_FLAG_PERMUTATION(
         WITH_FETCH_STEPS(
-            IR_BUS_OUT | PC_BUS_IN)),
+            PC_BUS_OUT | MAR_BUS_IN,
+            RAM_BUS_OUT | PC_BUS_IN)),
 
     // 0x8: goto immediate when zero
     ZERO_FLAG_PERMUTATION(

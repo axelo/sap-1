@@ -564,8 +564,8 @@ public class Suite {
     @DisplayName("goto immediate when carry")
     public void setPcToImmediateWhenCarry() {
         final var model = initModelWithRam(//
-                0x30, 0x03, // a -= mem[3]
-                0x74, // goto 4 when carry
+                0x30, 0x04, // a -= mem[3]
+                0x70, 0x05, // goto 5 when carry
                 0x01, //
                 0xf0 // halt
         );
@@ -578,14 +578,21 @@ public class Suite {
 
         assertFetchSteps(model);
 
+        assertAll(signalEquals(model, Signal.IR, 0x70));
+
         step(model); // Latch next control signals.
 
-        assertAll(signalEquals(model, Signal.IR, 0x74), //
-                controlSignalEquals(model, IR_BUS_OUT | PC_BUS_IN | LAST_STEP));
+        assertAll(controlSignalEquals(model, PC_BUS_OUT | MAR_BUS_IN));
 
         step(model); // Execute control signals.
 
-        assertAll(signalEquals(model, Signal.PC, 4));
+        step(model); // Latch next control signals.
+
+        assertAll(controlSignalEquals(model, RAM_BUS_OUT | PC_BUS_IN | LAST_STEP));
+
+        step(model); // Execute control signals.
+
+        assertAll(signalEquals(model, Signal.PC, 5));
     }
 
     @Test
